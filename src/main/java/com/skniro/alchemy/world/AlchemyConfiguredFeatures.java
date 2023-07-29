@@ -32,7 +32,9 @@ public class AlchemyConfiguredFeatures {
     static{
         SALT_ORE = ConfiguredFeatures.register("salt_ore", Feature.ORE, new OreFeatureConfig(OVERWORLD_SALT_ORES, 9));
         Arknite_ORE = ConfiguredFeatures.register("arknite_ore", Feature.ORE, new OreFeatureConfig(OVERWORLD_Arknite_ORES, 3));
+
     }
+
     public static void registerConfiguredFeatures() {
         Alchemy.LOGGER.debug("Registering the ModConfiguredFeatures for " + Alchemy.MOD_ID);
     }

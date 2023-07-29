@@ -6,11 +6,9 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class AlchemyItems {
-
-    //Food Materials
     public static final Item Salt = registerItem("salt",new Item(new Item.Settings().group(Alchemy.Alchemy_Group_Food)));
     public static final Item Arknite = registerItem("arknite",new Item(new Item.Settings().group(Alchemy.Alchemy_Group)));
-
+    public static final Item Raw_Crimson = registerItem("raw_crimson",new Item(new Item.Settings().group(Alchemy.Alchemy_Group)));
 
     //Tools
 

@@ -20,7 +20,8 @@ public class AlchemyOreBlocks {
     public static final Block Deepslate_arknite_Ore =registerBlock("deepslate_arknite_ore",new OreBlock(AbstractBlock.Settings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(3, 7)), Alchemy.Alchemy_Group);
     //闪电矿
     public static final Block lightning_Ore =registerBlock("lightning_ore",new OreBlock(AbstractBlock.Settings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(3, 7)), Alchemy.Alchemy_Group);
-
+    //赤热矿
+    public static final Block Crimson_ore =registerBlock("lightning_ore",new OreBlock(AbstractBlock.Settings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(3, 7)), Alchemy.Alchemy_Group);
 
     private static Block registerBlockWithoutItem(String name, Block block) {
         return Registry.register(Registry.BLOCK, new Identifier(Alchemy.MOD_ID, name), block);

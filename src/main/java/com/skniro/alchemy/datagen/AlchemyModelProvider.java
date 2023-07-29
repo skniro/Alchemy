@@ -23,6 +23,7 @@ public class AlchemyModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(AlchemyOreBlocks.Deepslate_arknite_Ore);
         blockStateModelGenerator.registerCubeAllModelTexturePool(AlchemyOreBlocks.Hematite_Ore);
         blockStateModelGenerator.registerCubeAllModelTexturePool(AlchemyOreBlocks.lightning_Ore);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(AlchemyOreBlocks.Crimson_ore);
         //LOG Block
 
         //Door
@@ -40,6 +41,9 @@ public class AlchemyModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(AlchemyItems.Salt, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.Arknite, Models.GENERATED);
+        itemModelGenerator.register(AlchemyItems.Raw_Crimson, Models.GENERATED);
+
         itemModelGenerator.register(ModFluids.PlantEssence_BUCKET, Models.GENERATED);
+
     }
 }
