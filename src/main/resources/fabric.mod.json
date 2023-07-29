@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "alchemy",
+  "version": "${version}",
+  "name": "Alchemy",
+  "description": "",
+  "authors": [
+    "skniro"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/alchemy/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "terrablender": [
+      "com.skniro.alchemy.Alchemy"
+    ],
+    "client": [
+      "com.skniro.alchemy.client.AlchemyClient"
+    ],
+    "main": [
+      "com.skniro.alchemy.Alchemy"
+    ],
+    "fabric-datagen": [
+      "com.skniro.alchemy.datagen.AlchemyDataGeneration"
+    ]
+  },
+  "mixins": [
+    "alchemy.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "minecraft": "1.19.X",
+    "fabric": "*"
+  }
+}

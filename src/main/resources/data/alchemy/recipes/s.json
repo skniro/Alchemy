@@ -1,0 +1,17 @@
+{
+  "type": "alchemy:crafting_alchemy",
+  "ingredients": [
+    {
+      "item": "alchemy:salt_ore"
+    },
+    {
+      "item": "alchemy:salt_ore"
+    },
+    {
+      "item": "alchemy:salt_ore"
+    }
+  ],
+  "output": {
+    "item": "alchemy:salt"
+  }
+}

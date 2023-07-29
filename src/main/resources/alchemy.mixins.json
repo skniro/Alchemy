@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.skniro.alchemy.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "SignTypeAccessor",
+    "BlockEntityTypeMixin"
+
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
