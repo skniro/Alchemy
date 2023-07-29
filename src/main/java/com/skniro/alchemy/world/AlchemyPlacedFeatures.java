@@ -11,20 +11,16 @@ import java.util.List;
 
 
 public class AlchemyPlacedFeatures {
-   /* public static final RegistryEntry<PlacedFeature> Maple_TREE_PLACED;
-    public static final RegistryEntry<PlacedFeature> CHERRY_TREE_PLACED;
-    public static final RegistryEntry<PlacedFeature> SAKURA_TREE_PLACED;*/
+    public static final RegistryEntry<PlacedFeature> Arknite_ORE_PLACED;
     public static final RegistryEntry<PlacedFeature> SALT_ORE_PLACED;
     static{
         SALT_ORE_PLACED = PlacedFeatures.register("ore_salt_overworld",
                 AlchemyConfiguredFeatures.SALT_ORE, modifiersWithCount(5,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(30))));
-       /* Maple_TREE_PLACED = PlacedFeatures.register("maple_tree_placed", AlchemyConfiguredFeatures.Maple_TREE_SPAWN,
-                VegetationPlacedFeatures.modifiers(PlacedFeatures.createCountExtraModifier(1, 0.1f, 1)));
-        CHERRY_TREE_PLACED = PlacedFeatures.register("cherry_tree_placed", AlchemyConfiguredFeatures.CHERRY_TREE_SPAWN,
-                VegetationPlacedFeatures.modifiers(PlacedFeatures.createCountExtraModifier(1, 0.1f, 1)));
-        SAKURA_TREE_PLACED = PlacedFeatures.register("sakura_tree_placed", AlchemyConfiguredFeatures.SAKURA_TREE_SPAWN,
-                VegetationPlacedFeatures.modifiers(PlacedFeatures.createCountExtraModifier(1, 0.1f, 1)));*/
+        Arknite_ORE_PLACED = PlacedFeatures.register("ore_arknite_overworld",
+                AlchemyConfiguredFeatures.Arknite_ORE, modifiersWithCount(3,
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(-80), YOffset.fixed(0))));
+
     }
 
     private static List<PlacementModifier> modifiers(PlacementModifier countModifier, PlacementModifier heightModifier) {

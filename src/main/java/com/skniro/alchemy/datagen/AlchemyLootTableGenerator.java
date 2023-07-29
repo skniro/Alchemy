@@ -3,6 +3,7 @@ package com.skniro.alchemy.datagen;
 import com.skniro.alchemy.Alchemy;
 import com.skniro.alchemy.block.AlchemyBlocks;
 import com.skniro.alchemy.block.AlchemyOreBlocks;
+import com.skniro.alchemy.item.AlchemyItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.datagen.v1.provider.SimpleFabricLootTableProvider;
 import net.minecraft.data.server.BlockLootTableGenerator;
@@ -25,7 +26,7 @@ public class AlchemyLootTableGenerator extends SimpleFabricLootTableProvider {
         identifierBuilderBiConsumer.accept(new Identifier(Alchemy.MOD_ID,"blocks/alchemy_block"),
                 BlockLootTableGenerator.drops(AlchemyBlocks.Alchemy_Block));
         identifierBuilderBiConsumer.accept(new Identifier(Alchemy.MOD_ID,"blocks/arknite_ore"),
-                BlockLootTableGenerator.oreDrops(AlchemyOreBlocks.Deepslate_arknite_Ore, Item.fromBlock(AlchemyOreBlocks.Deepslate_arknite_Ore)));
+                BlockLootTableGenerator.oreDrops(AlchemyOreBlocks.Deepslate_arknite_Ore, AlchemyItems.Arknite));
 
         //MAPLE
 

@@ -39,6 +39,7 @@ public class AlchemyModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(AlchemyItems.Salt, Models.GENERATED);
+        itemModelGenerator.register(AlchemyItems.Arknite, Models.GENERATED);
         itemModelGenerator.register(ModFluids.PlantEssence_BUCKET, Models.GENERATED);
     }
 }

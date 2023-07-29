@@ -9,6 +9,7 @@ public class AlchemyItems {
 
     //Food Materials
     public static final Item Salt = registerItem("salt",new Item(new Item.Settings().group(Alchemy.Alchemy_Group_Food)));
+    public static final Item Arknite = registerItem("arknite",new Item(new Item.Settings().group(Alchemy.Alchemy_Group)));
 
 
     //Tools
