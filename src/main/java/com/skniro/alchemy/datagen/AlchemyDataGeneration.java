@@ -2,6 +2,8 @@ package com.skniro.alchemy.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.minecraft.util.registry.RegistryKey;
+import org.apache.http.config.RegistryBuilder;
 
 public class AlchemyDataGeneration implements DataGeneratorEntrypoint {
     @Override
