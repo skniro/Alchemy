@@ -4,13 +4,14 @@ import com.skniro.alchemy.block.AlchemyOreBlocks;
 import com.skniro.alchemy.fluid.ModFluids;
 import com.skniro.alchemy.item.AlchemyItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
 
 public class AlchemyModelProvider extends FabricModelProvider {
-    public AlchemyModelProvider(FabricDataGenerator dataGenerator){
+    public AlchemyModelProvider(FabricDataOutput dataGenerator){
         super(dataGenerator);
     }
 

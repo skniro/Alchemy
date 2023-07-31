@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:entity",
+  "type": "minecraft:block",
   "pools": [
     {
       "bonus_rolls": 0.0,
@@ -24,7 +24,7 @@
                   }
                 }
               ],
-              "name": "alchemy:deepslate_arknite_ore"
+              "name": "alchemy:end_septrin_ore"
             },
             {
               "type": "minecraft:item",
@@ -38,7 +38,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "alchemy:arknite"
+              "name": "alchemy:septrin"
             }
           ]
         }

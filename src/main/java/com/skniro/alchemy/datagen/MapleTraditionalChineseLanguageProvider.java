@@ -3,10 +3,11 @@ package com.skniro.alchemy.datagen;
 import com.skniro.alchemy.block.AlchemyOreBlocks;
 import com.skniro.alchemy.item.AlchemyItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 
 public class MapleTraditionalChineseLanguageProvider extends FabricLanguageProvider {
-    public MapleTraditionalChineseLanguageProvider(FabricDataGenerator dataGenerator){
+    public MapleTraditionalChineseLanguageProvider(FabricDataOutput dataGenerator){
         super(dataGenerator,"zh_tw");
     }
 

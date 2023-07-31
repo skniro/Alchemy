@@ -2,41 +2,57 @@ package com.skniro.alchemy.world;
 
 import com.skniro.alchemy.Alchemy;
 import com.skniro.alchemy.block.AlchemyOreBlocks;
-import net.minecraft.block.Block;
-
-import net.minecraft.util.math.intprovider.ConstantIntProvider;
-import net.minecraft.util.registry.RegistryEntry;
+import net.minecraft.block.Blocks;
+import net.minecraft.registry.Registerable;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.structure.rule.BlockMatchRuleTest;
+import net.minecraft.structure.rule.RuleTest;
+import net.minecraft.structure.rule.TagMatchRuleTest;
+import net.minecraft.util.Identifier;
+import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
-import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
-import net.minecraft.world.gen.stateprovider.BlockStateProvider;
-import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
+import net.minecraft.world.gen.placementmodifier.*;
 
 import java.util.List;
 
 
 public class AlchemyConfiguredFeatures {
-    public static final List<OreFeatureConfig.Target> OVERWORLD_SALT_ORES = List.of(
-            OreFeatureConfig.createTarget(OreConfiguredFeatures.STONE_ORE_REPLACEABLES, AlchemyOreBlocks.Salt_Ore.getDefaultState()),
-            OreFeatureConfig.createTarget(OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES, AlchemyOreBlocks.DEEPSLATE_Salt_Ore.getDefaultState()));
-    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> SALT_ORE;
-    public static final List<OreFeatureConfig.Target> OVERWORLD_Arknite_ORES = List.of(
-            OreFeatureConfig.createTarget(OreConfiguredFeatures.DEEPSLATE_ORE_REPLACEABLES, AlchemyOreBlocks.Deepslate_arknite_Ore.getDefaultState()));
-    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> Arknite_ORE;
+    public static final RegistryKey<ConfiguredFeature<?, ?>>  Arknite_ORE_KEY = registerKey("arknite_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>>  SALT_ORE_KEY = registerKey("salt_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>>  Deepslate_SALT_ORE_KEY = registerKey("deepslate_salt_ore");
+
+    public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
+        RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest netherstoneReplaceables = new BlockMatchRuleTest(Blocks.NETHERRACK);
+        RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
+        RuleTest endstoneReplaceables = new BlockMatchRuleTest(Blocks.END_STONE);
 
 
-    private static TreeFeatureConfig.Builder builder(Block log, Block leaves, int baseHeight, int firstRandomHeight, int secondRandomHeight, int radius) {
-        return new TreeFeatureConfig.Builder(BlockStateProvider.of(log), new StraightTrunkPlacer(baseHeight, firstRandomHeight, secondRandomHeight), BlockStateProvider.of(leaves), new BlobFoliagePlacer(ConstantIntProvider.create(radius), ConstantIntProvider.create(0), 3), new TwoLayersFeatureSize(1, 0, 1));
+        List<OreFeatureConfig.Target> deepslate_arknite_Ores =
+                List.of(OreFeatureConfig.createTarget(deepslateReplaceables, AlchemyOreBlocks.Deepslate_arknite_Ore.getDefaultState()));
+
+        List<OreFeatureConfig.Target> salt_Ores =
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, AlchemyOreBlocks.Salt_Ore.getDefaultState()));
+
+        List<OreFeatureConfig.Target> deepslate_salt_Ores =
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, AlchemyOreBlocks.DEEPSLATE_Salt_Ore.getDefaultState()));
+
+
+
+        register(context, Arknite_ORE_KEY, Feature.ORE, new OreFeatureConfig(deepslate_arknite_Ores, 2));
+        register(context, SALT_ORE_KEY, Feature.ORE, new OreFeatureConfig(salt_Ores, 1));
+        register(context, Deepslate_SALT_ORE_KEY, Feature.ORE, new OreFeatureConfig(deepslate_salt_Ores, 2));
     }
 
-    static{
-        SALT_ORE = ConfiguredFeatures.register("salt_ore", Feature.ORE, new OreFeatureConfig(OVERWORLD_SALT_ORES, 9));
-        Arknite_ORE = ConfiguredFeatures.register("arknite_ore", Feature.ORE, new OreFeatureConfig(OVERWORLD_Arknite_ORES, 3));
 
+    public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
+        return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(Alchemy.MOD_ID, name));
     }
-
-    public static void registerConfiguredFeatures() {
-        Alchemy.LOGGER.debug("Registering the ModConfiguredFeatures for " + Alchemy.MOD_ID);
+    private static <FC extends FeatureConfig, F extends Feature<FC>> void register(Registerable<ConfiguredFeature<?, ?>> context,
+                                                                                   RegistryKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
+        context.register(key, new ConfiguredFeature<>(feature, configuration));
     }
-
 }

@@ -12,14 +12,11 @@ import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
 public class PlantEssenceFluid extends FlowableFluid {
-    @Override
-    protected boolean isInfinite() {
-        return false;
-    }
 
     @Override
     protected void beforeBreakingBlock(WorldAccess world, BlockPos pos, BlockState state) {
@@ -65,6 +62,11 @@ public class PlantEssenceFluid extends FlowableFluid {
     @Override
     public Fluid getStill() {
         return ModFluids.STILL_PlantEssence_WATER;
+    }
+
+    @Override
+    protected boolean isInfinite(World world) {
+        return false;
     }
 
     @Override

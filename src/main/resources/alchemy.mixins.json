@@ -4,7 +4,6 @@
   "package": "com.skniro.alchemy.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "SignTypeAccessor",
     "BlockEntityTypeMixin"
 
   ],
