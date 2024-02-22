@@ -27,18 +27,8 @@ public class AlchemyLootTableGenerator extends SimpleFabricLootTableProvider {
                 BlockLootTableGenerator.drops(AlchemyBlocks.Alchemy_Block));
         identifierBuilderBiConsumer.accept(new Identifier(Alchemy.MOD_ID,"blocks/arknite_ore"),
                 BlockLootTableGenerator.oreDrops(AlchemyOreBlocks.Deepslate_arknite_Ore, AlchemyItems.Arknite));
-
-        //MAPLE
-
-
-
-
-        //BAMBOO
-
-
-        //SAKURA
-
-        //Crop
+        identifierBuilderBiConsumer.accept(new Identifier(Alchemy.MOD_ID,"blocks/septrin_ore"),
+                BlockLootTableGenerator.oreDrops(AlchemyOreBlocks.End_Septrin_Ore, AlchemyItems.Septrin));
 
     }
 }

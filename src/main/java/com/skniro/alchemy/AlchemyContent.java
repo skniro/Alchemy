@@ -13,6 +13,7 @@ import com.skniro.alchemy.util.MapleStrippableBlocks;
 import com.skniro.alchemy.world.AlchemyConfiguredFeatures;
 import com.skniro.alchemy.world.biome.MapleBiomeKeys;
 import com.skniro.alchemy.world.gen.MapleTreeGeneration;
+import com.skniro.alchemy.world.gen.ModOreGeneration;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
@@ -38,6 +39,7 @@ public class AlchemyContent {
 
     public static void generateWorldGen() {
         MapleTreeGeneration.generateTrees();
+        ModOreGeneration.generateOres();
         MapleBiomeKeys.registerBiome();
     }
     public static void registerMapleConfigured() {

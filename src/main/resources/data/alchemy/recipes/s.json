@@ -12,6 +12,7 @@
     }
   ],
   "output": {
-    "item": "alchemy:salt"
+    "item": "alchemy:salt",
+    "count": 3
   }
 }

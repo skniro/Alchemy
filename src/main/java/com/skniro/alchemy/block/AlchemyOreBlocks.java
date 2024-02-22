@@ -21,7 +21,9 @@ public class AlchemyOreBlocks {
     //闪电矿
     public static final Block lightning_Ore =registerBlock("lightning_ore",new OreBlock(AbstractBlock.Settings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(3, 7)), Alchemy.Alchemy_Group);
     //赤热矿
-    public static final Block Crimson_ore =registerBlock("lightning_ore",new OreBlock(AbstractBlock.Settings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(3, 7)), Alchemy.Alchemy_Group);
+    public static final Block Crimson_ore =registerBlock("crimson_ore",new OreBlock(AbstractBlock.Settings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(3, 7)), Alchemy.Alchemy_Group);
+    //圣石矿
+    public static final Block End_Septrin_Ore =registerBlock("end_septrin_ore",new OreBlock(AbstractBlock.Settings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(3, 7)), Alchemy.Alchemy_Group);
 
     private static Block registerBlockWithoutItem(String name, Block block) {
         return Registry.register(Registry.BLOCK, new Identifier(Alchemy.MOD_ID, name), block);
