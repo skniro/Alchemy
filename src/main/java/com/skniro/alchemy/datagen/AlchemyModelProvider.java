@@ -1,9 +1,9 @@
 package com.skniro.alchemy.datagen;
 
 import com.skniro.alchemy.block.AlchemyOreBlocks;
-import com.skniro.alchemy.fluid.ModFluids;
+import com.skniro.alchemy.fluid.AlchemyFluidItems;
+import com.skniro.alchemy.fluid.AlchemyFluids;
 import com.skniro.alchemy.item.AlchemyItems;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
@@ -45,7 +45,7 @@ public class AlchemyModelProvider extends FabricModelProvider {
         itemModelGenerator.register(AlchemyItems.Arknite, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.Septrin, Models.GENERATED);
 
-        itemModelGenerator.register(ModFluids.PlantEssence_BUCKET, Models.GENERATED);
+        itemModelGenerator.register(AlchemyFluidItems.PlantEssence_BUCKET, Models.GENERATED);
 
     }
 }

@@ -1,6 +1,8 @@
 package com.skniro.alchemy.block.init;
 
 
+import com.skniro.alchemy.block.entity.AlchemyBlockEntityType;
+import com.skniro.alchemy.block.entity.Alchemyblockentity;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
@@ -57,7 +59,7 @@ public class Alchemyblock extends BlockWithEntity implements BlockEntityProvider
         return BlockRenderType.MODEL;
     }
 
-    /*@Override
+    @Override
     public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
         if (state.getBlock() != newState.getBlock()) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -67,7 +69,7 @@ public class Alchemyblock extends BlockWithEntity implements BlockEntityProvider
             }
             super.onStateReplaced(state, world, pos, newState, moved);
         }
-    }*/
+    }
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos,
@@ -86,12 +88,6 @@ public class Alchemyblock extends BlockWithEntity implements BlockEntityProvider
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
-        return null;
-    }
-
-   /* @Nullable
-    @Override
-    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
         return new Alchemyblockentity(pos,state);
     }
 
@@ -99,6 +95,6 @@ public class Alchemyblock extends BlockWithEntity implements BlockEntityProvider
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
         return checkType(type, AlchemyBlockEntityType.ALCHEMY_BLOCK_ENTITY, Alchemyblockentity::tick);
-    }*/
+    }
 
 }

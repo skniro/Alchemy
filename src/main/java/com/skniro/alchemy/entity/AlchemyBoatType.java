@@ -2,7 +2,7 @@ package com.skniro.alchemy.entity;
 
 import net.minecraft.entity.vehicle.BoatEntity;
 
-public class MapleBoatType {
+public class AlchemyBoatType {
     static {
         BoatEntity.Type.values();
     }

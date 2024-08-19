@@ -1,5 +1,8 @@
-package com.skniro.alchemy.fluid;
+package com.skniro.alchemy.fluid.init;
 
+import com.skniro.alchemy.fluid.AlchemyFluidBlocks;
+import com.skniro.alchemy.fluid.AlchemyFluidItems;
+import com.skniro.alchemy.fluid.AlchemyFluids;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -61,7 +64,7 @@ public class PlantEssenceFluid extends FlowableFluid {
 
     @Override
     public Fluid getStill() {
-        return ModFluids.STILL_PlantEssence_WATER;
+        return AlchemyFluids.STILL_PlantEssence_WATER;
     }
 
     @Override
@@ -71,17 +74,17 @@ public class PlantEssenceFluid extends FlowableFluid {
 
     @Override
     public Fluid getFlowing() {
-        return ModFluids.FLOWING_PlantEssence_WATER;
+        return AlchemyFluids.FLOWING_PlantEssence_WATER;
     }
 
     @Override
     public Item getBucketItem() {
-        return ModFluids.PlantEssence_BUCKET;
+        return AlchemyFluidItems.PlantEssence_BUCKET;
     }
 
     @Override
     protected BlockState toBlockState(FluidState state) {
-        return ModFluids.PlantEssence_BLOCK.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(state));
+        return AlchemyFluidBlocks.PlantEssence_BLOCK.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(state));
     }
 
     @Override

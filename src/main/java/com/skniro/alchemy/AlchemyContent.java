@@ -3,13 +3,17 @@ package com.skniro.alchemy;
 
 import com.skniro.alchemy.block.AlchemyBlocks;
 import com.skniro.alchemy.block.AlchemyOreBlocks;
+import com.skniro.alchemy.block.entity.AlchemyBlockEntityType;
 import com.skniro.alchemy.client.gui.screen.ingame.AlchemyBlockScreen;
-import com.skniro.alchemy.fluid.ModFluids;
+import com.skniro.alchemy.fluid.AlchemyFluidBlocks;
+import com.skniro.alchemy.fluid.AlchemyFluidItems;
+import com.skniro.alchemy.fluid.AlchemyFluids;
 import com.skniro.alchemy.item.AlchemyFoodComponents;
 import com.skniro.alchemy.item.AlchemyItems;
+import com.skniro.alchemy.recipe.AlchemyRecipeType;
 import com.skniro.alchemy.screen.AlchemyScreenHandlerType;
-import com.skniro.alchemy.util.MapleFlammableBlocks;
-import com.skniro.alchemy.util.MapleStrippableBlocks;
+import com.skniro.alchemy.util.AlchemyFlammableBlocks;
+import com.skniro.alchemy.util.AlchemyStrippableBlocks;
 import com.skniro.alchemy.world.gen.MapleTreeGeneration;
 import com.skniro.alchemy.world.gen.ModOreGeneration;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -37,10 +41,16 @@ public class AlchemyContent {
         AlchemyFoodComponents.registerMapleFoodItems();
     }
     public static void registerBlock(){
-        MapleFlammableBlocks.registerFlammableBlocks();
-        MapleStrippableBlocks.registerStrippables();
+        AlchemyFlammableBlocks.registerFlammableBlocks();
+        AlchemyStrippableBlocks.registerStrippables();
         AlchemyBlocks.registerAlchemyBlocks();
         AlchemyOreBlocks.registerAlchemyExperienceDroppingBlocks();
+    }
+
+    public static void registerFluid(){
+        AlchemyFluids.registerFluids();
+        AlchemyFluidBlocks.registerFluidBlocks();
+        AlchemyFluidItems.registerFluidsItems();
     }
 
     public static void generateWorldGen() {
@@ -49,9 +59,9 @@ public class AlchemyContent {
     }
 
     public static void registerType() {
-        //AlchemyRecipeType.registerRecipeType();
+        AlchemyRecipeType.registerRecipeType();
         AlchemyScreenHandlerType.registeralchemyscreenhandlertype();
-        //AlchemyBlockEntityType.registerMapleBlockEntityType();
+        AlchemyBlockEntityType.registerMapleBlockEntityType();
     }
 
     public static void registerItemGroup() {
@@ -73,7 +83,7 @@ public class AlchemyContent {
             content.add(AlchemyItems.Septrin);
 
             //Fluids
-            content.add(ModFluids.PlantEssence_BUCKET);
+            content.add(AlchemyFluidItems.PlantEssence_BUCKET);
         });
     }
 
@@ -81,7 +91,7 @@ public class AlchemyContent {
     @net.fabricmc.api.Environment(net.fabricmc.api.EnvType.CLIENT)
     public static void registerforclient() {
         HandledScreens.register(AlchemyScreenHandlerType.ALCHEMY, AlchemyBlockScreen::new);
-        FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.STILL_PlantEssence_WATER, ModFluids.FLOWING_PlantEssence_WATER,
+        FluidRenderHandlerRegistry.INSTANCE.register(AlchemyFluids.STILL_PlantEssence_WATER, AlchemyFluids.FLOWING_PlantEssence_WATER,
                 new SimpleFluidRenderHandler(
                         new Identifier("minecraft:block/water_still"),
                         new Identifier("minecraft:block/water_flow"),
@@ -89,7 +99,7 @@ public class AlchemyContent {
                 ));
 
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(),
-                ModFluids.STILL_PlantEssence_WATER, ModFluids.FLOWING_PlantEssence_WATER);
+                AlchemyFluids.STILL_PlantEssence_WATER, AlchemyFluids.FLOWING_PlantEssence_WATER);
     }
 
 }
