@@ -81,6 +81,7 @@ public class AlchemyContent {
             content.add(AlchemyItems.Salt);
             content.add(AlchemyItems.Arknite);
             content.add(AlchemyItems.Septrin);
+            content.add(AlchemyItems.Test_Tool);
 
             //Fluids
             content.add(AlchemyFluidItems.PlantEssence_BUCKET);

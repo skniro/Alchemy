@@ -4,6 +4,7 @@ import com.skniro.alchemy.fluid.AlchemyFluidBlocks;
 import com.skniro.alchemy.fluid.AlchemyFluidItems;
 import com.skniro.alchemy.fluid.AlchemyFluids;
 import com.skniro.alchemy.recipe.AlchemyRecipeType;
+import com.skniro.alchemy.util.AlchemyLootTableModifiers;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.registry.RegistryKey;
@@ -29,6 +30,7 @@ public class Alchemy implements ModInitializer, TerraBlenderApi {
         AlchemyContent.registerItemGroup();
         AlchemyContent.registerType();
         AlchemyContent.registerFluid();
+        AlchemyLootTableModifiers.modifyLootTables();
     }
 
 

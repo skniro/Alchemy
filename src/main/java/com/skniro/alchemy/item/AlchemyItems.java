@@ -1,6 +1,7 @@
 package com.skniro.alchemy.item;
 
 import com.skniro.alchemy.Alchemy;
+import com.skniro.alchemy.item.init.AlchemyTestItem;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -11,6 +12,9 @@ public class AlchemyItems {
     public static final Item Arknite = registerItem("arknite",new Item(new Item.Settings()));
     //圣石
     public static final Item Septrin = registerItem("septrin",new Item(new Item.Settings()));
+
+
+    public static final Item Test_Tool = registerItem("testtool",new AlchemyTestItem(ToolMaterials.IRON,5, 6.0F, new Item.Settings()));
 
 
     private static Item registerItem(String name, Item item) {
