@@ -16,6 +16,8 @@ public class AlchemyItems {
 
     public static final Item Test_Tool = registerItem("testtool",new AlchemyTestItem(ToolMaterials.IRON,5, 6.0F, new Item.Settings()));
 
+    //能喝的
+    public static final Item Goat_Milk = registerItem("goat_milk",new MilkBucketItem(new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(Alchemy.MOD_ID, name), item);

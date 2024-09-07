@@ -5,6 +5,9 @@ import com.skniro.alchemy.block.AlchemyBlocks;
 import com.skniro.alchemy.block.AlchemyOreBlocks;
 import com.skniro.alchemy.block.entity.AlchemyBlockEntityType;
 import com.skniro.alchemy.client.gui.screen.ingame.AlchemyBlockScreen;
+import com.skniro.alchemy.entity.customnpc.AlchemyCustomNPCEntity;
+import com.skniro.alchemy.entity.client.render.entity.AlchemyCustomNPCRenderer;
+import com.skniro.alchemy.entity.AlchemyEntityType;
 import com.skniro.alchemy.fluid.AlchemyFluidBlocks;
 import com.skniro.alchemy.fluid.AlchemyFluidItems;
 import com.skniro.alchemy.fluid.AlchemyFluids;
@@ -19,8 +22,10 @@ import com.skniro.alchemy.world.gen.ModOreGeneration;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.ItemStack;
@@ -87,20 +92,41 @@ public class AlchemyContent {
             content.add(AlchemyFluidItems.PlantEssence_BUCKET);
         });
     }
-
+    public static void registerEntityAttribute() {
+        FabricDefaultAttributeRegistry.register(AlchemyEntityType.HimegiAgeha, AlchemyCustomNPCEntity.createMobAttributes());
+    }
 
     @net.fabricmc.api.Environment(net.fabricmc.api.EnvType.CLIENT)
-    public static void registerforclient() {
-        HandledScreens.register(AlchemyScreenHandlerType.ALCHEMY, AlchemyBlockScreen::new);
+    public static void registerForClient() {
+        registerFluidRenderForClient();
+        registerBlockRenderForClient();
+        registerEntityForClient();
+        registerScreenForClient();
+    }
+
+    @net.fabricmc.api.Environment(net.fabricmc.api.EnvType.CLIENT)
+    public static void registerFluidRenderForClient() {
         FluidRenderHandlerRegistry.INSTANCE.register(AlchemyFluids.STILL_PlantEssence_WATER, AlchemyFluids.FLOWING_PlantEssence_WATER,
                 new SimpleFluidRenderHandler(
                         new Identifier("minecraft:block/water_still"),
                         new Identifier("minecraft:block/water_flow"),
                         0xA59EE261
                 ));
+    }
 
-        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(),
-                AlchemyFluids.STILL_PlantEssence_WATER, AlchemyFluids.FLOWING_PlantEssence_WATER);
+    @net.fabricmc.api.Environment(net.fabricmc.api.EnvType.CLIENT)
+    public static void registerBlockRenderForClient() {
+        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), AlchemyFluids.STILL_PlantEssence_WATER, AlchemyFluids.FLOWING_PlantEssence_WATER);
+    }
+
+    @net.fabricmc.api.Environment(net.fabricmc.api.EnvType.CLIENT)
+    public static void registerScreenForClient() {
+        HandledScreens.register(AlchemyScreenHandlerType.ALCHEMY, AlchemyBlockScreen::new);
+    }
+
+    @net.fabricmc.api.Environment(net.fabricmc.api.EnvType.CLIENT)
+    public static void registerEntityForClient() {
+        EntityRendererRegistry.register(AlchemyEntityType.HimegiAgeha, AlchemyCustomNPCRenderer::new);
     }
 
 }
