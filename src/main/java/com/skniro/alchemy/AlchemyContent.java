@@ -2,6 +2,7 @@ package com.skniro.alchemy;
 
 
 import com.skniro.alchemy.block.AlchemyBlocks;
+import com.skniro.alchemy.block.AlchemyMapleBlocks;
 import com.skniro.alchemy.block.AlchemyOreBlocks;
 import com.skniro.alchemy.block.entity.AlchemyBlockEntityType;
 import com.skniro.alchemy.client.gui.screen.ingame.AlchemyBlockScreen;
@@ -50,6 +51,7 @@ public class AlchemyContent {
         AlchemyFlammableBlocks.registerFlammableBlocks();
         AlchemyStrippableBlocks.registerStrippables();
         AlchemyBlocks.registerAlchemyBlocks();
+        AlchemyMapleBlocks.registerAlchemyMapleTreeBlocks();
         AlchemyOreBlocks.registerAlchemyExperienceDroppingBlocks();
     }
 
