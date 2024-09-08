@@ -4,6 +4,7 @@ package com.skniro.alchemy;
 import com.skniro.alchemy.block.AlchemyBlocks;
 import com.skniro.alchemy.block.AlchemyMapleBlocks;
 import com.skniro.alchemy.block.AlchemyOreBlocks;
+import com.skniro.alchemy.block.AlchemySignBlocks;
 import com.skniro.alchemy.block.entity.AlchemyBlockEntityType;
 import com.skniro.alchemy.client.gui.screen.ingame.AlchemyBlockScreen;
 import com.skniro.alchemy.entity.customnpc.AlchemyCustomNPCEntity;
@@ -12,8 +13,7 @@ import com.skniro.alchemy.entity.AlchemyEntityType;
 import com.skniro.alchemy.fluid.AlchemyFluidBlocks;
 import com.skniro.alchemy.fluid.AlchemyFluidItems;
 import com.skniro.alchemy.fluid.AlchemyFluids;
-import com.skniro.alchemy.item.AlchemyFoodComponents;
-import com.skniro.alchemy.item.AlchemyItems;
+import com.skniro.alchemy.item.*;
 import com.skniro.alchemy.recipe.AlchemyRecipeType;
 import com.skniro.alchemy.screen.AlchemyScreenHandlerType;
 import com.skniro.alchemy.util.AlchemyFlammableBlocks;
@@ -46,6 +46,9 @@ public class AlchemyContent {
     public static void registerItem(){
         AlchemyItems.registerModItems();
         AlchemyFoodComponents.registerMapleFoodItems();
+        AlchemySignItems.registerAlchemySignItems();
+        AlchemyDoorItems.registerAlchemyDoorItems();
+        AlchemyBoatItems.registerAlchemyBoatItems();
     }
     public static void registerBlock(){
         AlchemyFlammableBlocks.registerFlammableBlocks();
@@ -53,6 +56,7 @@ public class AlchemyContent {
         AlchemyBlocks.registerAlchemyBlocks();
         AlchemyMapleBlocks.registerAlchemyMapleTreeBlocks();
         AlchemyOreBlocks.registerAlchemyExperienceDroppingBlocks();
+        AlchemySignBlocks.registerAlchemySignBlocks();
     }
 
     public static void registerFluid(){

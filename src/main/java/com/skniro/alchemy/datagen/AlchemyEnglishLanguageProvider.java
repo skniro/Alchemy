@@ -1,6 +1,8 @@
 package com.skniro.alchemy.datagen;
 
+import com.skniro.alchemy.block.AlchemyMapleBlocks;
 import com.skniro.alchemy.block.AlchemyOreBlocks;
+import com.skniro.alchemy.block.AlchemySignBlocks;
 import com.skniro.alchemy.item.AlchemyItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
@@ -13,6 +15,24 @@ public class AlchemyEnglishLanguageProvider extends FabricLanguageProvider {
     @Override
     public void generateTranslations(TranslationBuilder translationBuilder) {
         //Maple
+        translationBuilder.add(AlchemyMapleBlocks.MAPLE_PLANKS,"Maple Planks");
+        translationBuilder.add(AlchemyMapleBlocks.MAPLE_LOG,"Maple Log");
+        translationBuilder.add(AlchemyMapleBlocks.MAPLE_WOOD,"Maple Wood");
+        translationBuilder.add(AlchemyMapleBlocks.STRIPPED_MAPLE_WOOD,"Stripped Maple Wood");
+        translationBuilder.add(AlchemyMapleBlocks.STRIPPED_MAPLE_LOG,"Stripped Maple Log");
+        translationBuilder.add(AlchemyMapleBlocks.RED_MAPLE_LEAVES,"Red Maple Leaves");
+        translationBuilder.add(AlchemyMapleBlocks.MAPLE_DOOR,"Maple Door");
+        translationBuilder.add(AlchemyMapleBlocks.MAPLE_BUTTON,"Maple Button");
+        translationBuilder.add(AlchemyMapleBlocks.MAPLE_FENCE,"Maple Fence");
+        translationBuilder.add(AlchemyMapleBlocks.MAPLE_FENCE_GATE,"Maple Fence Gate");
+        translationBuilder.add(AlchemyMapleBlocks.MAPLE_SLAB,"Maple Slab");
+        translationBuilder.add(AlchemyMapleBlocks.MAPLE_STAIRS,"Maple Stairs");
+        translationBuilder.add(AlchemyMapleBlocks.RED_MAPLE_SAPLING,"Red Maple Sapling");
+        translationBuilder.add(AlchemyMapleBlocks.POTTED_RED_MAPLE_SAPLING,"Potted Red Maple Sapling");
+        translationBuilder.add(AlchemySignBlocks.Maple_SIGN,"Maple Sign");
+        translationBuilder.add(AlchemySignBlocks.Maple_HANGING_SIGN,"Maple Hanging Sign");
+        translationBuilder.add(AlchemyMapleBlocks.MAPLE_TRAPDOOR,"Maple Trapdoor");
+        translationBuilder.add(AlchemyMapleBlocks.MAPLE_PRESSURE_PLATE,"Maple Pressure Plate");
 
 
         //Cherry

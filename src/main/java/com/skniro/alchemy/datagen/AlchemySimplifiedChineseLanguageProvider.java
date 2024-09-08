@@ -1,7 +1,9 @@
 package com.skniro.alchemy.datagen;
 
 import com.skniro.alchemy.Alchemy;
+import com.skniro.alchemy.block.AlchemyMapleBlocks;
 import com.skniro.alchemy.block.AlchemyOreBlocks;
+import com.skniro.alchemy.block.AlchemySignBlocks;
 import com.skniro.alchemy.item.AlchemyItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
@@ -13,10 +15,29 @@ public class AlchemySimplifiedChineseLanguageProvider extends FabricLanguageProv
 
     @Override
     public void generateTranslations(TranslationBuilder translationBuilder){
-        //Maple
+            //Maple
+            translationBuilder.add(AlchemyMapleBlocks.MAPLE_PLANKS,"枫木木板");
+            translationBuilder.add(AlchemyMapleBlocks.MAPLE_LOG,"枫树原木");
+            translationBuilder.add(AlchemyMapleBlocks.MAPLE_WOOD,"枫树木");
+            translationBuilder.add(AlchemyMapleBlocks.STRIPPED_MAPLE_WOOD,"去皮枫树木");
+            translationBuilder.add(AlchemyMapleBlocks.STRIPPED_MAPLE_LOG,"去皮枫树原木");
+            translationBuilder.add(AlchemyMapleBlocks.RED_MAPLE_LEAVES,"红枫枫树叶");
+            translationBuilder.add(AlchemyMapleBlocks.MAPLE_DOOR,"枫木门");
+            translationBuilder.add(AlchemyMapleBlocks.MAPLE_BUTTON,"枫木按钮");
+            translationBuilder.add(AlchemyMapleBlocks.MAPLE_FENCE,"枫木栏杆");
+            translationBuilder.add(AlchemyMapleBlocks.MAPLE_FENCE_GATE,"枫木栏杆门");
+            translationBuilder.add(AlchemyMapleBlocks.MAPLE_SLAB,"枫木台阶");
+            translationBuilder.add(AlchemyMapleBlocks.MAPLE_STAIRS,"枫木楼梯");
+            translationBuilder.add(AlchemyMapleBlocks.RED_MAPLE_SAPLING,"红枫枫木树苗");
+            translationBuilder.add(AlchemyMapleBlocks.POTTED_RED_MAPLE_SAPLING,"枫木树苗盆栽");
+            translationBuilder.add(AlchemySignBlocks.Maple_SIGN,"枫木告示牌");
+            translationBuilder.add(AlchemySignBlocks.Maple_HANGING_SIGN,"悬挂式枫木告示牌");
+            translationBuilder.add(AlchemyMapleBlocks.MAPLE_TRAPDOOR,"枫木活版门");
+            translationBuilder.add(AlchemyMapleBlocks.MAPLE_PRESSURE_PLATE,"枫木压力板");
 
 
-        //Cherry
+
+            //Cherry
 ;
 
         //BAMBOO
