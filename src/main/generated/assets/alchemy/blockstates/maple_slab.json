@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "alchemy:block/maple_slab"
+    },
+    "type=double": {
+      "model": "alchemy:block/maple_planks"
+    },
+    "type=top": {
+      "model": "alchemy:block/maple_slab_top"
+    }
+  }
+}

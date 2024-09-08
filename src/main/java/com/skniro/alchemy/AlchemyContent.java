@@ -29,7 +29,6 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
-import net.minecraft.data.client.Models;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
@@ -269,8 +268,28 @@ public class AlchemyContent {
             content.add(AlchemyItems.SPIRIT_FEATHER);
             content.add(AlchemyItems.RUSTED_SWORD);
             content.add(AlchemyItems.AZURITE_ORE);
-
-
+            content.add(AlchemyMapleBlocks.MAPLE_LOG);
+            content.add(AlchemyMapleBlocks.STRIPPED_MAPLE_LOG);
+            content.add(AlchemyMapleBlocks.STRIPPED_MAPLE_WOOD);
+            content.add(AlchemyMapleBlocks.MAPLE_WOOD);
+            content.add(AlchemyMapleBlocks.STRIPPED_MAPLE_WOOD);
+            content.add(AlchemyMapleBlocks.STRIPPED_MAPLE_LOG);
+            content.add(AlchemyMapleBlocks.RED_MAPLE_SAPLING);
+            content.add(AlchemyMapleBlocks.MAPLE_PLANKS);
+            content.add(AlchemyMapleBlocks.RED_MAPLE_LEAVES);
+            content.add(AlchemyMapleBlocks.RED_MAPLE_CARPET);
+            content.add(AlchemyMapleBlocks.MAPLE_BUTTON);
+            content.add(AlchemyMapleBlocks.MAPLE_STAIRS);
+            content.add(AlchemyMapleBlocks.MAPLE_SLAB);
+            content.add(AlchemyMapleBlocks.MAPLE_FENCE);
+            content.add(AlchemyMapleBlocks.MAPLE_FENCE_GATE);
+            content.add(AlchemyMapleBlocks.MAPLE_TRAPDOOR);
+            content.add(AlchemyMapleBlocks.MAPLE_PRESSURE_PLATE);
+            content.add(AlchemySignItems.MAPLE_SIGN);
+            content.add(AlchemySignItems.Maple_HANGING_SIGN);
+            content.add(AlchemyDoorItems.MAPLE_DOOR);
+            content.add(AlchemyBoatItems.MAPLE_BOAT);
+            content.add(AlchemyBoatItems.MAPLE_CHEST_BOAT);
 
             // Other Materials
             content.add(AlchemyItems.BEE_HIVE);
@@ -307,8 +326,24 @@ public class AlchemyContent {
 
     @net.fabricmc.api.Environment(net.fabricmc.api.EnvType.CLIENT)
     public static void registerBlockRenderForClient() {
-        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), AlchemyFluids.STILL_EmeraldBand_WATER, AlchemyFluids.FLOWING_EmeraldBand_WATER);
-        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), AlchemyFluids.FLOWING_RotwaterMineral_WATER, AlchemyFluids.FLOWING_RotwaterMineral_WATER);
+        RenderLayer renderLayer1 = RenderLayer.getCutout();
+        BlockRenderLayerMap.INSTANCE.putBlock(AlchemyMapleBlocks.MAPLE_DOOR, renderLayer1);
+        BlockRenderLayerMap.INSTANCE.putBlock(AlchemyMapleBlocks.MAPLE_TRAPDOOR, renderLayer1);
+
+        RenderLayer renderLayer2 = RenderLayer.getCutoutMipped();
+        BlockRenderLayerMap.INSTANCE.putBlock(AlchemyMapleBlocks.RED_MAPLE_CARPET,renderLayer2);
+
+
+        RenderLayer renderLayer3 = RenderLayer.getCutout();
+        BlockRenderLayerMap.INSTANCE.putBlock(AlchemyMapleBlocks.RED_MAPLE_LEAVES, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(AlchemyMapleBlocks.RED_MAPLE_SAPLING , renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(AlchemyMapleBlocks.POTTED_RED_MAPLE_SAPLING, renderLayer3);
+
+
+        RenderLayer renderLayer4 = RenderLayer.getTranslucent();
+        BlockRenderLayerMap.INSTANCE.putFluids(renderLayer4, AlchemyFluids.STILL_EmeraldBand_WATER, AlchemyFluids.FLOWING_EmeraldBand_WATER);
+        BlockRenderLayerMap.INSTANCE.putFluids(renderLayer4, AlchemyFluids.FLOWING_RotwaterMineral_WATER, AlchemyFluids.FLOWING_RotwaterMineral_WATER);
+
     }
 
     @net.fabricmc.api.Environment(net.fabricmc.api.EnvType.CLIENT)

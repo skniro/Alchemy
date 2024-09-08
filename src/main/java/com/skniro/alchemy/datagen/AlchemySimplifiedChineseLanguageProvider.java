@@ -8,6 +8,8 @@ import com.skniro.alchemy.item.AlchemyItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 
+import java.nio.file.Path;
+
 public class AlchemySimplifiedChineseLanguageProvider extends FabricLanguageProvider {
     public AlchemySimplifiedChineseLanguageProvider(FabricDataOutput dataGenerator){
         super(dataGenerator,"zh_cn");
@@ -34,7 +36,7 @@ public class AlchemySimplifiedChineseLanguageProvider extends FabricLanguageProv
             translationBuilder.add(AlchemySignBlocks.Maple_HANGING_SIGN,"悬挂式枫木告示牌");
             translationBuilder.add(AlchemyMapleBlocks.MAPLE_TRAPDOOR,"枫木活版门");
             translationBuilder.add(AlchemyMapleBlocks.MAPLE_PRESSURE_PLATE,"枫木压力板");
-
+            translationBuilder.add(AlchemyMapleBlocks.RED_MAPLE_CARPET,"红枫落叶");
 
 
             //Cherry
@@ -244,5 +246,11 @@ public class AlchemySimplifiedChineseLanguageProvider extends FabricLanguageProv
         translationBuilder.add(AlchemyItems.GOLDEN_BEE_HIVE,"金色蜂巢");
 
 
+/*        try {
+                Path existingFilePath = dataOutput.getModContainer().findPath("assets/maple/lang/zh_cn.existing.json").get();
+                translationBuilder.add(existingFilePath);
+        } catch (Exception e) {
+                throw new RuntimeException("Failed to add existing language file!", e);
+        }*/
     }
 }

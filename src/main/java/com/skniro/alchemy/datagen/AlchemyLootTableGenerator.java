@@ -7,6 +7,9 @@ import com.skniro.alchemy.block.AlchemySignBlocks;
 import com.skniro.alchemy.item.AlchemyItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.loot.entry.ItemEntry;
+import net.minecraft.loot.function.SetCountLootFunction;
+import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 
 
 public class AlchemyLootTableGenerator extends FabricBlockLootTableProvider {
@@ -17,6 +20,8 @@ public class AlchemyLootTableGenerator extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
+        addDrop(AlchemyOreBlocks.Salt_Ore, dropsWithSilkTouch(AlchemyOreBlocks.Salt_Ore, this.applyExplosionDecay(AlchemyOreBlocks.Salt_Ore, ItemEntry.builder(AlchemyItems.Salt).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F,1.0F))))));
+        addDrop(AlchemyOreBlocks.DEEPSLATE_Salt_Ore, dropsWithSilkTouch(AlchemyOreBlocks.DEEPSLATE_Salt_Ore, this.applyExplosionDecay(AlchemyOreBlocks.DEEPSLATE_Salt_Ore, ItemEntry.builder(AlchemyItems.Salt).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0F, 5.0F))))));
         addDrop(AlchemyOreBlocks.Deepslate_arknite_Ore, oreDrops(AlchemyOreBlocks.Deepslate_arknite_Ore, AlchemyItems.Arknite));
         addDrop(AlchemyOreBlocks.End_Septrin_Ore, oreDrops(AlchemyOreBlocks.End_Septrin_Ore,AlchemyItems.Septrin));
         addDrop(AlchemyBlocks.Alchemy_Block);
@@ -41,5 +46,7 @@ public class AlchemyLootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(AlchemyMapleBlocks.MAPLE_TRAPDOOR);
         addDrop(AlchemyMapleBlocks.STRIPPED_MAPLE_LOG);
         addDrop(AlchemyMapleBlocks.STRIPPED_MAPLE_WOOD);
+        addPottedPlantDrops(AlchemyMapleBlocks.POTTED_RED_MAPLE_SAPLING);
+        addDrop(AlchemyMapleBlocks.RED_MAPLE_CARPET);
     }
 }

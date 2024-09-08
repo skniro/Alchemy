@@ -7,6 +7,8 @@ import com.skniro.alchemy.item.AlchemyItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 
+import java.nio.file.Path;
+
 public class AlchemyEnglishLanguageProvider extends FabricLanguageProvider {
     public AlchemyEnglishLanguageProvider(FabricDataOutput dataGenerator){
         super(dataGenerator,"en_us");
@@ -33,6 +35,7 @@ public class AlchemyEnglishLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(AlchemySignBlocks.Maple_HANGING_SIGN,"Maple Hanging Sign");
         translationBuilder.add(AlchemyMapleBlocks.MAPLE_TRAPDOOR,"Maple Trapdoor");
         translationBuilder.add(AlchemyMapleBlocks.MAPLE_PRESSURE_PLATE,"Maple Pressure Plate");
+        translationBuilder.add(AlchemyMapleBlocks.RED_MAPLE_CARPET,"Red Maple Fallen Leaves");
 
 
         //Cherry
@@ -60,6 +63,11 @@ public class AlchemyEnglishLanguageProvider extends FabricLanguageProvider {
         //Food
 
         //Boat
-
+/*        try {
+            Path existingFilePath = dataOutput.getModContainer().findPath("assets/maple/lang/en_us.existing.json").get();
+            translationBuilder.add(existingFilePath);
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to add existing language file!", e);
+        }*/
     }
 }

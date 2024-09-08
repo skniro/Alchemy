@@ -1,15 +1,20 @@
 package com.skniro.alchemy.datagen;
 
+import com.skniro.alchemy.block.AlchemyBlocks;
+import com.skniro.alchemy.block.AlchemyMapleBlocks;
 import com.skniro.alchemy.block.AlchemyOreBlocks;
 import com.skniro.alchemy.fluid.AlchemyFluidItems;
 import com.skniro.alchemy.fluid.AlchemyFluids;
+import com.skniro.alchemy.item.AlchemyBoatItems;
 import com.skniro.alchemy.item.AlchemyItems;
+import com.skniro.alchemy.item.AlchemySignItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
 import net.minecraft.item.Item;
+import net.minecraft.state.property.Properties;
 
 public class AlchemyModelProvider extends FabricModelProvider {
     public AlchemyModelProvider(FabricDataOutput dataGenerator){
@@ -28,15 +33,13 @@ public class AlchemyModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(AlchemyOreBlocks.Crimson_ore);
         blockStateModelGenerator.registerCubeAllModelTexturePool(AlchemyOreBlocks.End_Septrin_Ore);
         //LOG Block
+        blockStateModelGenerator.registerLog(AlchemyMapleBlocks.MAPLE_LOG).log(AlchemyMapleBlocks.MAPLE_LOG).wood(AlchemyMapleBlocks.MAPLE_WOOD);
+        blockStateModelGenerator.registerLog(AlchemyMapleBlocks.STRIPPED_MAPLE_LOG).log(AlchemyMapleBlocks.STRIPPED_MAPLE_LOG).wood(AlchemyMapleBlocks.STRIPPED_MAPLE_WOOD);
 
-        //Door
-
-        //TRAPDOOR
-
-        //SAPLING
-
-        //Crop
-
+        //Maple
+        BlockStateModelGenerator.BlockTexturePool maple_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(AlchemyMapleBlocks.MAPLE_PLANKS);
+        maple_pool.family(AlchemyMapleBlocks.MAPLE_FAMILY);
+        blockStateModelGenerator.registerWoolAndCarpet(AlchemyMapleBlocks.RED_MAPLE_LEAVES,AlchemyMapleBlocks.RED_MAPLE_CARPET);
 
     }
 
@@ -221,11 +224,18 @@ public class AlchemyModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(AlchemyItems.AZURITE_ORE, Models.GENERATED);
 
+        //Sign
+        itemModelGenerator.register(AlchemySignItems.Maple_HANGING_SIGN, Models.GENERATED);
+
+        //Boat
+        itemModelGenerator.register(AlchemyBoatItems.MAPLE_BOAT, Models.GENERATED);
+        itemModelGenerator.register(AlchemyBoatItems.MAPLE_CHEST_BOAT, Models.GENERATED);
 
 
         // Other Materials
         itemModelGenerator.register(AlchemyItems.BEE_HIVE, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.GOLDEN_BEE_HIVE, Models.GENERATED);
+
 
     }
 }

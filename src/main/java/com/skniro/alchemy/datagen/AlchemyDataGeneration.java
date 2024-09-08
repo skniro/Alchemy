@@ -1,7 +1,7 @@
 package com.skniro.alchemy.datagen;
 
-import com.skniro.alchemy.world.AlchemyConfiguredFeatures;
-import com.skniro.alchemy.world.AlchemyPlacedFeatures;
+import com.skniro.alchemy.world.feature.AlchemyConfiguredFeatures;
+import com.skniro.alchemy.world.feature.AlchemyPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;

@@ -1,6 +1,6 @@
 package com.skniro.alchemy.world.gen;
 
-import com.skniro.alchemy.world.AlchemyPlacedFeatures;
+import com.skniro.alchemy.world.feature.AlchemyPlacedFeatures;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.world.gen.GenerationStep;

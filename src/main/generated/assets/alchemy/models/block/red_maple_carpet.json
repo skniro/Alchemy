@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/carpet",
+  "textures": {
+    "wool": "alchemy:block/red_maple_leaves"
+  }
+}
