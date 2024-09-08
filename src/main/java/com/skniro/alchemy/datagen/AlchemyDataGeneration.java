@@ -12,9 +12,9 @@ public class AlchemyDataGeneration implements DataGeneratorEntrypoint {
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
         pack.addProvider(AlchemyModelProvider::new);
-        pack.addProvider(MapleSimplifiedChineseLanguageProvider::new);
-        pack.addProvider(MapleTraditionalChineseLanguageProvider::new);
-        pack.addProvider(MapleEnglishLanguageProvider::new);
+        pack.addProvider(AlchemySimplifiedChineseLanguageProvider::new);
+        pack.addProvider(AlchemyTraditionalChineseLanguageProvider::new);
+        pack.addProvider(AlchemyEnglishLanguageProvider::new);
         pack.addProvider(AlchemyLootTableGenerator::new);
         pack.addProvider(AlchemyWorldGenerator::new);
     }

@@ -1,7 +1,8 @@
 package com.skniro.alchemy.fluid;
 
 import com.skniro.alchemy.Alchemy;
-import com.skniro.alchemy.fluid.init.PlantEssenceFluid;
+import com.skniro.alchemy.fluid.init.EmeraldBandFluid;
+import com.skniro.alchemy.fluid.init.RotwaterMineralFluid;
 import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -9,8 +10,10 @@ import net.minecraft.util.Identifier;
 
     public class AlchemyFluids {
 
-        public static final FlowableFluid STILL_PlantEssence_WATER = registerFluid("plant_essence_water", new PlantEssenceFluid.Still());
-        public static final FlowableFluid FLOWING_PlantEssence_WATER = registerFluid("plowing_plant_essence_water", new PlantEssenceFluid.Flowing());
+        public static final FlowableFluid STILL_EmeraldBand_WATER = registerFluid("emerald_band_water", new EmeraldBandFluid.Still());
+        public static final FlowableFluid FLOWING_EmeraldBand_WATER = registerFluid("plowing_emerald_band_water", new EmeraldBandFluid.Flowing());
+        public static final FlowableFluid STILL_RotwaterMineral_WATER = registerFluid("rotwater_mineral_water", new RotwaterMineralFluid.Still());
+        public static final FlowableFluid FLOWING_RotwaterMineral_WATER = registerFluid("plowing_rotwater_mineral_water", new RotwaterMineralFluid.Flowing());
 
 
 

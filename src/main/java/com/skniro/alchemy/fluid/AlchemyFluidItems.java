@@ -15,9 +15,10 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class AlchemyFluidItems {
-    public static Item PlantEssence_BUCKET= registerItem("plant_essence_bucket",
-            new BucketItem(AlchemyFluids.STILL_PlantEssence_WATER, new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
-
+    public static Item EmeraldBand_BUCKET= registerItem("emerald_band_bucket",
+            new BucketItem(AlchemyFluids.STILL_EmeraldBand_WATER, new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
+    public static Item RotwaterMineral_BUCKET= registerItem("rotwater_mineral_bucket",
+            new BucketItem(AlchemyFluids.STILL_RotwaterMineral_WATER, new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(Alchemy.MOD_ID, name), item);

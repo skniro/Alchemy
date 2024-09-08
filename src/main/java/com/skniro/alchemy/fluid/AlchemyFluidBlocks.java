@@ -16,8 +16,10 @@ import net.minecraft.util.Identifier;
 
 public class AlchemyFluidBlocks {
 
-    public static final Block PlantEssence_BLOCK = registerBlockWithoutItem("plant_essence_block",
-            new FluidBlock(AlchemyFluids.STILL_PlantEssence_WATER, FabricBlockSettings.copyOf(Blocks.WATER)){ });
+    public static final Block EmeraldBand_BLOCK = registerBlockWithoutItem("emerald_band_block",
+            new FluidBlock(AlchemyFluids.STILL_EmeraldBand_WATER, FabricBlockSettings.copyOf(Blocks.WATER)){ });
+    public static final Block RotwaterMineral_BLOCK = registerBlockWithoutItem("rotwater_mineral_block",
+            new FluidBlock(AlchemyFluids.STILL_RotwaterMineral_WATER, FabricBlockSettings.copyOf(Blocks.WATER)){ });
 
 
     private static Block registerBlockWithoutItem(String name, Block block) {

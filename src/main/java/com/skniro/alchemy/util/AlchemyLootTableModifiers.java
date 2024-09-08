@@ -71,12 +71,24 @@ public class AlchemyLootTableModifiers {
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
             if(GRASS_BLOCK_ID.equals(id)) {
-                LootPool.Builder poolBuilder2 = LootPool.builder()
+                LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.35f))// Drops 35% of the time
+                        .conditionally(RandomChanceLootCondition.builder(1f))// Drops 100% of the time
                         .with(ItemEntry.builder(Items.IRON_HOE))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)).build());
-                tableBuilder.pool(poolBuilder2.conditionally(MatchToolLootCondition.builder(ItemPredicate.Builder.create().items(AlchemyItems.Test_Tool))).build());
+                tableBuilder.pool(poolBuilder.conditionally(MatchToolLootCondition.builder(ItemPredicate.Builder.create().items(AlchemyItems.Test_Tool_Type1_Level1))).build());
+                LootPool.Builder poolBuilder1 = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(2))
+                        .conditionally(RandomChanceLootCondition.builder(1f))// Drops 100% of the time
+                        .with(ItemEntry.builder(Items.IRON_HOE))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)).build());
+                tableBuilder.pool(poolBuilder1.conditionally(MatchToolLootCondition.builder(ItemPredicate.Builder.create().items(AlchemyItems.Test_Tool_Type1_Level2))).build());
+                LootPool.Builder poolBuilder2 = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(3))
+                        .conditionally(RandomChanceLootCondition.builder(1f))// Drops 100% of the time
+                        .with(ItemEntry.builder(Items.IRON_HOE))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)).build());
+                tableBuilder.pool(poolBuilder2.conditionally(MatchToolLootCondition.builder(ItemPredicate.Builder.create().items(AlchemyItems.Test_Tool_Type1_Level3))).build());
             }
         });
     }

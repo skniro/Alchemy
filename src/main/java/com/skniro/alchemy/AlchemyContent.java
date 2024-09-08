@@ -28,6 +28,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.data.client.Models;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
@@ -81,15 +82,193 @@ public class AlchemyContent {
 
             //Ore
             content.add(AlchemyOreBlocks.Crimson_ore);
+            content.add(AlchemyItems.Crimson);
+            content.add(AlchemyItems.Hematite);
 
             //Items
             content.add(AlchemyItems.Salt);
             content.add(AlchemyItems.Arknite);
             content.add(AlchemyItems.Septrin);
-            content.add(AlchemyItems.Test_Tool);
+            content.add(AlchemyItems.Test_Tool_Type1_Level1);
 
             //Fluids
-            content.add(AlchemyFluidItems.PlantEssence_BUCKET);
+            content.add(AlchemyFluidItems.EmeraldBand_BUCKET);
+
+            content.add(AlchemyItems.PlantEssence);
+            content.add(AlchemyItems.NamelessGrass);
+            content.add(AlchemyItems.EtherAqua);
+            content.add(AlchemyItems.ScorchedGrass);
+            content.add(AlchemyItems.LuckyClover);
+            content.add(AlchemyItems.PoisonEater);
+            content.add(AlchemyItems.WasserWheat);
+            content.add(AlchemyItems.MapleLeaf);
+            content.add(AlchemyItems.SweetLeaf);
+            content.add(AlchemyItems.RoseLeaf);
+            content.add(AlchemyItems.AncientBranch);
+
+
+            // Sea Urchins
+            content.add(AlchemyItems.SeaUrchin);
+            content.add(AlchemyItems.SILVER_SEA_URCHIN);
+            content.add(AlchemyItems.GOLDEN_SEA_URCHIN);
+
+            // Flowers
+            content.add(AlchemyItems.FORGET_ME_NOT);
+            content.add(AlchemyItems.NORTH_WIND_FLOWER);
+            content.add(AlchemyItems.NIGHTGLOW_FLOWER);
+            content.add(AlchemyItems.Sun_Nectar_Flower);
+            content.add(AlchemyItems.Blessed_Clear_Flower);
+            content.add(AlchemyItems.Reminiscence_Mist_Flower);
+            content.add(AlchemyItems.Silent_Moonflower);
+            content.add(AlchemyItems.Tranquil_Flower);
+            content.add(AlchemyItems.Clear_Water_White_Princess);
+            content.add(AlchemyItems.DOLPHIN_ROSE);
+
+            // Grass, Herbs, and Leaves
+            content.add(AlchemyItems.LANTERN_GRASS);
+            content.add(AlchemyItems.SOAP_GRASS);
+            content.add(AlchemyItems.Aether_Grass);
+
+            content.add(AlchemyItems.HERB);
+            content.add(AlchemyItems.LONG_NECK_GRASS);
+            content.add(AlchemyItems.MUTANT_PLANT);
+            content.add(AlchemyItems.THREE_SEED_GRASS);
+            content.add(AlchemyItems.RED_GRASS);
+            content.add(AlchemyItems.BITTER_ROOT);
+            content.add(AlchemyItems.SAPLING_BRANCHES);
+            content.add(AlchemyItems.MOSS_STONE);
+            content.add(AlchemyItems.RICH_SOIL);
+            content.add(AlchemyItems.MEDICINE_BONE);
+            content.add(AlchemyItems.KARMINE_FRUIT);
+            content.add(AlchemyItems.KARMINE_VENOM);
+            content.add(AlchemyItems.DECAYED_BARK);
+            content.add(AlchemyItems.WAILING_GROANS);
+            content.add(AlchemyItems.MUSHROOM_SPORES);
+            content.add(AlchemyItems.DEATHS_SIGH);
+            content.add(AlchemyItems.FOREST_WISDOM_GRASS);
+            content.add(AlchemyItems.NIGHT_FLOWER);
+            content.add(AlchemyItems.SOFT_SAND);
+            content.add(AlchemyItems.FLAMMABLE_SAND);
+            content.add(AlchemyItems.WHITE_ASH_SAND);
+            content.add(AlchemyItems.POLLUTED_DEAD_LEAF_SOIL);;
+            content.add(AlchemyItems.EMERALD_GLASS);
+            content.add(AlchemyItems.SANDSTONE);
+            content.add(AlchemyItems.WEATHERED_STONE);
+            content.add(AlchemyItems.ANCIENT_PILLAR);
+            content.add(AlchemyItems.CORAL_STONE);
+            content.add(AlchemyItems.CAVE_CORAL);
+            content.add(AlchemyItems.RIVER_STONE);
+            content.add(AlchemyItems.RIVER_STONE_BLAZE);
+            content.add(AlchemyItems.STALACTITE_FRAGMENT);
+            content.add(AlchemyItems.SPIRIT_WHITE_ROCK);
+            content.add(AlchemyItems.KOBOLD_NIGHTSTONE);
+            content.add(AlchemyItems.PAINT_NIGHTSTONE);
+            content.add(AlchemyItems.MOLDY_NIGHTSTONE);
+            content.add(AlchemyItems.GORDY_NIGHTSTONE);
+            content.add(AlchemyItems.COMET_ROCK);
+            content.add(AlchemyItems.CREATION_REVERSE_STONE);
+            content.add(AlchemyItems.SMALL_CRYSTAL);
+            content.add(AlchemyItems.UNKNOWN_ORE);
+            content.add(AlchemyItems.GREAT_WHITE_PEARL);
+            content.add(AlchemyItems.STRIPED_STONE);;
+            content.add(AlchemyItems.AMBER_FRAGMENT);
+            content.add(AlchemyItems.AMBER_CRYSTAL);
+            content.add(AlchemyItems.MAGNETIC_MARBLE);
+            content.add(AlchemyItems.HOLY_TREE_CRYSTAL);
+            content.add(AlchemyItems.DRIED_WOOD_CHIP);
+            content.add(AlchemyItems.BLACK_FLAME_SAND);
+            content.add(AlchemyItems.MAGMA_POWDER);
+            content.add(AlchemyItems.PAPER_SCRAP);
+            content.add(AlchemyItems.FLAMMABLE_BARK);
+            content.add(AlchemyItems.PALM_BARK);
+            content.add(AlchemyItems.NATURAL_OIL);
+            content.add(AlchemyItems.WHITE_SMOKE_CHARCOAL);
+            content.add(AlchemyItems.PALM_BLACK_CHARCOAL);
+            content.add(AlchemyItems.WILD_POTATO);
+            content.add(AlchemyItems.BEAST_MEAT);
+            content.add(AlchemyItems.FRESH_MEAT);
+            content.add(AlchemyItems.KUKEN_FRUIT);
+            content.add(AlchemyItems.UNKNOWN_EGG);
+            content.add(AlchemyItems.SEVEN_COLORED_GRAPE);
+            content.add(AlchemyItems.PALMA_FRUIT);
+            content.add(AlchemyItems.BERRY);
+            content.add(AlchemyItems.OIL_TREE_FRUIT);
+            content.add(AlchemyItems.DEW_FRUIT);
+            content.add(AlchemyItems.OAK_MUSHROOM);
+            content.add(AlchemyItems.DREAM_MUSHROOM);
+            content.add(AlchemyItems.CLUSTER_MUSHROOM);
+            content.add(AlchemyItems.JUPITER_TOOTH_MUSHROOM);
+            content.add(AlchemyItems.GOLDEN_CROWN);
+            content.add(AlchemyItems.BEAUTIFUL_SHELL);
+            content.add(AlchemyItems.SARDINE);
+            content.add(AlchemyItems.JIANG_LONG_FISH);
+            content.add(AlchemyItems.SPIKY_FISH);;
+            content.add(AlchemyItems.YELLOW_TAIL_FISH);
+            content.add(AlchemyItems.SHRUB_CRAB);
+            content.add(AlchemyItems.CAP_CRAB);
+            content.add(AlchemyItems.SHARP_NOSE_FISH);
+            content.add(AlchemyItems.HAMMERFISH);
+            content.add(AlchemyItems.ANCIENT_FISH);
+            content.add(AlchemyItems.LAKE_MASTER);
+            content.add(AlchemyItems.OTHERWORLD_MASTER);
+            content.add(AlchemyItems.SEVEN_STAR_BUG );
+            content.add(AlchemyItems.HONEY_ANT);
+            content.add(AlchemyItems.LANTERN_FIREFLY);
+            content.add(AlchemyItems.ROSE_BEE);
+            content.add(AlchemyItems.BEETLE);
+            content.add(AlchemyItems.BLAZING_DRAGONFLY);
+            content.add(AlchemyItems.SPEAR_WORM);
+            content.add(AlchemyItems.AMBER_FLY);
+            content.add(AlchemyItems.NAPIS_BUTTERFLY);
+            content.add(AlchemyItems.YOUNG_RAINBOW_WORM);
+            content.add(AlchemyItems.TRIANGLE_BEETLE);
+            content.add(AlchemyItems.HARDENED_SPIDER_SILK);
+            content.add(AlchemyItems.STRONG_VINE);
+            content.add(AlchemyItems.WOOLLY_GRASS);
+            content.add(AlchemyItems.GIANT_IVY);
+            content.add(AlchemyItems.OAK_WOOD);
+            content.add(AlchemyItems.STURDY_LOG);
+            content.add(AlchemyItems.MOSSY_DRIFTWOOD);
+            content.add(AlchemyItems.PALMA_WOOD);
+            content.add(AlchemyItems.FOSSIL_TREE);
+            content.add(AlchemyItems.HONEY_WOOD);
+            content.add(AlchemyItems.OTHERWORLD_ROTTEN_WOOD);
+            content.add(AlchemyItems.HOLY_TREE_BIG_BRANCH);
+            content.add(AlchemyItems.WINGED_LEAF_GRASS);
+            content.add(AlchemyItems.SKY_BUBBLE);
+            content.add(AlchemyItems.SCORCH_MUSHROOM);
+            content.add(AlchemyItems.ROTTEN_WOOD_POISON_MIST);
+            content.add(AlchemyItems.PUNI_PUNI_BALL_BLUE);
+            content.add(AlchemyItems.PUNI_PUNI_BALL_GREEN);
+            content.add(AlchemyItems.PUNI_PUNI_BALL_RED);
+            content.add(AlchemyItems.PUNI_PUNI_BALL_BLACK);
+            content.add(AlchemyItems.PUNI_PUNI_BALL_SILVER);
+            content.add(AlchemyItems.PUNI_PUNI_BALL_GOLD);
+            content.add(AlchemyItems.LARGE_FEATHER);
+            content.add(AlchemyItems.ANIMAL_FUR);
+            content.add(AlchemyItems.FANTASY_BEAST_FUR);
+            content.add(AlchemyItems.LARGE_BONE);
+            content.add(AlchemyItems.SNAKE_SHEATH);
+            content.add(AlchemyItems.GIANT_BEAST_FOSSIL);
+            content.add(AlchemyItems.MAGIC_STONE_FRAGMENT);
+            content.add(AlchemyItems.DARK_CRYSTAL_FRAGMENT);
+            content.add(AlchemyItems.HOLY_STONE_FRAGMENT);
+            content.add(AlchemyItems.MAGIC_BOOK_PAGE);
+            content.add(AlchemyItems.OLD_MAGIC_BOOK);
+            content.add(AlchemyItems.OTHERWORLD_CORE);
+            content.add(AlchemyItems.HOLY_TREE_LEAF);
+            content.add(AlchemyItems.MAPLE_BARK);
+            content.add(AlchemyItems.HONEY_WOOD_BRANCH);
+            content.add(AlchemyItems.SPIRIT_FLOWER);
+            content.add(AlchemyItems.SPIRIT_FEATHER);
+            content.add(AlchemyItems.RUSTED_SWORD);
+            content.add(AlchemyItems.AZURITE_ORE);
+
+
+
+            // Other Materials
+            content.add(AlchemyItems.BEE_HIVE);
+            content.add(AlchemyItems.GOLDEN_BEE_HIVE);
         });
     }
     public static void registerEntityAttribute() {
@@ -106,7 +285,13 @@ public class AlchemyContent {
 
     @net.fabricmc.api.Environment(net.fabricmc.api.EnvType.CLIENT)
     public static void registerFluidRenderForClient() {
-        FluidRenderHandlerRegistry.INSTANCE.register(AlchemyFluids.STILL_PlantEssence_WATER, AlchemyFluids.FLOWING_PlantEssence_WATER,
+        FluidRenderHandlerRegistry.INSTANCE.register(AlchemyFluids.STILL_EmeraldBand_WATER, AlchemyFluids.FLOWING_EmeraldBand_WATER,
+                new SimpleFluidRenderHandler(
+                        new Identifier("minecraft:block/water_still"),
+                        new Identifier("minecraft:block/water_flow"),
+                        0xA59EE261
+                ));
+        FluidRenderHandlerRegistry.INSTANCE.register(AlchemyFluids.STILL_RotwaterMineral_WATER, AlchemyFluids.FLOWING_RotwaterMineral_WATER,
                 new SimpleFluidRenderHandler(
                         new Identifier("minecraft:block/water_still"),
                         new Identifier("minecraft:block/water_flow"),
@@ -116,7 +301,8 @@ public class AlchemyContent {
 
     @net.fabricmc.api.Environment(net.fabricmc.api.EnvType.CLIENT)
     public static void registerBlockRenderForClient() {
-        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), AlchemyFluids.STILL_PlantEssence_WATER, AlchemyFluids.FLOWING_PlantEssence_WATER);
+        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), AlchemyFluids.STILL_EmeraldBand_WATER, AlchemyFluids.FLOWING_EmeraldBand_WATER);
+        BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), AlchemyFluids.FLOWING_RotwaterMineral_WATER, AlchemyFluids.FLOWING_RotwaterMineral_WATER);
     }
 
     @net.fabricmc.api.Environment(net.fabricmc.api.EnvType.CLIENT)
