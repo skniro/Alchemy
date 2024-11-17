@@ -1,9 +1,6 @@
 package com.skniro.alchemy;
 
-import com.skniro.alchemy.fluid.AlchemyFluidBlocks;
-import com.skniro.alchemy.fluid.AlchemyFluidItems;
-import com.skniro.alchemy.fluid.AlchemyFluids;
-import com.skniro.alchemy.recipe.AlchemyRecipeType;
+import com.skniro.alchemy.command.CoinCommand;
 import com.skniro.alchemy.util.AlchemyLootTableModifiers;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.item.ItemGroup;
@@ -12,7 +9,6 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import terrablender.api.Regions;
 import terrablender.api.TerraBlenderApi;
 
 
@@ -32,6 +28,8 @@ public class Alchemy implements ModInitializer, TerraBlenderApi {
         AlchemyContent.registerFluid();
         AlchemyLootTableModifiers.modifyLootTables();
         AlchemyContent.registerEntityAttribute();
+        AlchemyContent.registerNetworkServer();
+        CoinCommand.register();
     }
 
 

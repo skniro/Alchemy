@@ -1,11 +1,13 @@
 package com.skniro.alchemy;
 
 
+import com.skniro.alchemy.Networking.AlchemyMessages;
 import com.skniro.alchemy.block.AlchemyBlocks;
 import com.skniro.alchemy.block.AlchemyMapleBlocks;
 import com.skniro.alchemy.block.AlchemyOreBlocks;
 import com.skniro.alchemy.block.AlchemySignBlocks;
 import com.skniro.alchemy.block.entity.AlchemyBlockEntityType;
+import com.skniro.alchemy.client.CoinHudOverlay;
 import com.skniro.alchemy.client.gui.screen.ingame.AlchemyBlockScreen;
 import com.skniro.alchemy.entity.customnpc.AlchemyCustomNPCEntity;
 import com.skniro.alchemy.entity.client.render.entity.AlchemyCustomNPCRenderer;
@@ -25,6 +27,7 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
@@ -63,6 +66,10 @@ public class AlchemyContent {
         AlchemyFluids.registerFluids();
         AlchemyFluidBlocks.registerFluidBlocks();
         AlchemyFluidItems.registerFluidsItems();
+    }
+
+    public static void registerNetworkServer(){
+        AlchemyMessages.registerC2SPackets();
     }
 
     public static void generateWorldGen() {
@@ -308,6 +315,7 @@ public class AlchemyContent {
         registerBlockRenderForClient();
         registerEntityForClient();
         registerScreenForClient();
+        registerNetworkForClient();
     }
 
     @net.fabricmc.api.Environment(net.fabricmc.api.EnvType.CLIENT)
@@ -351,6 +359,7 @@ public class AlchemyContent {
     @net.fabricmc.api.Environment(net.fabricmc.api.EnvType.CLIENT)
     public static void registerScreenForClient() {
         HandledScreens.register(AlchemyScreenHandlerType.ALCHEMY, AlchemyBlockScreen::new);
+        HudRenderCallback.EVENT.register(new CoinHudOverlay());
     }
 
     @net.fabricmc.api.Environment(net.fabricmc.api.EnvType.CLIENT)
@@ -358,5 +367,9 @@ public class AlchemyContent {
         EntityRendererRegistry.register(AlchemyEntityType.HimegiAgeha, AlchemyCustomNPCRenderer::new);
     }
 
+    @net.fabricmc.api.Environment(net.fabricmc.api.EnvType.CLIENT)
+    public static void registerNetworkForClient() {
+            AlchemyMessages.registerS2CPackets();
+    }
 }
 
