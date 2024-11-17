@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.7-SNAPSHOT'
+    id 'fabric-loom' version '1.8-SNAPSHOT'
     id 'maven-publish'
 }
 
@@ -15,6 +15,14 @@ repositories {
         // location of the maven that hosts JEI files before January 2023
         name = "Progwml6's maven"
         url = "https://dvs1.progwml6.com/files/maven/"
+    }
+    maven {
+        name = "TerraformersMC"
+        url = "https://maven.terraformersmc.com/"
+    }
+    maven {
+        name = "Ladysnake Libs"
+        url = 'https://maven.ladysnake.org/releases'
     }
     // Add repositories to retrieve artifacts from in here.
     // You should only use this when depending on other mods because
@@ -33,6 +41,7 @@ dependencies {
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
     modImplementation "com.github.glitchfiend:TerraBlender-fabric:${project.terrablender_version}"
+    modImplementation "dev.emi:trinkets:${trinkets_version}"
     //modImplementation "com.github.glitchfiend:TerraBlender-fabric:${project.terrablender_version}"
 
     // compile against the JEI API but do not include it at runtime

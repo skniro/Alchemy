@@ -2,7 +2,8 @@ package com.skniro.alchemy.util;
 
 import com.skniro.alchemy.item.AlchemyItems;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
-import net.minecraft.item.Items;
+import net.minecraft.block.Block;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.condition.MatchToolLootCondition;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
@@ -11,6 +12,7 @@ import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.predicate.item.ItemPredicate;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
 
 public class AlchemyLootTableModifiers {

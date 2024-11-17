@@ -10,6 +10,7 @@ import com.skniro.alchemy.client.gui.screen.ingame.AlchemyBlockScreen;
 import com.skniro.alchemy.entity.customnpc.AlchemyCustomNPCEntity;
 import com.skniro.alchemy.entity.client.render.entity.AlchemyCustomNPCRenderer;
 import com.skniro.alchemy.entity.AlchemyEntityType;
+import com.skniro.alchemy.entity.village.AlchemyVillagers;
 import com.skniro.alchemy.fluid.AlchemyFluidBlocks;
 import com.skniro.alchemy.fluid.AlchemyFluidItems;
 import com.skniro.alchemy.fluid.AlchemyFluids;
@@ -73,6 +74,7 @@ public class AlchemyContent {
         AlchemyRecipeType.registerRecipeType();
         AlchemyScreenHandlerType.registeralchemyscreenhandlertype();
         AlchemyBlockEntityType.registerMapleBlockEntityType();
+        AlchemyVillagers.registerVillagerType();
     }
 
     public static void registerItemGroup() {

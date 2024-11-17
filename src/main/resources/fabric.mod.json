@@ -30,6 +30,7 @@
   ],
   "depends": {
     "fabricloader": ">=0.14.19",
+    "trinkets": "*",
     "minecraft": "1.20.X",
     "fabric": "*"
   }
