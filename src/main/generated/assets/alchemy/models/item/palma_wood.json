@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "alchemy:item/palma_wood"
-  }
+  "parent": "alchemy:block/palma_wood"
 }

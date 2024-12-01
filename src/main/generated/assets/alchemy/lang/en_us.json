@@ -20,5 +20,8 @@
   "block.alchemy.salt_ore": "Salt Ore",
   "block.alchemy.stripped_maple_log": "Stripped Maple Log",
   "block.alchemy.stripped_maple_wood": "Stripped Maple Wood",
-  "item.alchemy.salt": "Salt"
+  "item.alchemy.salt": "Salt",
+  "item.minecraft.lingering_potion.effect.karmine_venom": "Karmine Lingering Potion",
+  "item.minecraft.potion.effect.karmine_venom": "卡明毒液",
+  "item.minecraft.splash_potion.effect.karmine_venom": "Karmine Splash Potion"
 }

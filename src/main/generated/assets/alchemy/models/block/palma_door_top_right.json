@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_right",
+  "textures": {
+    "bottom": "alchemy:block/palma_door_bottom",
+    "top": "alchemy:block/palma_door_top"
+  }
+}

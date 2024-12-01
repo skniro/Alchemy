@@ -63,11 +63,11 @@ public class AlchemyEnglishLanguageProvider extends FabricLanguageProvider {
         //Food
 
         //Boat
-/*        try {
-            Path existingFilePath = dataOutput.getModContainer().findPath("assets/maple/lang/en_us.existing.json").get();
+        try {
+            Path existingFilePath = dataOutput.getModContainer().findPath("assets/alchemy/lang/en_us.existing.json").get();
             translationBuilder.add(existingFilePath);
         } catch (Exception e) {
             throw new RuntimeException("Failed to add existing language file!", e);
-        }*/
+        }
     }
 }
