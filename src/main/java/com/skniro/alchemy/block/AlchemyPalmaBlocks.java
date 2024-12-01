@@ -35,7 +35,7 @@ public class AlchemyPalmaBlocks {
     public static final Block PALMA_SAPLING = registerBlock("red_palma_sapling",new SaplingBlock(new PalmaSaplingGenerator(),FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)), Alchemy.Alchemy_Group);
     public static final Block PALMA_LEAVES = registerBlock("red_palma_leaves",
             new LeavesBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES).mapColor(MapColor.RED)), Alchemy.Alchemy_Group);
-    public static final Block PALMA_FRUIT_LEAVES = registerBlock("red_palma_leaves",
+    public static final Block PALMA_FRUIT_LEAVES = registerBlock("palma_fruit_leaves",
             new LeafCropBlock(FabricBlockSettings.copy(Blocks.OAK_LEAVES).mapColor(MapColor.RED), AlchemyFoodComponents.PALMA_FRUIT), Alchemy.Alchemy_Group);
     public static final Block PALMA_PLANKS = registerBlock("palma_planks",
             new Block(FabricBlockSettings.copy(Blocks.OAK_PLANKS).mapColor(MapColor.BROWN)), Alchemy.Alchemy_Group);
