@@ -20,11 +20,11 @@ public class AlchemyFoodComponents {
                                     .hunger(6)
                                     .saturationModifier(0.3f)
                                     .alwaysEdible()
-                                    .statusEffect
+/*                                    .statusEffect
                                             (new StatusEffectInstance(StatusEffects.POISON,
                                                             300,
                                                             0),
-                                                    1.0F)
+                                                    1.0F)*/
                                     .build()
                             )
     ));
