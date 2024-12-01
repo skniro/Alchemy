@@ -10,4 +10,8 @@ public class AlchemySignTypes {
 
     public static final WoodType GINKGO =
             SignTypeAccessor.registerNew(SignTypeAccessor.newSignType("alchemy_ginkgo", AlchemyBlockSetType.GINKGO));
+
+    public static final WoodType PALMA =
+            SignTypeAccessor.registerNew(SignTypeAccessor.newSignType("alchemy_palma", AlchemyBlockSetType.MAPLE));
+
 }

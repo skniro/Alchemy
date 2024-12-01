@@ -17,6 +17,8 @@ public class BoatDropsMixin {
     public void asItem(CallbackInfoReturnable<Item> ci) {
         if (((BoatEntity)(Object)this).getVariant() == AlchemyBoatType.MAPLE) {
             ci.setReturnValue(AlchemyBoatItems.MAPLE_BOAT);
+        }else if (((BoatEntity)(Object)this).getVariant() == AlchemyBoatType.Palma) {
+            ci.setReturnValue(AlchemyBoatItems.Palma_BOAT);
         }
     }
 

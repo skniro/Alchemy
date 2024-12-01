@@ -63,7 +63,6 @@ public class AlchemyItems {
     public static final Item RICH_SOIL = registerItem("rich_soil", new Item(new Item.Settings()));
     public static final Item MEDICINE_BONE = registerItem("medicine_bone", new Item(new Item.Settings()));
     public static final Item KARMINE_FRUIT = registerItem("karmine_fruit", new Item(new Item.Settings()));
-    public static final Item KARMINE_VENOM = registerItem("karmine_venom", new Item(new Item.Settings()));
     public static final Item DECAYED_BARK = registerItem("decayed_bark", new Item(new Item.Settings()));
     public static final Item WAILING_GROANS = registerItem("wailing_groans", new Item(new Item.Settings()));
     public static final Item MUSHROOM_SPORES = registerItem("mushroom_spores", new Item(new Item.Settings()));
@@ -114,7 +113,6 @@ public class AlchemyItems {
     public static final Item KUKEN_FRUIT = registerItem("kuken_fruit", new Item(new Item.Settings()));
     public static final Item UNKNOWN_EGG = registerItem("unknown_egg", new Item(new Item.Settings()));
     public static final Item SEVEN_COLORED_GRAPE = registerItem("seven_colored_grape", new Item(new Item.Settings()));
-    public static final Item PALMA_FRUIT = registerItem("palma_fruit", new Item(new Item.Settings()));
     public static final Item BERRY = registerItem("berry", new Item(new Item.Settings()));
     public static final Item OIL_TREE_FRUIT = registerItem("oil_tree_fruit", new Item(new Item.Settings()));
     public static final Item DEW_FRUIT = registerItem("dew_fruit", new Item(new Item.Settings()));
@@ -150,10 +148,8 @@ public class AlchemyItems {
     public static final Item STRONG_VINE = registerItem("strong_vine", new Item(new Item.Settings()));
     public static final Item WOOLLY_GRASS = registerItem("woolly_grass", new Item(new Item.Settings()));
     public static final Item GIANT_IVY = registerItem("giant_ivy", new Item(new Item.Settings()));
-    public static final Item OAK_WOOD = registerItem("oak_wood", new Item(new Item.Settings()));
     public static final Item STURDY_LOG = registerItem("sturdy_log", new Item(new Item.Settings()));
     public static final Item MOSSY_DRIFTWOOD = registerItem("mossy_driftwood", new Item(new Item.Settings()));
-    public static final Item PALMA_WOOD = registerItem("palma_wood", new Item(new Item.Settings()));
     public static final Item FOSSIL_TREE = registerItem("fossil_tree", new Item(new Item.Settings()));
     public static final Item HONEY_WOOD = registerItem("honey_wood", new Item(new Item.Settings()));
     public static final Item OTHERWORLD_ROTTEN_WOOD = registerItem("otherworld_rotten_wood", new Item(new Item.Settings()));

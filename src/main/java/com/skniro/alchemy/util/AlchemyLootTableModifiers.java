@@ -1,6 +1,7 @@
 package com.skniro.alchemy.util;
 
 import com.skniro.alchemy.item.AlchemyItems;
+import com.skniro.alchemy.registry.tag.AlchemyItemTags;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemGroup;
@@ -78,7 +79,27 @@ public class AlchemyLootTableModifiers {
                         .conditionally(RandomChanceLootCondition.builder(1f))// Drops 100% of the time
                         .with(ItemEntry.builder(AlchemyItems.NamelessGrass))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)).build());
-                tableBuilder.pool(poolBuilder.conditionally(MatchToolLootCondition.builder(ItemPredicate.Builder.create().items(AlchemyItems.Test_Tool_Type1_Level1))).build());
+                tableBuilder.pool(poolBuilder.conditionally(MatchToolLootCondition.builder(ItemPredicate.Builder.create().tag(AlchemyItemTags.Tool1))).build());
+                LootPool.Builder poolBuilder1 = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(2))
+                        .conditionally(RandomChanceLootCondition.builder(1f))// Drops 100% of the time
+                        .with(ItemEntry.builder(AlchemyItems.NamelessGrass))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)).build());
+                tableBuilder.pool(poolBuilder1.conditionally(MatchToolLootCondition.builder(ItemPredicate.Builder.create().items(AlchemyItems.Test_Tool_Type1_Level2))).build());
+                LootPool.Builder poolBuilder2 = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(3))
+                        .conditionally(RandomChanceLootCondition.builder(1f))// Drops 100% of the time
+                        .with(ItemEntry.builder(AlchemyItems.NamelessGrass))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)).build());
+                tableBuilder.pool(poolBuilder2.conditionally(MatchToolLootCondition.builder(ItemPredicate.Builder.create().items(AlchemyItems.Test_Tool_Type1_Level3))).build());
+            }
+            if(GRASS_BLOCK_ID.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(1f))// Drops 100% of the time
+                        .with(ItemEntry.builder(AlchemyItems.NamelessGrass))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)).build());
+                tableBuilder.pool(poolBuilder.conditionally(MatchToolLootCondition.builder(ItemPredicate.Builder.create().tag(AlchemyItemTags.Tool1))).build());
                 LootPool.Builder poolBuilder1 = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(2))
                         .conditionally(RandomChanceLootCondition.builder(1f))// Drops 100% of the time

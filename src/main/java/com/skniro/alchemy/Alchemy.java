@@ -22,6 +22,8 @@ public class Alchemy implements ModInitializer, TerraBlenderApi {
     public void onInitialize() {
         AlchemyContent.registerItem();
         AlchemyContent.registerBlock();
+        AlchemyContent.registerPotion();
+        AlchemyContent.registerRecipe();
         AlchemyContent.generateWorldGen();
         AlchemyContent.registerItemGroup();
         AlchemyContent.registerType();

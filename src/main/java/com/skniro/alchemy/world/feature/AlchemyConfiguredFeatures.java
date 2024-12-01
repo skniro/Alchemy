@@ -3,7 +3,9 @@ package com.skniro.alchemy.world.feature;
 import com.skniro.alchemy.Alchemy;
 import com.skniro.alchemy.block.AlchemyMapleBlocks;
 import com.skniro.alchemy.block.AlchemyOreBlocks;
+import com.skniro.alchemy.block.AlchemyPalmaBlocks;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
@@ -13,11 +15,13 @@ import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.collection.DataPool;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 
 import java.util.List;
@@ -27,14 +31,29 @@ public class AlchemyConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>>  Arknite_ORE_KEY = registerKey("arknite_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>>  SALT_ORE_KEY = registerKey("salt_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>>  Deepslate_SALT_ORE_KEY = registerKey("deepslate_salt_ore");
-    public static final RegistryKey<ConfiguredFeature<?, ?>> Red_Maple_TREE =registerKey("red_maple_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>>  Red_Maple_TREE =registerKey("red_maple_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>>  Palma_TREE =registerKey("red_palma_tree");
 
     private static TreeFeatureConfig.Builder builder(Block log, Block leaves, int baseHeight, int firstRandomHeight, int secondRandomHeight, int radius) {
         return new TreeFeatureConfig.Builder(BlockStateProvider.of(log), new StraightTrunkPlacer(baseHeight, firstRandomHeight, secondRandomHeight), BlockStateProvider.of(leaves), new BlobFoliagePlacer(ConstantIntProvider.create(radius), ConstantIntProvider.create(0), 3), new TwoLayersFeatureSize(1, 0, 1));
     }
 
+
+    static DataPool.Builder<BlockState> pool() {
+        return DataPool.builder();
+    }
+
     private static TreeFeatureConfig.Builder redmaple() {
         return AlchemyConfiguredFeatures.builder(AlchemyMapleBlocks.MAPLE_LOG, AlchemyMapleBlocks.RED_MAPLE_LEAVES, 4, 3, 0, 2).ignoreVines();
+    }
+
+    private static TreeFeatureConfig palma() {
+        return new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(AlchemyPalmaBlocks.PALMA_LOG),
+                new StraightTrunkPlacer(4, 2, 0),
+                new WeightedBlockStateProvider(pool().add(AlchemyPalmaBlocks.PALMA_LEAVES.getDefaultState(), 3).add(AlchemyPalmaBlocks.PALMA_FRUIT_LEAVES.getDefaultState(), 1)),
+                new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
+                new TwoLayersFeatureSize(1, 0, 1)).build();
     }
 
 
@@ -57,7 +76,8 @@ public class AlchemyConfiguredFeatures {
         //Tree
         register(context, Red_Maple_TREE, Feature.TREE,
                 AlchemyConfiguredFeatures.redmaple().build());
-
+        register(context, Palma_TREE, Feature.TREE,
+                AlchemyConfiguredFeatures.palma());
 
         register(context, Arknite_ORE_KEY, Feature.ORE, new OreFeatureConfig(deepslate_arknite_Ores, 2));
         register(context, SALT_ORE_KEY, Feature.ORE, new OreFeatureConfig(salt_Ores, 1));

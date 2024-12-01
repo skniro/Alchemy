@@ -8,4 +8,5 @@ public class AlchemyBoatType {
     }
     public static BoatEntity.Type MAPLE;
     public static BoatEntity.Type GINKGO;
+    public static BoatEntity.Type Palma;
 }

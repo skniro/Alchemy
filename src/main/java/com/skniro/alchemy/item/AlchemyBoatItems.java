@@ -11,6 +11,8 @@ public class AlchemyBoatItems {
     //Boat
     public static final Item MAPLE_BOAT = registerItem("maple_boat", (new BoatItem(false, AlchemyBoatType.MAPLE, (new Item.Settings()).maxCount(1))));
     public static final Item MAPLE_CHEST_BOAT = registerItem("maple_chest_boat", (new BoatItem(true, AlchemyBoatType.MAPLE, (new Item.Settings()).maxCount(1))));
+    public static final Item Palma_BOAT = registerItem("palma_boat", (new BoatItem(false, AlchemyBoatType.Palma, (new Item.Settings()).maxCount(1))));
+    public static final Item Palma_CHEST_BOAT = registerItem("palma_chest_boat", (new BoatItem(true, AlchemyBoatType.Palma, (new Item.Settings()).maxCount(1))));
 
 
     private static Item registerItem(String name,Item item) {

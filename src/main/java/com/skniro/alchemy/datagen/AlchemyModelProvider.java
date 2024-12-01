@@ -3,9 +3,11 @@ package com.skniro.alchemy.datagen;
 import com.skniro.alchemy.block.AlchemyBlocks;
 import com.skniro.alchemy.block.AlchemyMapleBlocks;
 import com.skniro.alchemy.block.AlchemyOreBlocks;
+import com.skniro.alchemy.block.AlchemyPalmaBlocks;
 import com.skniro.alchemy.fluid.AlchemyFluidItems;
 import com.skniro.alchemy.fluid.AlchemyFluids;
 import com.skniro.alchemy.item.AlchemyBoatItems;
+import com.skniro.alchemy.item.AlchemyFoodComponents;
 import com.skniro.alchemy.item.AlchemyItems;
 import com.skniro.alchemy.item.AlchemySignItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -32,14 +34,22 @@ public class AlchemyModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(AlchemyOreBlocks.lightning_Ore);
         blockStateModelGenerator.registerCubeAllModelTexturePool(AlchemyOreBlocks.Crimson_ore);
         blockStateModelGenerator.registerCubeAllModelTexturePool(AlchemyOreBlocks.End_Septrin_Ore);
+
         //LOG Block
         blockStateModelGenerator.registerLog(AlchemyMapleBlocks.MAPLE_LOG).log(AlchemyMapleBlocks.MAPLE_LOG).wood(AlchemyMapleBlocks.MAPLE_WOOD);
         blockStateModelGenerator.registerLog(AlchemyMapleBlocks.STRIPPED_MAPLE_LOG).log(AlchemyMapleBlocks.STRIPPED_MAPLE_LOG).wood(AlchemyMapleBlocks.STRIPPED_MAPLE_WOOD);
+        blockStateModelGenerator.registerLog(AlchemyPalmaBlocks.PALMA_LOG).log(AlchemyPalmaBlocks.PALMA_LOG).wood(AlchemyPalmaBlocks.PALMA_WOOD);
+        blockStateModelGenerator.registerLog(AlchemyPalmaBlocks.STRIPPED_PALMA_LOG).log(AlchemyPalmaBlocks.STRIPPED_PALMA_LOG).wood(AlchemyPalmaBlocks.STRIPPED_PALMA_WOOD);
 
         //Maple
         BlockStateModelGenerator.BlockTexturePool maple_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(AlchemyMapleBlocks.MAPLE_PLANKS);
         maple_pool.family(AlchemyMapleBlocks.MAPLE_FAMILY);
         blockStateModelGenerator.registerWoolAndCarpet(AlchemyMapleBlocks.RED_MAPLE_LEAVES,AlchemyMapleBlocks.RED_MAPLE_CARPET);
+
+        //PALMA
+        BlockStateModelGenerator.BlockTexturePool palma_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(AlchemyPalmaBlocks.PALMA_PLANKS);
+        maple_pool.family(AlchemyPalmaBlocks.PALMA_FAMILY);
+        //blockStateModelGenerator.registerWoolAndCarpet(AlchemyPalmaBlocks.PALMA_LEAVES,AlchemyPalmaBlocks.PALMA_CARPET);
 
     }
 
@@ -99,7 +109,6 @@ public class AlchemyModelProvider extends FabricModelProvider {
         itemModelGenerator.register(AlchemyItems.RICH_SOIL, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.MEDICINE_BONE, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.KARMINE_FRUIT, Models.GENERATED);
-        itemModelGenerator.register(AlchemyItems.KARMINE_VENOM, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.DECAYED_BARK, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.WAILING_GROANS, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.MUSHROOM_SPORES, Models.GENERATED);
@@ -149,7 +158,7 @@ public class AlchemyModelProvider extends FabricModelProvider {
         itemModelGenerator.register(AlchemyItems.KUKEN_FRUIT, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.UNKNOWN_EGG, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.SEVEN_COLORED_GRAPE, Models.GENERATED);
-        itemModelGenerator.register(AlchemyItems.PALMA_FRUIT, Models.GENERATED);
+        itemModelGenerator.register(AlchemyFoodComponents.PALMA_FRUIT, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.BERRY, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.OIL_TREE_FRUIT, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.DEW_FRUIT, Models.GENERATED);
@@ -185,10 +194,8 @@ public class AlchemyModelProvider extends FabricModelProvider {
         itemModelGenerator.register(AlchemyItems.STRONG_VINE, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.WOOLLY_GRASS, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.GIANT_IVY, Models.GENERATED);
-        itemModelGenerator.register(AlchemyItems.OAK_WOOD, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.STURDY_LOG, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.MOSSY_DRIFTWOOD, Models.GENERATED);
-        itemModelGenerator.register(AlchemyItems.PALMA_WOOD, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.FOSSIL_TREE, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.HONEY_WOOD, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.OTHERWORLD_ROTTEN_WOOD, Models.GENERATED);

@@ -12,6 +12,7 @@ public record AlchemyBlockSetType(String name, BlockSoundGroup soundType, SoundE
     private static final Set<BlockSetType> VALUES = new ObjectArraySet<BlockSetType>();
     public static final BlockSetType MAPLE = register(new BlockSetType("maple"));
     public static final BlockSetType GINKGO = register(new BlockSetType("ginkgo"));
+    public static final BlockSetType PALMA = register(new BlockSetType("palma"));
 
 
     public AlchemyBlockSetType(String name) {

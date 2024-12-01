@@ -54,6 +54,10 @@ public class BoatTypeMixin {
         AlchemyBoatType.MAPLE = maple;
         types.add(maple);
 
+        var palma = newType("Palma", last.ordinal() + 2, Blocks.OAK_PLANKS, "alchemy_palma");
+        AlchemyBoatType.Palma = palma;
+        types.add(palma);
+
         field_7724 = types.toArray(new BoatEntity.Type[0]);
     }
 }

@@ -2,10 +2,7 @@ package com.skniro.alchemy;
 
 
 import com.skniro.alchemy.Networking.AlchemyMessages;
-import com.skniro.alchemy.block.AlchemyBlocks;
-import com.skniro.alchemy.block.AlchemyMapleBlocks;
-import com.skniro.alchemy.block.AlchemyOreBlocks;
-import com.skniro.alchemy.block.AlchemySignBlocks;
+import com.skniro.alchemy.block.*;
 import com.skniro.alchemy.block.entity.AlchemyBlockEntityType;
 import com.skniro.alchemy.client.CoinHudOverlay;
 import com.skniro.alchemy.client.gui.screen.ingame.AlchemyBlockScreen;
@@ -17,6 +14,8 @@ import com.skniro.alchemy.fluid.AlchemyFluidBlocks;
 import com.skniro.alchemy.fluid.AlchemyFluidItems;
 import com.skniro.alchemy.fluid.AlchemyFluids;
 import com.skniro.alchemy.item.*;
+import com.skniro.alchemy.potion.AlchemyPotions;
+import com.skniro.alchemy.potion.PotionRecipes;
 import com.skniro.alchemy.recipe.AlchemyRecipeType;
 import com.skniro.alchemy.screen.AlchemyScreenHandlerType;
 import com.skniro.alchemy.util.AlchemyFlammableBlocks;
@@ -53,6 +52,7 @@ public class AlchemyContent {
         AlchemyDoorItems.registerAlchemyDoorItems();
         AlchemyBoatItems.registerAlchemyBoatItems();
     }
+
     public static void registerBlock(){
         AlchemyFlammableBlocks.registerFlammableBlocks();
         AlchemyStrippableBlocks.registerStrippables();
@@ -60,6 +60,14 @@ public class AlchemyContent {
         AlchemyMapleBlocks.registerAlchemyMapleTreeBlocks();
         AlchemyOreBlocks.registerAlchemyExperienceDroppingBlocks();
         AlchemySignBlocks.registerAlchemySignBlocks();
+    }
+
+    public static void registerPotion(){
+        AlchemyPotions.registerAlchemyPotions();
+    }
+
+    public static void registerRecipe(){
+        PotionRecipes.registerPotionRecipes();
     }
 
     public static void registerFluid(){
@@ -154,7 +162,6 @@ public class AlchemyContent {
             content.add(AlchemyItems.RICH_SOIL);
             content.add(AlchemyItems.MEDICINE_BONE);
             content.add(AlchemyItems.KARMINE_FRUIT);
-            content.add(AlchemyItems.KARMINE_VENOM);
             content.add(AlchemyItems.DECAYED_BARK);
             content.add(AlchemyItems.WAILING_GROANS);
             content.add(AlchemyItems.MUSHROOM_SPORES);
@@ -204,7 +211,7 @@ public class AlchemyContent {
             content.add(AlchemyItems.KUKEN_FRUIT);
             content.add(AlchemyItems.UNKNOWN_EGG);
             content.add(AlchemyItems.SEVEN_COLORED_GRAPE);
-            content.add(AlchemyItems.PALMA_FRUIT);
+            content.add(AlchemyFoodComponents.PALMA_FRUIT);
             content.add(AlchemyItems.BERRY);
             content.add(AlchemyItems.OIL_TREE_FRUIT);
             content.add(AlchemyItems.DEW_FRUIT);
@@ -240,10 +247,9 @@ public class AlchemyContent {
             content.add(AlchemyItems.STRONG_VINE);
             content.add(AlchemyItems.WOOLLY_GRASS);
             content.add(AlchemyItems.GIANT_IVY);
-            content.add(AlchemyItems.OAK_WOOD);
             content.add(AlchemyItems.STURDY_LOG);
             content.add(AlchemyItems.MOSSY_DRIFTWOOD);
-            content.add(AlchemyItems.PALMA_WOOD);
+            content.add(AlchemyPalmaBlocks.PALMA_WOOD);
             content.add(AlchemyItems.FOSSIL_TREE);
             content.add(AlchemyItems.HONEY_WOOD);
             content.add(AlchemyItems.OTHERWORLD_ROTTEN_WOOD);

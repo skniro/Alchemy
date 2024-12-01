@@ -16,6 +16,11 @@ public class AlchemySignItems {
                     AlchemySignBlocks.Maple_SIGN, AlchemySignBlocks.Maple_WALL_SIGN));
     public static final Item Maple_HANGING_SIGN = registerItem("maple_hanging_sign", new HangingSignItem(
             AlchemySignBlocks.Maple_HANGING_SIGN, AlchemySignBlocks.Maple_WALL_HANGING_SIGN, new FabricItemSettings().maxCount(16)));
+    public static final Item Palma_SIGN = registerItem("palma_sign",
+            new SignItem(new FabricItemSettings().maxCount(16),
+                    AlchemySignBlocks.Palma_SIGN, AlchemySignBlocks.Palma_WALL_SIGN));
+    public static final Item Palma_HANGING_SIGN = registerItem("palma_hanging_sign", new HangingSignItem(
+            AlchemySignBlocks.Palma_HANGING_SIGN, AlchemySignBlocks.Palma_WALL_HANGING_SIGN, new FabricItemSettings().maxCount(16)));
 
 
     private static Item registerItem(String name,Item item) {

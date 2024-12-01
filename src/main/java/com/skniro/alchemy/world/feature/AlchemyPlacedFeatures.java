@@ -2,6 +2,7 @@ package com.skniro.alchemy.world.feature;
 
 import com.skniro.alchemy.Alchemy;
 import com.skniro.alchemy.block.AlchemyMapleBlocks;
+import com.skniro.alchemy.block.AlchemyPalmaBlocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -20,6 +21,7 @@ public class AlchemyPlacedFeatures {
     public static final RegistryKey<PlacedFeature> SALT_ORE_PLACED = registerKey("ore_salt_overworld");
     public static final RegistryKey<PlacedFeature> Deepslate_SALT_ORE_PLACED = registerKey("deepslate_ore_salt_overworld");
     public static final RegistryKey<PlacedFeature> Red_Maple_TREE_PLACED = registerKey("red_maple_tree_placed");
+    public static final RegistryKey<PlacedFeature> Palma_TREE_PLACED = registerKey("red_maple_tree_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -40,6 +42,8 @@ public class AlchemyPlacedFeatures {
         register(context, Red_Maple_TREE_PLACED, configuredFeatureRegistryEntryLookup.getOrThrow(AlchemyConfiguredFeatures.Red_Maple_TREE),
                 VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(3, 0.1f, 1), AlchemyMapleBlocks.RED_MAPLE_SAPLING));
 
+        register(context, Palma_TREE_PLACED, configuredFeatureRegistryEntryLookup.getOrThrow(AlchemyConfiguredFeatures.Palma_TREE),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(3, 0.1f, 1), AlchemyPalmaBlocks.PALMA_SAPLING));
 
     }
 
