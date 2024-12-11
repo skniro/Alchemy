@@ -185,6 +185,7 @@ public class AlchemyItems {
 
     // Other Materials
     public static final Item BEE_HIVE = registerItem("bee_hive", new Item(new Item.Settings()));
+    public static final Item Silver_BEE_HIVE = registerItem("silver_bee_hive", new Item(new Item.Settings()));
     public static final Item GOLDEN_BEE_HIVE = registerItem("golden_bee_hive", new Item(new Item.Settings()));
 
 
