@@ -24,12 +24,12 @@ public class AlchemyBlockScreenHandler extends ScreenHandler {
         inventory.onOpen(playerInventory.player);
         this.propertyDelegate = delegate;
 
-        this.addSlot(new Slot(inventory, 0, 66, 13));
-        this.addSlot(new Slot(inventory, 1, 66, 34));
-        this.addSlot(new Slot(inventory, 2, 66, 56));
-        this.addSlot(new Slot(inventory, 3, 18, 47));
+        this.addSlot(new Slot(inventory, 0, 27, 9));
+        this.addSlot(new Slot(inventory, 1, 55, 9));
+        this.addSlot(new Slot(inventory, 2, 65, 33));
+        this.addSlot(new Slot(inventory, 3, 16, 33));
         this.addSlot(new Slot(inventory, 4, 28, 47));
-        this.addSlot(new Slot(inventory, 5, 114, 30));
+        this.addSlot(new Slot(inventory, 5, 40, 57));
 
 
 
