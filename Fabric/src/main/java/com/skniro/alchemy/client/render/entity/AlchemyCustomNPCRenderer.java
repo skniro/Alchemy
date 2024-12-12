@@ -1,4 +1,4 @@
-package com.skniro.alchemy.entity.client.render.entity;
+package com.skniro.alchemy.client.render.entity;
 
 import com.skniro.alchemy.Alchemy;
 import com.skniro.alchemy.entity.customnpc.AlchemyCustomNPCEntity;

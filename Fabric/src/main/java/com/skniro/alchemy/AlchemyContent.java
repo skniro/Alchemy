@@ -6,8 +6,8 @@ import com.skniro.alchemy.block.*;
 import com.skniro.alchemy.block.entity.AlchemyBlockEntityType;
 import com.skniro.alchemy.client.CoinHudOverlay;
 import com.skniro.alchemy.client.gui.screen.ingame.AlchemyBlockScreen;
+import com.skniro.alchemy.client.render.entity.*;
 import com.skniro.alchemy.entity.customnpc.AlchemyCustomNPCEntity;
-import com.skniro.alchemy.entity.client.render.entity.AlchemyCustomNPCRenderer;
 import com.skniro.alchemy.entity.AlchemyEntityType;
 import com.skniro.alchemy.entity.village.AlchemyVillagers;
 import com.skniro.alchemy.fluid.AlchemyFluidBlocks;
@@ -32,6 +32,8 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.entity.SlimeEntityRenderer;
+import net.minecraft.entity.mob.SlimeEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
@@ -313,6 +315,13 @@ public class AlchemyContent {
     }
     public static void registerEntityAttribute() {
         FabricDefaultAttributeRegistry.register(AlchemyEntityType.HimegiAgeha, AlchemyCustomNPCEntity.createMobAttributes());
+        FabricDefaultAttributeRegistry.register(AlchemyEntityType.BLUE_SLIME, SlimeEntity.createMobAttributes().build());
+        FabricDefaultAttributeRegistry.register(AlchemyEntityType.BLACK_SLIME, SlimeEntity.createMobAttributes().build());
+        FabricDefaultAttributeRegistry.register(AlchemyEntityType.GOLD_SLIME, SlimeEntity.createMobAttributes().build());
+        FabricDefaultAttributeRegistry.register(AlchemyEntityType.GREEN_SLIME, SlimeEntity.createMobAttributes().build());
+        FabricDefaultAttributeRegistry.register(AlchemyEntityType.RED_SLIME, SlimeEntity.createMobAttributes().build());
+        FabricDefaultAttributeRegistry.register(AlchemyEntityType.PINK_SLIME, SlimeEntity.createMobAttributes().build());
+        FabricDefaultAttributeRegistry.register(AlchemyEntityType.Sliver_SLIME, SlimeEntity.createMobAttributes().build());
     }
 
     @net.fabricmc.api.Environment(net.fabricmc.api.EnvType.CLIENT)
@@ -371,6 +380,13 @@ public class AlchemyContent {
     @net.fabricmc.api.Environment(net.fabricmc.api.EnvType.CLIENT)
     public static void registerEntityForClient() {
         EntityRendererRegistry.register(AlchemyEntityType.HimegiAgeha, AlchemyCustomNPCRenderer::new);
+        EntityRendererRegistry.register(AlchemyEntityType.BLUE_SLIME, BlueSlimeEntityRenderer::new);
+        EntityRendererRegistry.register(AlchemyEntityType.BLACK_SLIME, BlackSlimeEntityRenderer::new);
+        EntityRendererRegistry.register(AlchemyEntityType.GOLD_SLIME, GoldSlimeEntityRenderer::new);
+        EntityRendererRegistry.register(AlchemyEntityType.GREEN_SLIME, GreenSlimeEntityRenderer::new);
+        EntityRendererRegistry.register(AlchemyEntityType.RED_SLIME, RedSlimeEntityRenderer::new);
+        EntityRendererRegistry.register(AlchemyEntityType.PINK_SLIME, PinkSlimeEntityRenderer::new);
+        EntityRendererRegistry.register(AlchemyEntityType.Sliver_SLIME, SliverSlimeEntityRenderer::new);
     }
 
     @net.fabricmc.api.Environment(net.fabricmc.api.EnvType.CLIENT)
