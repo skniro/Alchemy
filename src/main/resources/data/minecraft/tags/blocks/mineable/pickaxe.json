@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "maple:salt_ore",
-    "maple:deepslate_salt_ore"
+    "alchemy:salt_ore",
+    "alchemy:deepslate_salt_ore"
   ]
 }
