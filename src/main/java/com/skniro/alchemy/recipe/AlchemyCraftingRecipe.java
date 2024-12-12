@@ -3,6 +3,7 @@ package com.skniro.alchemy.recipe;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import com.google.gson.JsonSyntaxException;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketByteBuf;
@@ -82,13 +83,49 @@ public class AlchemyCraftingRecipe implements Recipe<SimpleInventory> {
         public AlchemyCraftingRecipe read(Identifier id, JsonObject json) {
             ItemStack output = ShapedRecipe.outputFromJson(JsonHelper.getObject(json, "output"));
 
-            JsonArray ingredients = JsonHelper.getArray(json, "ingredients");
-            DefaultedList<Ingredient> inputs = DefaultedList.ofSize(3, Ingredient.EMPTY);
+            JsonArray red_ingredients = JsonHelper.getArray(json, "red");
+            JsonArray blue_ingredients = JsonHelper.getArray(json, "blue");
+            JsonArray green_ingredients = JsonHelper.getArray(json, "green");
+            JsonArray yellow_ingredients = JsonHelper.getArray(json, "yellow");
+            JsonArray purple_ingredients = JsonHelper.getArray(json, "purple");
+            DefaultedList<Ingredient> inputs = DefaultedList.ofSize(5, Ingredient.EMPTY);
 
             for (int i = 0; i < inputs.size(); i++) {
-                inputs.set(i, Ingredient.fromJson(ingredients.get(i)));
+                try {
+                    switch (i) {
+                        case 0 -> {
+                            if (red_ingredients.size() > i) {
+                                inputs.set(i, Ingredient.fromJson(red_ingredients.get(i)));
+                            }
+                        }
+                        case 1 -> {
+                            if (blue_ingredients.size() > i) {
+                                inputs.set(i, Ingredient.fromJson(blue_ingredients.get(i)));
+                            }
+                        }
+                        case 2 -> {
+                            if (green_ingredients.size() > i) {
+                                inputs.set(i, Ingredient.fromJson(green_ingredients.get(i)));
+                            }
+                        }
+                        case 3 -> {
+                            if (yellow_ingredients.size() > i) {
+                                inputs.set(i, Ingredient.fromJson(yellow_ingredients.get(i)));
+                            }
+                        }
+                        case 4 -> {
+                            if (purple_ingredients.size() > i) {
+                                inputs.set(i, Ingredient.fromJson(purple_ingredients.get(i)));
+                            }
+                        }
+                    }
+                } catch (Exception e) {
+                    throw new JsonSyntaxException("Error parsing ingredient at index " + i + ": " + e.getMessage(), e);
+                }
             }
-
+            System.out.println("Reading recipe: " + id);
+            System.out.println("Inputs: " + inputs);
+            System.out.println("Output: " + output);
             return new AlchemyCraftingRecipe(id, output, inputs);
         }
 

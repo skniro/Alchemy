@@ -144,6 +144,8 @@ public class Alchemyblockentity extends BlockEntity implements NamedScreenHandle
             entity.removeStack(0, 1);
             entity.removeStack(1, 1);
             entity.removeStack(2, 1);
+            entity.removeStack(3, 1);
+            entity.removeStack(4, 1);
             entity.setStack(5, new ItemStack(recipe.get().getOutput(null).getItem(),
                     entity.getStack(5).getCount() + 1));
             entity.resetProgress();

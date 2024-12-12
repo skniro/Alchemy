@@ -1,12 +1,26 @@
 {
   "type": "alchemy:crafting_alchemy",
-  "ingredients": [
+  "red": [
     {
       "item": "alchemy:salt_ore"
-    },
+    }
+  ],
+  "blue": [
     {
       "item": "alchemy:salt_ore"
-    },
+    }
+  ],
+  "green": [
+    {
+      "item": "alchemy:salt_ore"
+    }
+  ],
+  "purple": [
+    {
+      "item": "alchemy:salt_ore"
+    }
+  ],
+  "yellow": [
     {
       "item": "alchemy:salt_ore"
     }

@@ -28,6 +28,7 @@ public class AlchemyBlockScreenHandler extends ScreenHandler {
         this.addSlot(new Slot(inventory, 1, 66, 34));
         this.addSlot(new Slot(inventory, 2, 66, 56));
         this.addSlot(new Slot(inventory, 3, 18, 47));
+        this.addSlot(new Slot(inventory, 4, 28, 47));
         this.addSlot(new Slot(inventory, 5, 114, 30));
 
 
