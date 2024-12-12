@@ -29,10 +29,12 @@ public class AlchemyCraftingRecipe implements Recipe<SimpleInventory> {
 
     @Override
     public boolean matches(SimpleInventory inventory, World world) {
-        if(recipeItems.get(0).test(inventory.getStack(0))) {
-            return recipeItems.get(1).test(inventory.getStack(1)) && recipeItems.get(2).test(inventory.getStack(2));
+        for (int i = 0; i < recipeItems.size(); i++) {
+            if (!recipeItems.get(i).test(inventory.getStack(i))) {
+                return false;
+            }
         }
-        return false;
+        return true;
     }
 
     @Override
@@ -88,7 +90,7 @@ public class AlchemyCraftingRecipe implements Recipe<SimpleInventory> {
             JsonArray green_ingredients = JsonHelper.getArray(json, "green");
             JsonArray yellow_ingredients = JsonHelper.getArray(json, "yellow");
             JsonArray purple_ingredients = JsonHelper.getArray(json, "purple");
-            DefaultedList<Ingredient> inputs = DefaultedList.ofSize(5, Ingredient.EMPTY);
+            DefaultedList<Ingredient> inputs = DefaultedList.ofSize(1, Ingredient.EMPTY);
 
             for (int i = 0; i < inputs.size(); i++) {
                 try {
