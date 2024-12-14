@@ -37,6 +37,7 @@ public class Alchemy implements ModInitializer, TerraBlenderApi {
 
     @Override
     public void onTerraBlenderInitialized() {
+        AlchemyContent.BiomeWorldgen();
     }
 
 

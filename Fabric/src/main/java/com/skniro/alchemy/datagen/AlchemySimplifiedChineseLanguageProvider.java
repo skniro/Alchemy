@@ -39,6 +39,7 @@ public class AlchemySimplifiedChineseLanguageProvider extends FabricLanguageProv
             translationBuilder.add(AlchemyMapleBlocks.MAPLE_TRAPDOOR,"枫木活版门");
             translationBuilder.add(AlchemyMapleBlocks.MAPLE_PRESSURE_PLATE,"枫木压力板");
             translationBuilder.add(AlchemyMapleBlocks.RED_MAPLE_CARPET,"红枫落叶");
+            translationBuilder.add(AlchemyItems.MAPLE_BARK,"枫树皮");
 
 
             //PALMA
@@ -231,7 +232,6 @@ public class AlchemySimplifiedChineseLanguageProvider extends FabricLanguageProv
             translationBuilder.add(AlchemyItems.OLD_MAGIC_BOOK,"陈旧的魔导书");
             translationBuilder.add(AlchemyItems.OTHERWORLD_CORE,"异界之核");
             translationBuilder.add(AlchemyItems.HOLY_TREE_LEAF,"圣树叶");
-            translationBuilder.add(AlchemyItems.MAPLE_BARK,"枫树皮");
             translationBuilder.add(AlchemyItems.HONEY_WOOD_BRANCH,"蜜木枝");
             translationBuilder.add(AlchemyItems.SPIRIT_FLOWER,"精神之花");
             translationBuilder.add(AlchemyItems.SPIRIT_FEATHER,"精神之羽");

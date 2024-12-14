@@ -21,6 +21,9 @@ import com.skniro.alchemy.recipe.AlchemyRecipeType;
 import com.skniro.alchemy.screen.AlchemyScreenHandlerType;
 import com.skniro.alchemy.util.AlchemyFlammableBlocks;
 import com.skniro.alchemy.util.AlchemyStrippableBlocks;
+import com.skniro.alchemy.world.biome.AlchemyBiomeFeatures;
+import com.skniro.alchemy.world.biome.AlchemyBiomeKeys;
+import com.skniro.alchemy.world.biome.AlchemyGroveBiome;
 import com.skniro.alchemy.world.gen.MapleTreeGeneration;
 import com.skniro.alchemy.world.gen.ModOreGeneration;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -41,6 +44,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import terrablender.api.Regions;
 
 import static com.skniro.alchemy.Alchemy.Alchemy_Group;
 
@@ -86,6 +90,12 @@ public class AlchemyContent {
     public static void generateWorldGen() {
         MapleTreeGeneration.generateTrees();
         ModOreGeneration.generateOres();
+        AlchemyBiomeKeys.registerAlchemyBiome();
+        AlchemyBiomeFeatures.registerBiomesFeatures();
+    }
+
+    public static void BiomeWorldgen() {
+        Regions.register(new AlchemyGroveBiome(new Identifier(Alchemy.MOD_ID, "overworld_1"), 2));
     }
 
     public static void registerType() {

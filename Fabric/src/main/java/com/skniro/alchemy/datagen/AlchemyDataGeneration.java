@@ -1,5 +1,6 @@
 package com.skniro.alchemy.datagen;
 
+import com.skniro.alchemy.world.biome.AlchemyBiomeKeys;
 import com.skniro.alchemy.world.feature.AlchemyConfiguredFeatures;
 import com.skniro.alchemy.world.feature.AlchemyPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -23,5 +24,6 @@ public class AlchemyDataGeneration implements DataGeneratorEntrypoint {
     public void buildRegistry(RegistryBuilder registryBuilder) {
         registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, AlchemyConfiguredFeatures::bootstrap);
         registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, AlchemyPlacedFeatures::bootstrap);
+        registryBuilder.addRegistry(RegistryKeys.BIOME, AlchemyBiomeKeys::bootstrap);
     }
 }
