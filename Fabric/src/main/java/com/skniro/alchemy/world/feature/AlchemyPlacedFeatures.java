@@ -21,7 +21,7 @@ public class AlchemyPlacedFeatures {
     public static final RegistryKey<PlacedFeature> SALT_ORE_PLACED = registerKey("ore_salt_overworld");
     public static final RegistryKey<PlacedFeature> Deepslate_SALT_ORE_PLACED = registerKey("deepslate_ore_salt_overworld");
     public static final RegistryKey<PlacedFeature> Red_Maple_TREE_PLACED = registerKey("red_maple_tree_placed");
-    public static final RegistryKey<PlacedFeature> Palma_TREE_PLACED = registerKey("red_maple_tree_placed");
+    public static final RegistryKey<PlacedFeature> Palma_TREE_PLACED = registerKey("palma_tree_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);

@@ -1,6 +1,7 @@
 package com.skniro.alchemy;
 
 import com.skniro.alchemy.util.AlchemyLootTableModifiers;
+import com.skniro.alchemy.util.AlchemyStrippableBlocks;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.registry.RegistryKey;
@@ -27,7 +28,7 @@ public class Alchemy implements ModInitializer, TerraBlenderApi {
         AlchemyContent.registerItemGroup();
         AlchemyContent.registerType();
         AlchemyContent.registerFluid();
-        AlchemyContent.registerEvent();
+        //AlchemyContent.registerEvent();
         AlchemyContent.registerCommand();
         AlchemyLootTableModifiers.modifyLootTables();
         AlchemyContent.registerEntityAttribute();
@@ -37,7 +38,7 @@ public class Alchemy implements ModInitializer, TerraBlenderApi {
 
     @Override
     public void onTerraBlenderInitialized() {
-        AlchemyContent.BiomeWorldgen();
+        //AlchemyContent.BiomeWorldgen();
     }
 
 
