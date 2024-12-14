@@ -106,7 +106,7 @@ public class AlchemyContent {
     }
 
     public static void registerEvent() {
-        UseBlockCallback.EVENT.register(AlchemyEventHandler::MapleBarkDrop);
+        //UseBlockCallback.EVENT.register(AlchemyEventHandler::MapleBarkDrop);
     }
 
     public static void registerType() {

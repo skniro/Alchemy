@@ -2,14 +2,15 @@
   "required": true,
   "minVersion": "0.8",
   "package": "com.skniro.alchemy.mixin",
-  "compatibilityLevel": "JAVA_8",
+  "compatibilityLevel": "JAVA_17",
   "mixins": [
     "BlockEntityTypeMixin",
     "SignTypeAccessor",
     "ModEntityDataSaverMixin",
     "BoatDropsMixin",
     "BoatTypeMixin",
-    "ChestBoatDropsMixin"
+    "ChestBoatDropsMixin",
+    "api.AxeItemStrippableDropMixin"
   ],
   "client": [
   ],
