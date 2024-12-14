@@ -182,10 +182,9 @@ public class AlchemyContent {
             content.add(AlchemyItems.RED_GRASS);
             content.add(AlchemyItems.BITTER_ROOT);
             content.add(AlchemyItems.SAPLING_BRANCHES);
-            content.add(AlchemyItems.MOSS_STONE);
             content.add(AlchemyItems.RICH_SOIL);
             content.add(AlchemyItems.MEDICINE_BONE);
-            content.add(AlchemyItems.KARMINE_FRUIT);
+            content.add(AlchemyFoodComponents.KARMINE_FRUIT);
             content.add(AlchemyItems.DECAYED_BARK);
             content.add(AlchemyItems.WAILING_GROANS);
             content.add(AlchemyItems.MUSHROOM_SPORES);

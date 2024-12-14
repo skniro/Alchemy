@@ -105,10 +105,9 @@ public class AlchemyModelProvider extends FabricModelProvider {
         itemModelGenerator.register(AlchemyItems.RED_GRASS, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.BITTER_ROOT, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.SAPLING_BRANCHES, Models.GENERATED);
-        itemModelGenerator.register(AlchemyItems.MOSS_STONE, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.RICH_SOIL, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.MEDICINE_BONE, Models.GENERATED);
-        itemModelGenerator.register(AlchemyItems.KARMINE_FRUIT, Models.GENERATED);
+        itemModelGenerator.register(AlchemyFoodComponents.KARMINE_FRUIT, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.DECAYED_BARK, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.WAILING_GROANS, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.MUSHROOM_SPORES, Models.GENERATED);

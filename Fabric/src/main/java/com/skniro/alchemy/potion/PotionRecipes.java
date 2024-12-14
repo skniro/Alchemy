@@ -1,5 +1,6 @@
 package com.skniro.alchemy.potion;
 
+import com.skniro.alchemy.item.AlchemyFoodComponents;
 import com.skniro.alchemy.item.AlchemyItems;
 import net.fabricmc.fabric.api.registry.FabricBrewingRecipeRegistry;
 import net.minecraft.item.Items;
@@ -9,6 +10,6 @@ import net.minecraft.registry.Registries;
 
 public class PotionRecipes {
     public static void registerPotionRecipes() {
-        BrewingRecipeRegistry.registerPotionRecipe(Potions.WATER, AlchemyItems.KARMINE_FRUIT, AlchemyPotions.KARMINE_VENOM);
+        BrewingRecipeRegistry.registerPotionRecipe(Potions.WATER, AlchemyFoodComponents.KARMINE_FRUIT, AlchemyPotions.KARMINE_VENOM);
     }
 }
