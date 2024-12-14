@@ -1,6 +1,5 @@
 package com.skniro.alchemy;
 
-import com.skniro.alchemy.command.CoinCommand;
 import com.skniro.alchemy.util.AlchemyLootTableModifiers;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.item.ItemGroup;
@@ -28,10 +27,11 @@ public class Alchemy implements ModInitializer, TerraBlenderApi {
         AlchemyContent.registerItemGroup();
         AlchemyContent.registerType();
         AlchemyContent.registerFluid();
+        AlchemyContent.registerEvent();
+        AlchemyContent.registerCommand();
         AlchemyLootTableModifiers.modifyLootTables();
         AlchemyContent.registerEntityAttribute();
         AlchemyContent.registerNetworkServer();
-        CoinCommand.register();
     }
 
 

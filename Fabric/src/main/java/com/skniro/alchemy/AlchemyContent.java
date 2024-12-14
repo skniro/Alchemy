@@ -7,10 +7,12 @@ import com.skniro.alchemy.block.entity.AlchemyBlockEntityType;
 import com.skniro.alchemy.client.CoinHudOverlay;
 import com.skniro.alchemy.client.gui.screen.ingame.AlchemyBlockScreen;
 import com.skniro.alchemy.client.render.entity.*;
+import com.skniro.alchemy.command.CoinCommand;
 import com.skniro.alchemy.entity.customnpc.AlchemyCustomNPCEntity;
 import com.skniro.alchemy.entity.AlchemyEntityType;
 import com.skniro.alchemy.entity.slime.AlchemySlimeEntity;
 import com.skniro.alchemy.entity.village.AlchemyVillagers;
+import com.skniro.alchemy.event.AlchemyEventHandler;
 import com.skniro.alchemy.fluid.AlchemyFluidBlocks;
 import com.skniro.alchemy.fluid.AlchemyFluidItems;
 import com.skniro.alchemy.fluid.AlchemyFluids;
@@ -31,6 +33,7 @@ import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
+import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
@@ -96,6 +99,14 @@ public class AlchemyContent {
 
     public static void BiomeWorldgen() {
         Regions.register(new AlchemyGroveBiome(new Identifier(Alchemy.MOD_ID, "overworld_1"), 2));
+    }
+
+    public static void registerCommand() {
+        CoinCommand.register();
+    }
+
+    public static void registerEvent() {
+        UseBlockCallback.EVENT.register(AlchemyEventHandler::MapleBarkDrop);
     }
 
     public static void registerType() {
