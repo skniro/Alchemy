@@ -45,9 +45,13 @@ public class AlchemySimplifiedChineseLanguageProvider extends FabricLanguageProv
             //PALMA
             translationBuilder.add(AlchemyPalmaBlocks.PALMA_WOOD,"帕尔马木");
 
-            //BAMBOO
-
-
+            //史莱姆球
+            translationBuilder.add(AlchemyItems.PUNI_PUNI_BALL_BLUE,"噗尼噗尼珠·蓝");
+            translationBuilder.add(AlchemyItems.PUNI_PUNI_BALL_GREEN,"噗尼噗尼珠·绿");
+            translationBuilder.add(AlchemyItems.PUNI_PUNI_BALL_RED,"噗尼噗尼珠·红");
+            translationBuilder.add(AlchemyItems.PUNI_PUNI_BALL_BLACK,"噗尼噗尼珠·黑");
+            translationBuilder.add(AlchemyItems.PUNI_PUNI_BALL_SILVER,"噗尼噗尼珠·银");
+            translationBuilder.add(AlchemyItems.PUNI_PUNI_BALL_GOLD,"噗尼噗尼珠·金");
 
 
             //ITEM GROUP
@@ -65,9 +69,9 @@ public class AlchemySimplifiedChineseLanguageProvider extends FabricLanguageProv
             //Crop
 
             //Food Materials
-
+            translationBuilder.add(AlchemyFoodComponents.PALMA_FRUIT,"帕尔马果实");
             translationBuilder.add(AlchemyItems.Salt,"盐");
-
+            translationBuilder.add(AlchemyFoodComponents.KARMINE_FRUIT,"卡明果实");
 
             //Food
             //Boat
@@ -114,10 +118,9 @@ public class AlchemySimplifiedChineseLanguageProvider extends FabricLanguageProv
             translationBuilder.add(AlchemyItems.RED_GRASS,"红草");
             translationBuilder.add(AlchemyItems.BITTER_ROOT,"苦根");
             translationBuilder.add(AlchemyItems.SAPLING_BRANCHES,"幼树枝叶");
-            translationBuilder.add(AlchemyItems.MOSS_STONE,"水边苔石");
             translationBuilder.add(AlchemyItems.RICH_SOIL,"肥土");
             translationBuilder.add(AlchemyItems.MEDICINE_BONE,"中药骨");
-            translationBuilder.add(AlchemyItems.KARMINE_FRUIT,"卡明果实");
+
             translationBuilder.add(AlchemyItems.DECAYED_BARK,"朽木树皮");
             translationBuilder.add(AlchemyItems.WAILING_GROANS,"怨嗟悲鸣");
             translationBuilder.add(AlchemyItems.MUSHROOM_SPORES,"蘑菇孢子");
@@ -167,7 +170,7 @@ public class AlchemySimplifiedChineseLanguageProvider extends FabricLanguageProv
             translationBuilder.add(AlchemyItems.KUKEN_FRUIT,"库肯果");
             translationBuilder.add(AlchemyItems.UNKNOWN_EGG,"不知名的蛋");
             translationBuilder.add(AlchemyItems.SEVEN_COLORED_GRAPE,"七色葡萄");
-            translationBuilder.add(AlchemyFoodComponents.PALMA_FRUIT,"帕尔马果实");
+
             translationBuilder.add(AlchemyItems.BERRY,"莓果");
             translationBuilder.add(AlchemyItems.OIL_TREE_FRUIT,"油木果实");
             translationBuilder.add(AlchemyItems.DEW_FRUIT,"甘露果实");
@@ -213,12 +216,7 @@ public class AlchemySimplifiedChineseLanguageProvider extends FabricLanguageProv
             translationBuilder.add(AlchemyItems.SKY_BUBBLE,"天空泡沫");
             translationBuilder.add(AlchemyItems.SCORCH_MUSHROOM,"焦菇");
             translationBuilder.add(AlchemyItems.ROTTEN_WOOD_POISON_MIST,"朽木毒雾");
-            translationBuilder.add(AlchemyItems.PUNI_PUNI_BALL_BLUE,"噗尼噗尼珠·蓝");
-            translationBuilder.add(AlchemyItems.PUNI_PUNI_BALL_GREEN,"噗尼噗尼珠·绿");
-            translationBuilder.add(AlchemyItems.PUNI_PUNI_BALL_RED,"噗尼噗尼珠·红");
-            translationBuilder.add(AlchemyItems.PUNI_PUNI_BALL_BLACK,"噗尼噗尼珠·黑");
-            translationBuilder.add(AlchemyItems.PUNI_PUNI_BALL_SILVER,"噗尼噗尼珠·银");
-            translationBuilder.add(AlchemyItems.PUNI_PUNI_BALL_GOLD,"噗尼噗尼珠·金");
+
             translationBuilder.add(AlchemyItems.LARGE_FEATHER,"大片羽毛");
             translationBuilder.add(AlchemyItems.ANIMAL_FUR,"动物毛皮");
             translationBuilder.add(AlchemyItems.FANTASY_BEAST_FUR,"幻兽毛皮");

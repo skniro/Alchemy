@@ -29,6 +29,25 @@ public class AlchemyFoodComponents {
                             )
     ));
 
+    public static final Item KARMINE_FRUIT = registerItem("palma_fruit",
+            new Item(new Item
+                    .Settings()
+                    .rarity(Rarity.RARE)
+                    .food
+                            (new FoodComponent
+                                            .Builder()
+                                            .hunger(6)
+                                            .saturationModifier(0.3f)
+                                            .alwaysEdible()
+                                    .statusEffect
+                                            (new StatusEffectInstance(StatusEffects.POISON,
+                                                            300,
+                                                            0),
+                                                    1.0F)
+                                            .build()
+                            )
+            ));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(Alchemy.MOD_ID, name),item);
     }

@@ -67,10 +67,8 @@ public class AlchemyItems {
     public static final Item RED_GRASS = registerItem("red_grass", new Item(new Item.Settings()));
     public static final Item BITTER_ROOT = registerItem("bitter_root", new Item(new Item.Settings()));
     public static final Item SAPLING_BRANCHES = registerItem("sapling_branches", new Item(new Item.Settings()));
-    public static final Item MOSS_STONE = registerItem("moss_stone", new Item(new Item.Settings()));
     public static final Item RICH_SOIL = registerItem("rich_soil", new Item(new Item.Settings()));
     public static final Item MEDICINE_BONE = registerItem("medicine_bone", new Item(new Item.Settings()));
-    public static final Item KARMINE_FRUIT = registerItem("karmine_fruit", new Item(new Item.Settings()));
     public static final Item DECAYED_BARK = registerItem("decayed_bark", new Item(new Item.Settings()));
     public static final Item WAILING_GROANS = registerItem("wailing_groans", new Item(new Item.Settings()));
     public static final Item MUSHROOM_SPORES = registerItem("mushroom_spores", new Item(new Item.Settings()));
