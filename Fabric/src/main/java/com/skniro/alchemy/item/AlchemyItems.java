@@ -18,6 +18,7 @@ public class AlchemyItems {
 
     //其他合成材料
     public static final Item PlantEssence = registerItem("plantessence",new Item(new Item.Settings()));
+
     public static final Item NamelessGrass = registerItem("nameless_grass",new Item(new Item.Settings()));
     public static final Item EtherAqua = registerItem("ether_aqua",new Item(new Item.Settings()));
     public static final Item ScorchedGrass = registerItem("scorched_grass",new Item(new Item.Settings()));
@@ -29,6 +30,13 @@ public class AlchemyItems {
     public static final Item RoseLeaf = registerItem("rose_leaf",new Item(new Item.Settings()));
     public static final Item AncientBranch = registerItem("ancient_branch",new Item(new Item.Settings()));
 
+    //史莱姆球
+    public static final Item PUNI_PUNI_BALL_BLUE = registerItem("puni_puni_ball_blue", new Item(new Item.Settings()));
+    public static final Item PUNI_PUNI_BALL_GREEN = registerItem("puni_puni_ball_green", new Item(new Item.Settings()));
+    public static final Item PUNI_PUNI_BALL_RED = registerItem("puni_puni_ball_red", new Item(new Item.Settings()));
+    public static final Item PUNI_PUNI_BALL_BLACK = registerItem("puni_puni_ball_black", new Item(new Item.Settings()));
+    public static final Item PUNI_PUNI_BALL_SILVER = registerItem("puni_puni_ball_silver", new Item(new Item.Settings()));
+    public static final Item PUNI_PUNI_BALL_GOLD = registerItem("puni_puni_ball_gold", new Item(new Item.Settings()));
 
     // Sea Urchins
     public static final Item SeaUrchin = registerItem("sea_urchin",new Item(new Item.Settings()));
@@ -158,12 +166,6 @@ public class AlchemyItems {
     public static final Item SKY_BUBBLE = registerItem("sky_bubble", new Item(new Item.Settings()));
     public static final Item SCORCH_MUSHROOM = registerItem("scorch_mushroom", new Item(new Item.Settings()));
     public static final Item ROTTEN_WOOD_POISON_MIST = registerItem("rotten_wood_poison_mist", new Item(new Item.Settings()));
-    public static final Item PUNI_PUNI_BALL_BLUE = registerItem("puni_puni_ball_blue", new Item(new Item.Settings()));
-    public static final Item PUNI_PUNI_BALL_GREEN = registerItem("puni_puni_ball_green", new Item(new Item.Settings()));
-    public static final Item PUNI_PUNI_BALL_RED = registerItem("puni_puni_ball_red", new Item(new Item.Settings()));
-    public static final Item PUNI_PUNI_BALL_BLACK = registerItem("puni_puni_ball_black", new Item(new Item.Settings()));
-    public static final Item PUNI_PUNI_BALL_SILVER = registerItem("puni_puni_ball_silver", new Item(new Item.Settings()));
-    public static final Item PUNI_PUNI_BALL_GOLD = registerItem("puni_puni_ball_gold", new Item(new Item.Settings()));
     public static final Item LARGE_FEATHER = registerItem("large_feather", new Item(new Item.Settings()));
     public static final Item ANIMAL_FUR = registerItem("animal_fur", new Item(new Item.Settings()));
     public static final Item FANTASY_BEAST_FUR = registerItem("fantasy_beast_fur", new Item(new Item.Settings()));

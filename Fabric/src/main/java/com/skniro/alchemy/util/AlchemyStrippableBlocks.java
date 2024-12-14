@@ -9,6 +9,6 @@ import net.minecraft.item.ItemStack;
 public class AlchemyStrippableBlocks {
     public static void registerStrippables() {
         AlchemyStrippableDropRegistry.register(AlchemyMapleBlocks.MAPLE_LOG, AlchemyMapleBlocks.STRIPPED_MAPLE_LOG, new ItemStack(AlchemyItems.MAPLE_BARK, 2));
-        StrippableBlockRegistry.register(AlchemyMapleBlocks.MAPLE_WOOD, AlchemyMapleBlocks.STRIPPED_MAPLE_WOOD);
+        AlchemyStrippableDropRegistry.register(AlchemyMapleBlocks.MAPLE_WOOD, AlchemyMapleBlocks.STRIPPED_MAPLE_WOOD, new ItemStack(AlchemyItems.MAPLE_BARK, 2));
     }
 }
