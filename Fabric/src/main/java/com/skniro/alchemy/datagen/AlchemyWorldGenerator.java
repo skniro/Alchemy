@@ -17,6 +17,7 @@ public class AlchemyWorldGenerator extends FabricDynamicRegistryProvider {
         // HERE GOES FUTURE WORLD GEN!
         entries.addAll(registries.getWrapperOrThrow(RegistryKeys.CONFIGURED_FEATURE));
         entries.addAll(registries.getWrapperOrThrow(RegistryKeys.PLACED_FEATURE));
+        entries.addAll(registries.getWrapperOrThrow(RegistryKeys.BIOME));
     }
 
     @Override
