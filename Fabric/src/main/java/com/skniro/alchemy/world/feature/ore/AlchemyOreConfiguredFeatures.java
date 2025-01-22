@@ -1,4 +1,4 @@
-package com.skniro.alchemy.world.feature;
+package com.skniro.alchemy.world.feature.ore;
 
 import com.skniro.alchemy.Alchemy;
 import com.skniro.alchemy.block.AlchemyMapleBlocks;
@@ -27,7 +27,11 @@ import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 import java.util.List;
 
 
-public class AlchemyConfiguredFeatures {
+public class AlchemyOreConfiguredFeatures {
+    public static final RegistryKey<ConfiguredFeature<?, ?>>  Arknite_ORE_KEY = registerKey("arknite_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>>  SALT_ORE_KEY = registerKey("salt_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>>  Deepslate_SALT_ORE_KEY = registerKey("deepslate_salt_ore");
+
     private static TreeFeatureConfig.Builder builder(Block log, Block leaves, int baseHeight, int firstRandomHeight, int secondRandomHeight, int radius) {
         return new TreeFeatureConfig.Builder(BlockStateProvider.of(log), new StraightTrunkPlacer(baseHeight, firstRandomHeight, secondRandomHeight), BlockStateProvider.of(leaves), new BlobFoliagePlacer(ConstantIntProvider.create(radius), ConstantIntProvider.create(0), 3), new TwoLayersFeatureSize(1, 0, 1));
     }
@@ -37,22 +41,25 @@ public class AlchemyConfiguredFeatures {
         return DataPool.builder();
     }
 
-    private static TreeFeatureConfig palma() {
-        return new TreeFeatureConfig.Builder(
-                BlockStateProvider.of(AlchemyPalmaBlocks.PALMA_LOG),
-                new StraightTrunkPlacer(4, 2, 0),
-                new WeightedBlockStateProvider(pool().add(AlchemyPalmaBlocks.PALMA_LEAVES.getDefaultState(), 3).add(AlchemyPalmaBlocks.PALMA_FRUIT_LEAVES.getDefaultState(), 1)),
-                new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 3),
-                new TwoLayersFeatureSize(1, 0, 1)).build();
-    }
-
-
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest netherstoneReplaceables = new BlockMatchRuleTest(Blocks.NETHERRACK);
         RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
         RuleTest endstoneReplaceables = new BlockMatchRuleTest(Blocks.END_STONE);
 
+
+        List<OreFeatureConfig.Target> deepslate_arknite_Ores =
+                List.of(OreFeatureConfig.createTarget(deepslateReplaceables, AlchemyOreBlocks.Deepslate_arknite_Ore.getDefaultState()));
+
+        List<OreFeatureConfig.Target> salt_Ores =
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, AlchemyOreBlocks.Salt_Ore.getDefaultState()));
+
+        List<OreFeatureConfig.Target> deepslate_salt_Ores =
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, AlchemyOreBlocks.DEEPSLATE_Salt_Ore.getDefaultState()));
+
+        register(context, Arknite_ORE_KEY, Feature.ORE, new OreFeatureConfig(deepslate_arknite_Ores, 2));
+        register(context, SALT_ORE_KEY, Feature.ORE, new OreFeatureConfig(salt_Ores, 1));
+        register(context, Deepslate_SALT_ORE_KEY, Feature.ORE, new OreFeatureConfig(deepslate_salt_Ores, 2));
     }
 
 

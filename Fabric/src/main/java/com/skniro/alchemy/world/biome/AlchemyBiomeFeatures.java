@@ -2,12 +2,13 @@ package com.skniro.alchemy.world.biome;
 
 import com.skniro.alchemy.Alchemy;
 import com.skniro.alchemy.world.feature.AlchemyPlacedFeatures;
+import com.skniro.alchemy.world.feature.tree.AlchemyTreePlacedFeatures;
 import net.minecraft.world.biome.GenerationSettings;
 import net.minecraft.world.gen.GenerationStep;
 
 public class AlchemyBiomeFeatures {
     public static void addMapleGroveFeatures(GenerationSettings.LookupBackedBuilder builder) {
-        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, AlchemyPlacedFeatures.Red_Maple_TREE_PLACED);
+        builder.feature(GenerationStep.Feature.VEGETAL_DECORATION, AlchemyTreePlacedFeatures.Red_Maple_TREE_PLACED);
     }
 
     public static void registerBiomesFeatures() {

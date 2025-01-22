@@ -5,6 +5,7 @@ import com.skniro.alchemy.block.AlchemyMapleBlocks;
 import com.skniro.alchemy.block.AlchemyOreBlocks;
 import com.skniro.alchemy.block.AlchemySignBlocks;
 import com.skniro.alchemy.item.AlchemyItems;
+import com.skniro.alchemy.item.AlchemyOreItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.loot.entry.ItemEntry;
@@ -20,10 +21,13 @@ public class AlchemyLootTableGenerator extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        addDrop(AlchemyOreBlocks.Salt_Ore, dropsWithSilkTouch(AlchemyOreBlocks.Salt_Ore, this.applyExplosionDecay(AlchemyOreBlocks.Salt_Ore, ItemEntry.builder(AlchemyItems.Salt).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F,1.0F))))));
-        addDrop(AlchemyOreBlocks.DEEPSLATE_Salt_Ore, dropsWithSilkTouch(AlchemyOreBlocks.DEEPSLATE_Salt_Ore, this.applyExplosionDecay(AlchemyOreBlocks.DEEPSLATE_Salt_Ore, ItemEntry.builder(AlchemyItems.Salt).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0F, 5.0F))))));
-        addDrop(AlchemyOreBlocks.Deepslate_arknite_Ore, oreDrops(AlchemyOreBlocks.Deepslate_arknite_Ore, AlchemyItems.Arknite));
-        addDrop(AlchemyOreBlocks.End_Septrin_Ore, oreDrops(AlchemyOreBlocks.End_Septrin_Ore,AlchemyItems.Septrin));
+        //Ore
+        addDrop(AlchemyOreBlocks.Salt_Ore, dropsWithSilkTouch(AlchemyOreBlocks.Salt_Ore, this.applyExplosionDecay(AlchemyOreBlocks.Salt_Ore, ItemEntry.builder(AlchemyOreItems.Salt).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F,1.0F))))));
+        addDrop(AlchemyOreBlocks.DEEPSLATE_Salt_Ore, dropsWithSilkTouch(AlchemyOreBlocks.DEEPSLATE_Salt_Ore, this.applyExplosionDecay(AlchemyOreBlocks.DEEPSLATE_Salt_Ore, ItemEntry.builder(AlchemyOreItems.Salt).apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(2.0F, 5.0F))))));
+        addDrop(AlchemyOreBlocks.Deepslate_arknite_Ore, oreDrops(AlchemyOreBlocks.Deepslate_arknite_Ore, AlchemyOreItems.Arknite));
+        addDrop(AlchemyOreBlocks.End_Septrin_Ore, oreDrops(AlchemyOreBlocks.End_Septrin_Ore,AlchemyOreItems.Septrin));
+
+
         addDrop(AlchemyBlocks.Alchemy_Block);
 
         //MAPLE

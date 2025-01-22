@@ -4,6 +4,7 @@ import com.skniro.alchemy.block.AlchemyMapleBlocks;
 import com.skniro.alchemy.block.AlchemyOreBlocks;
 import com.skniro.alchemy.block.AlchemySignBlocks;
 import com.skniro.alchemy.item.AlchemyItems;
+import com.skniro.alchemy.item.AlchemyOreItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 
@@ -58,7 +59,7 @@ public class AlchemyEnglishLanguageProvider extends FabricLanguageProvider {
         //Crop
 
         //Food Materials
-        translationBuilder.add(AlchemyItems.Salt,"Salt");
+        translationBuilder.add(AlchemyOreItems.Salt,"Salt");
 
         //Food
 

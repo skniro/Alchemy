@@ -2,6 +2,7 @@ package com.skniro.alchemy.datagen;
 
 import com.skniro.alchemy.block.AlchemyOreBlocks;
 import com.skniro.alchemy.item.AlchemyItems;
+import com.skniro.alchemy.item.AlchemyOreItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 
@@ -37,7 +38,7 @@ public class AlchemyTraditionalChineseLanguageProvider extends FabricLanguagePro
 
         //Food Materials
 
-        translationBuilder.add(AlchemyItems.Salt,"鹽");
+        translationBuilder.add(AlchemyOreItems.Salt,"鹽");
 
         //Food
 

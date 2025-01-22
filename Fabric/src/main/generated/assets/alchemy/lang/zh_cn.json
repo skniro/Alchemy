@@ -1,4 +1,5 @@
 {
+  "block.alchemy.azurite_ore": "海蓝石矿",
   "block.alchemy.deepslate_salt_ore": "深板岩盐矿石",
   "block.alchemy.maple_button": "枫木按钮",
   "block.alchemy.maple_door": "枫木门",
@@ -29,7 +30,6 @@
   "item.alchemy.ancient_fish": "万年鱼",
   "item.alchemy.ancient_pillar": "古代石柱",
   "item.alchemy.animal_fur": "动物毛皮",
-  "item.alchemy.azurite_ore": "海蓝石矿",
   "item.alchemy.beast_meat": "兽肉",
   "item.alchemy.beautiful_shell": "美丽贝壳",
   "item.alchemy.bee_hive": "蜂巢（采集物）",
@@ -101,7 +101,6 @@
   "item.alchemy.maple_leaf": "枫叶",
   "item.alchemy.medicine_bone": "中药骨",
   "item.alchemy.moldy_nightstone": "毛尔迪夜石",
-  "item.alchemy.moss_stone": "水边苔石",
   "item.alchemy.mossy_driftwood": "长苔藓的流木",
   "item.alchemy.mushroom_spores": "蘑菇孢子",
   "item.alchemy.mutant_plant": "变异草",

@@ -1,12 +1,11 @@
 package com.skniro.alchemy.datagen;
 
 import com.skniro.alchemy.Alchemy;
-import com.skniro.alchemy.block.AlchemyMapleBlocks;
-import com.skniro.alchemy.block.AlchemyOreBlocks;
-import com.skniro.alchemy.block.AlchemyPalmaBlocks;
-import com.skniro.alchemy.block.AlchemySignBlocks;
+import com.skniro.alchemy.block.*;
+import com.skniro.alchemy.item.AlchemyCuriosItems;
 import com.skniro.alchemy.item.AlchemyFoodComponents;
 import com.skniro.alchemy.item.AlchemyItems;
+import com.skniro.alchemy.item.AlchemyOreItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 
@@ -60,17 +59,18 @@ public class AlchemySimplifiedChineseLanguageProvider extends FabricLanguageProv
             //Sakura
 
 
-            //Salt Ore
+            //Ore
             translationBuilder.add(AlchemyOreBlocks.DEEPSLATE_Salt_Ore,"深板岩盐矿石");
             translationBuilder.add(AlchemyOreBlocks.Salt_Ore,"盐矿石");
-            translationBuilder.add(AlchemyItems.Crimson,"赤热矿");
-            translationBuilder.add(AlchemyItems.Hematite,"赤铁矿");
+            translationBuilder.add(AlchemyOreItems.Crimson,"赤热矿");
+            translationBuilder.add(AlchemyOreItems.Hematite,"赤铁矿");
+            translationBuilder.add(AlchemyOreBlocks.AZURITE_ORE,"海蓝石矿");
 
             //Crop
 
             //Food Materials
             translationBuilder.add(AlchemyFoodComponents.PALMA_FRUIT,"帕尔马果实");
-            translationBuilder.add(AlchemyItems.Salt,"盐");
+            translationBuilder.add(AlchemyOreItems.Salt,"盐");
             translationBuilder.add(AlchemyFoodComponents.KARMINE_FRUIT,"卡明果实");
 
             //Food
@@ -141,12 +141,11 @@ public class AlchemySimplifiedChineseLanguageProvider extends FabricLanguageProv
             translationBuilder.add(AlchemyItems.RIVER_STONE_BLAZE,"河石·苍炎");
             translationBuilder.add(AlchemyItems.STALACTITE_FRAGMENT,"钟乳石碎片");
             translationBuilder.add(AlchemyItems.SPIRIT_WHITE_ROCK,"白灵岩");
-            translationBuilder.add(AlchemyItems.KOBOLD_NIGHTSTONE,"科比利夜石");
-            translationBuilder.add(AlchemyItems.PAINT_NIGHTSTONE,"派恩特夜石");
-            translationBuilder.add(AlchemyItems.MOLDY_NIGHTSTONE,"毛尔迪夜石");
-            translationBuilder.add(AlchemyItems.GORDY_NIGHTSTONE,"戈尔迪夜石");
+            translationBuilder.add(AlchemyOreBlocks.PAINT_NIGHTSTONE,"派恩特夜石");
+            translationBuilder.add(AlchemyOreBlocks.MOLDY_NIGHTSTONE,"毛尔迪夜石");
+            translationBuilder.add(AlchemyOreBlocks.GORDY_NIGHTSTONE,"戈尔迪夜石");
             translationBuilder.add(AlchemyItems.COMET_ROCK,"彗星岩");
-            translationBuilder.add(AlchemyItems.CREATION_REVERSE_STONE,"创生逆石");
+            translationBuilder.add(AlchemyOreItems.CREATION_REVERSE_STONE,"创生逆石");
             translationBuilder.add(AlchemyItems.SMALL_CRYSTAL,"小晶石");
             translationBuilder.add(AlchemyItems.UNKNOWN_ORE,"未知的原石");
             translationBuilder.add(AlchemyItems.GREAT_WHITE_PEARL,"大贝白玉");
@@ -178,7 +177,7 @@ public class AlchemySimplifiedChineseLanguageProvider extends FabricLanguageProv
             translationBuilder.add(AlchemyItems.DREAM_MUSHROOM,"做梦蘑菇");
             translationBuilder.add(AlchemyItems.CLUSTER_MUSHROOM,"群生蘑菇");
             translationBuilder.add(AlchemyItems.JUPITER_TOOTH_MUSHROOM,"尤皮特齿菇");
-            translationBuilder.add(AlchemyItems.GOLDEN_CROWN,"金色王冠");
+            translationBuilder.add(AlchemyCuriosItems.GOLDEN_CROWN,"金色王冠");
             translationBuilder.add(AlchemyItems.BEAUTIFUL_SHELL,"美丽贝壳");
             translationBuilder.add(AlchemyItems.SARDINE,"沙丁鱼");
             translationBuilder.add(AlchemyItems.JIANG_LONG_FISH,"江龙鱼");
@@ -234,7 +233,7 @@ public class AlchemySimplifiedChineseLanguageProvider extends FabricLanguageProv
             translationBuilder.add(AlchemyItems.SPIRIT_FLOWER,"精神之花");
             translationBuilder.add(AlchemyItems.SPIRIT_FEATHER,"精神之羽");
             translationBuilder.add(AlchemyItems.RUSTED_SWORD,"Rusty Sword");
-            translationBuilder.add(AlchemyItems.AZURITE_ORE,"海蓝石矿");
+
 
 
 

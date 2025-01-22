@@ -6,10 +6,7 @@ import com.skniro.alchemy.block.AlchemyOreBlocks;
 import com.skniro.alchemy.block.AlchemyPalmaBlocks;
 import com.skniro.alchemy.fluid.AlchemyFluidItems;
 import com.skniro.alchemy.fluid.AlchemyFluids;
-import com.skniro.alchemy.item.AlchemyBoatItems;
-import com.skniro.alchemy.item.AlchemyFoodComponents;
-import com.skniro.alchemy.item.AlchemyItems;
-import com.skniro.alchemy.item.AlchemySignItems;
+import com.skniro.alchemy.item.*;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
@@ -34,6 +31,10 @@ public class AlchemyModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerCubeAllModelTexturePool(AlchemyOreBlocks.lightning_Ore);
         blockStateModelGenerator.registerCubeAllModelTexturePool(AlchemyOreBlocks.Crimson_ore);
         blockStateModelGenerator.registerCubeAllModelTexturePool(AlchemyOreBlocks.End_Septrin_Ore);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(AlchemyOreBlocks.AZURITE_ORE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(AlchemyOreBlocks.PAINT_NIGHTSTONE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(AlchemyOreBlocks.MOLDY_NIGHTSTONE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(AlchemyOreBlocks.GORDY_NIGHTSTONE);
 
         //LOG Block
         blockStateModelGenerator.registerLog(AlchemyMapleBlocks.MAPLE_LOG).log(AlchemyMapleBlocks.MAPLE_LOG).wood(AlchemyMapleBlocks.MAPLE_WOOD);
@@ -55,11 +56,11 @@ public class AlchemyModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
-        itemModelGenerator.register(AlchemyItems.Salt, Models.GENERATED);
-        itemModelGenerator.register(AlchemyItems.Arknite, Models.GENERATED);
-        itemModelGenerator.register(AlchemyItems.Septrin, Models.GENERATED);
-        itemModelGenerator.register(AlchemyItems.Crimson, Models.GENERATED);
-        itemModelGenerator.register(AlchemyItems.Hematite, Models.GENERATED);
+        itemModelGenerator.register(AlchemyOreItems.Salt, Models.GENERATED);
+        itemModelGenerator.register(AlchemyOreItems.Arknite, Models.GENERATED);
+        itemModelGenerator.register(AlchemyOreItems.Septrin, Models.GENERATED);
+        itemModelGenerator.register(AlchemyOreItems.Crimson, Models.GENERATED);
+        itemModelGenerator.register(AlchemyOreItems.Hematite, Models.GENERATED);
 
         itemModelGenerator.register(AlchemyFluidItems.EmeraldBand_BUCKET, Models.GENERATED);
 
@@ -128,12 +129,8 @@ public class AlchemyModelProvider extends FabricModelProvider {
         itemModelGenerator.register(AlchemyItems.RIVER_STONE_BLAZE, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.STALACTITE_FRAGMENT, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.SPIRIT_WHITE_ROCK, Models.GENERATED);
-        itemModelGenerator.register(AlchemyItems.KOBOLD_NIGHTSTONE, Models.GENERATED);
-        itemModelGenerator.register(AlchemyItems.PAINT_NIGHTSTONE, Models.GENERATED);
-        itemModelGenerator.register(AlchemyItems.MOLDY_NIGHTSTONE, Models.GENERATED);
-        itemModelGenerator.register(AlchemyItems.GORDY_NIGHTSTONE, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.COMET_ROCK, Models.GENERATED);
-        itemModelGenerator.register(AlchemyItems.CREATION_REVERSE_STONE, Models.GENERATED);
+        itemModelGenerator.register(AlchemyOreItems.CREATION_REVERSE_STONE, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.SMALL_CRYSTAL, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.UNKNOWN_ORE, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.GREAT_WHITE_PEARL, Models.GENERATED);
@@ -165,7 +162,7 @@ public class AlchemyModelProvider extends FabricModelProvider {
         itemModelGenerator.register(AlchemyItems.DREAM_MUSHROOM, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.CLUSTER_MUSHROOM, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.JUPITER_TOOTH_MUSHROOM, Models.GENERATED);
-        itemModelGenerator.register(AlchemyItems.GOLDEN_CROWN, Models.GENERATED);
+        itemModelGenerator.register(AlchemyCuriosItems.GOLDEN_CROWN, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.BEAUTIFUL_SHELL, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.SARDINE, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.JIANG_LONG_FISH, Models.GENERATED);
@@ -227,8 +224,6 @@ public class AlchemyModelProvider extends FabricModelProvider {
         itemModelGenerator.register(AlchemyItems.SPIRIT_FLOWER, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.SPIRIT_FEATHER, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.RUSTED_SWORD, Models.GENERATED);
-
-        itemModelGenerator.register(AlchemyItems.AZURITE_ORE, Models.GENERATED);
 
         //Sign
         itemModelGenerator.register(AlchemySignItems.Maple_HANGING_SIGN, Models.GENERATED);

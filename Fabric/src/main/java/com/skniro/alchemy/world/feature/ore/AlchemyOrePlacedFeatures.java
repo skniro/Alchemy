@@ -1,4 +1,4 @@
-package com.skniro.alchemy.world.feature;
+package com.skniro.alchemy.world.feature.ore;
 
 import com.skniro.alchemy.Alchemy;
 import com.skniro.alchemy.block.AlchemyMapleBlocks;
@@ -16,10 +16,26 @@ import java.util.List;
 
 
 
-public class AlchemyPlacedFeatures {
+public class AlchemyOrePlacedFeatures {
+    public static final RegistryKey<PlacedFeature> Arknite_ORE_PLACED = registerKey("ore_arknite_overworld");
+    public static final RegistryKey<PlacedFeature> SALT_ORE_PLACED = registerKey("ore_salt_overworld");
+    public static final RegistryKey<PlacedFeature> Deepslate_SALT_ORE_PLACED = registerKey("deepslate_ore_salt_overworld");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
+
+
+        register(context, Arknite_ORE_PLACED, configuredFeatureRegistryEntryLookup.getOrThrow(AlchemyOreConfiguredFeatures.Arknite_ORE_KEY),
+                modifiersWithCount(7, // Veins per Chunk
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(-80))));
+
+        register(context, SALT_ORE_PLACED, configuredFeatureRegistryEntryLookup.getOrThrow(AlchemyOreConfiguredFeatures.SALT_ORE_KEY),
+                modifiersWithCount(5, // Veins per Chunk
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(30), YOffset.fixed(0))));
+
+        register(context, Deepslate_SALT_ORE_PLACED, configuredFeatureRegistryEntryLookup.getOrThrow(AlchemyOreConfiguredFeatures.Deepslate_SALT_ORE_KEY),
+                modifiersWithCount(5, // Veins per Chunk
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(-80))));
 
     }
 

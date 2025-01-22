@@ -1,4 +1,4 @@
-package com.skniro.alchemy.world.feature;
+package com.skniro.alchemy.world.feature.tree;
 
 import com.skniro.alchemy.Alchemy;
 import com.skniro.alchemy.block.AlchemyMapleBlocks;
@@ -16,10 +16,17 @@ import java.util.List;
 
 
 
-public class AlchemyPlacedFeatures {
+public class AlchemyTreePlacedFeatures {
+    public static final RegistryKey<PlacedFeature> Red_Maple_TREE_PLACED = registerKey("red_maple_tree_placed");
+    public static final RegistryKey<PlacedFeature> Palma_TREE_PLACED = registerKey("palma_tree_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
+        register(context, Red_Maple_TREE_PLACED, configuredFeatureRegistryEntryLookup.getOrThrow(AlchemyTreeConfiguredFeatures.Red_Maple_TREE),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(3, 0.1f, 1), AlchemyMapleBlocks.RED_MAPLE_SAPLING));
+
+        register(context, Palma_TREE_PLACED, configuredFeatureRegistryEntryLookup.getOrThrow(AlchemyTreeConfiguredFeatures.Palma_TREE),
+                VegetationPlacedFeatures.treeModifiersWithWouldSurvive(PlacedFeatures.createCountExtraModifier(3, 0.1f, 1), AlchemyPalmaBlocks.PALMA_SAPLING));
 
     }
 

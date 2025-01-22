@@ -24,6 +24,7 @@ public class AlchemyBlocks {
     public static final Block BLACK_SLIME_BLOCK = registerBlock("block_slime_block", new SlimeBlock(AbstractBlock.Settings.create().mapColor(MapColor.PALE_GREEN).slipperiness(0.8F).sounds(BlockSoundGroup.SLIME).nonOpaque()), Alchemy.Alchemy_Group);
     public static final Block Sliver_SLIME_BLOCK = registerBlock("sliver_slime_block", new SlimeBlock(AbstractBlock.Settings.create().mapColor(MapColor.PALE_GREEN).slipperiness(0.8F).sounds(BlockSoundGroup.SLIME).nonOpaque()), Alchemy.Alchemy_Group);
     public static final Block GOLD_SLIME_BLOCK = registerBlock("gold_slime_block", new SlimeBlock(AbstractBlock.Settings.create().mapColor(MapColor.PALE_GREEN).slipperiness(0.8F).sounds(BlockSoundGroup.SLIME).nonOpaque()), Alchemy.Alchemy_Group);
+
     private static Block registerBlockWithoutItem(String name, Block block) {
         return Registry.register(Registries.BLOCK, new Identifier(Alchemy.MOD_ID, name), block);
     }

@@ -1,4 +1,4 @@
-package com.skniro.alchemy.world.feature;
+package com.skniro.alchemy.world.feature.tree;
 
 import com.skniro.alchemy.Alchemy;
 import com.skniro.alchemy.block.AlchemyMapleBlocks;
@@ -27,7 +27,10 @@ import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 import java.util.List;
 
 
-public class AlchemyConfiguredFeatures {
+public class AlchemyTreeConfiguredFeatures {
+    public static final RegistryKey<ConfiguredFeature<?, ?>>  Red_Maple_TREE =registerKey("red_maple_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>>  Palma_TREE =registerKey("red_palma_tree");
+
     private static TreeFeatureConfig.Builder builder(Block log, Block leaves, int baseHeight, int firstRandomHeight, int secondRandomHeight, int radius) {
         return new TreeFeatureConfig.Builder(BlockStateProvider.of(log), new StraightTrunkPlacer(baseHeight, firstRandomHeight, secondRandomHeight), BlockStateProvider.of(leaves), new BlobFoliagePlacer(ConstantIntProvider.create(radius), ConstantIntProvider.create(0), 3), new TwoLayersFeatureSize(1, 0, 1));
     }
@@ -35,6 +38,10 @@ public class AlchemyConfiguredFeatures {
 
     static DataPool.Builder<BlockState> pool() {
         return DataPool.builder();
+    }
+
+    private static TreeFeatureConfig.Builder redmaple() {
+        return AlchemyTreeConfiguredFeatures.builder(AlchemyMapleBlocks.MAPLE_LOG, AlchemyMapleBlocks.RED_MAPLE_LEAVES, 4, 3, 0, 2).ignoreVines();
     }
 
     private static TreeFeatureConfig palma() {
@@ -53,6 +60,21 @@ public class AlchemyConfiguredFeatures {
         RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
         RuleTest endstoneReplaceables = new BlockMatchRuleTest(Blocks.END_STONE);
 
+
+        List<OreFeatureConfig.Target> deepslate_arknite_Ores =
+                List.of(OreFeatureConfig.createTarget(deepslateReplaceables, AlchemyOreBlocks.Deepslate_arknite_Ore.getDefaultState()));
+
+        List<OreFeatureConfig.Target> salt_Ores =
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, AlchemyOreBlocks.Salt_Ore.getDefaultState()));
+
+        List<OreFeatureConfig.Target> deepslate_salt_Ores =
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, AlchemyOreBlocks.DEEPSLATE_Salt_Ore.getDefaultState()));
+
+        //Tree
+        register(context, Red_Maple_TREE, Feature.TREE,
+                AlchemyTreeConfiguredFeatures.redmaple().build());
+        register(context, Palma_TREE, Feature.TREE,
+                AlchemyTreeConfiguredFeatures.palma());
     }
 
 

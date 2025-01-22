@@ -8,14 +8,6 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class AlchemyItems {
-    //矿物
-    public static final Item Salt = registerItem("salt",new Item(new Item.Settings()));
-    public static final Item Arknite = registerItem("arknite",new Item(new Item.Settings()));
-    public static final Item Crimson = registerItem("crimson",new Item(new Item.Settings()));
-    public static final Item Hematite = registerItem("hematite",new Item(new Item.Settings()));
-       //圣石
-    public static final Item Septrin = registerItem("septrin",new Item(new Item.Settings()));
-
     //其他合成材料
     public static final Item PlantEssence = registerItem("plantessence",new Item(new Item.Settings()));
 
@@ -89,13 +81,9 @@ public class AlchemyItems {
     public static final Item RIVER_STONE_BLAZE = registerItem("river_stone_blaze", new Item(new Item.Settings()));
     public static final Item STALACTITE_FRAGMENT = registerItem("stalactite_fragment", new Item(new Item.Settings()));
     public static final Item SPIRIT_WHITE_ROCK = registerItem("spirit_white_rock", new Item(new Item.Settings()));
-    public static final Item AZURITE_ORE = registerItem("azurite_ore", new Item(new Item.Settings()));
-    public static final Item KOBOLD_NIGHTSTONE = registerItem("kobold_nightstone", new Item(new Item.Settings()));
-    public static final Item PAINT_NIGHTSTONE = registerItem("paint_nightstone", new Item(new Item.Settings()));
-    public static final Item MOLDY_NIGHTSTONE = registerItem("moldy_nightstone", new Item(new Item.Settings()));
-    public static final Item GORDY_NIGHTSTONE = registerItem("gordy_nightstone", new Item(new Item.Settings()));
+
+
     public static final Item COMET_ROCK = registerItem("comet_rock", new Item(new Item.Settings()));
-    public static final Item CREATION_REVERSE_STONE = registerItem("creation_reverse_stone", new Item(new Item.Settings()));
     public static final Item SMALL_CRYSTAL = registerItem("small_crystal", new Item(new Item.Settings()));
     public static final Item UNKNOWN_ORE = registerItem("unknown_ore", new Item(new Item.Settings()));
     public static final Item GREAT_WHITE_PEARL = registerItem("great_white_pearl", new Item(new Item.Settings()));
@@ -126,7 +114,7 @@ public class AlchemyItems {
     public static final Item DREAM_MUSHROOM = registerItem("dream_mushroom", new Item(new Item.Settings()));
     public static final Item CLUSTER_MUSHROOM = registerItem("cluster_mushroom", new Item(new Item.Settings()));
     public static final Item JUPITER_TOOTH_MUSHROOM = registerItem("jupiter_tooth_mushroom", new Item(new Item.Settings()));
-    public static final Item GOLDEN_CROWN = registerItem("golden_crown", new Item(new Item.Settings()));
+
     public static final Item BEAUTIFUL_SHELL = registerItem("beautiful_shell", new Item(new Item.Settings()));
     public static final Item SARDINE = registerItem("sardine", new Item(new Item.Settings()));
     public static final Item JIANG_LONG_FISH = registerItem("jiang_long_fish", new Item(new Item.Settings()));
@@ -193,7 +181,10 @@ public class AlchemyItems {
     public static final Item Test_Tool_Type1_Level1 = registerItem("test_tool_type1_level1",new AlchemyTestItem(ToolMaterials.IRON,5, 6.0F, new Item.Settings()));
     public static final Item Test_Tool_Type1_Level2 = registerItem("test_tool_type1_level2",new AlchemyTestItem(ToolMaterials.IRON,5, 6.0F, new Item.Settings()));
     public static final Item Test_Tool_Type1_Level3 = registerItem("test_tool_type1_level3",new AlchemyTestItem(ToolMaterials.IRON,5, 6.0F, new Item.Settings()));
-
+    public static final Item Test_Tool_Type2_Level1 = registerItem("test_tool_type2_level1",new AlchemyTestItem(ToolMaterials.IRON,5, 6.0F, new Item.Settings()));
+    public static final Item Test_Tool_Type2_Level2 = registerItem("test_tool_type2_level2",new AlchemyTestItem(ToolMaterials.IRON,5, 6.0F, new Item.Settings()));
+    public static final Item Test_Tool_Type2_Level3 = registerItem("test_tool_type2_level3",new AlchemyTestItem(ToolMaterials.IRON,5, 6.0F, new Item.Settings()));
+    public static final Item Test_Tool_Type3_Level1 = registerItem("test_tool_type3_level1",new AlchemyTestItem(ToolMaterials.IRON,5, 6.0F, new Item.Settings()));
 
     //能喝的
     public static final Item Goat_Milk = registerItem("goat_milk",new MilkBucketItem(new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1)));

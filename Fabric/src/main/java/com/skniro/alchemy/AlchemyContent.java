@@ -61,6 +61,7 @@ public class AlchemyContent {
         AlchemySignItems.registerAlchemySignItems();
         AlchemyDoorItems.registerAlchemyDoorItems();
         AlchemyBoatItems.registerAlchemyBoatItems();
+        AlchemyCuriosItems.registerAlchemyCuriosItems();
     }
 
     public static void registerBlock(){
@@ -128,13 +129,13 @@ public class AlchemyContent {
 
             //Ore
             content.add(AlchemyOreBlocks.Crimson_ore);
-            content.add(AlchemyItems.Crimson);
-            content.add(AlchemyItems.Hematite);
+            content.add(AlchemyOreItems.Crimson);
+            content.add(AlchemyOreItems.Hematite);
 
             //Items
-            content.add(AlchemyItems.Salt);
-            content.add(AlchemyItems.Arknite);
-            content.add(AlchemyItems.Septrin);
+            content.add(AlchemyOreItems.Salt);
+            content.add(AlchemyOreItems.Arknite);
+            content.add(AlchemyOreItems.Septrin);
             content.add(AlchemyItems.Test_Tool_Type1_Level1);
 
             //Fluids
@@ -205,12 +206,11 @@ public class AlchemyContent {
             content.add(AlchemyItems.RIVER_STONE_BLAZE);
             content.add(AlchemyItems.STALACTITE_FRAGMENT);
             content.add(AlchemyItems.SPIRIT_WHITE_ROCK);
-            content.add(AlchemyItems.KOBOLD_NIGHTSTONE);
-            content.add(AlchemyItems.PAINT_NIGHTSTONE);
-            content.add(AlchemyItems.MOLDY_NIGHTSTONE);
-            content.add(AlchemyItems.GORDY_NIGHTSTONE);
+            content.add(AlchemyOreBlocks.PAINT_NIGHTSTONE);
+            content.add(AlchemyOreBlocks.MOLDY_NIGHTSTONE);
+            content.add(AlchemyOreBlocks.GORDY_NIGHTSTONE);
             content.add(AlchemyItems.COMET_ROCK);
-            content.add(AlchemyItems.CREATION_REVERSE_STONE);
+            content.add(AlchemyOreItems.CREATION_REVERSE_STONE);
             content.add(AlchemyItems.SMALL_CRYSTAL);
             content.add(AlchemyItems.UNKNOWN_ORE);
             content.add(AlchemyItems.GREAT_WHITE_PEARL);
@@ -242,7 +242,7 @@ public class AlchemyContent {
             content.add(AlchemyItems.DREAM_MUSHROOM);
             content.add(AlchemyItems.CLUSTER_MUSHROOM);
             content.add(AlchemyItems.JUPITER_TOOTH_MUSHROOM);
-            content.add(AlchemyItems.GOLDEN_CROWN);
+            content.add(AlchemyCuriosItems.GOLDEN_CROWN);
             content.add(AlchemyItems.BEAUTIFUL_SHELL);
             content.add(AlchemyItems.SARDINE);
             content.add(AlchemyItems.JIANG_LONG_FISH);
@@ -305,7 +305,7 @@ public class AlchemyContent {
             content.add(AlchemyItems.SPIRIT_FLOWER);
             content.add(AlchemyItems.SPIRIT_FEATHER);
             content.add(AlchemyItems.RUSTED_SWORD);
-            content.add(AlchemyItems.AZURITE_ORE);
+            content.add(AlchemyOreBlocks.AZURITE_ORE);
             content.add(AlchemyMapleBlocks.MAPLE_LOG);
             content.add(AlchemyMapleBlocks.STRIPPED_MAPLE_LOG);
             content.add(AlchemyMapleBlocks.STRIPPED_MAPLE_WOOD);
