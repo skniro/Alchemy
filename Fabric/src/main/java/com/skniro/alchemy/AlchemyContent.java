@@ -108,7 +108,6 @@ public class AlchemyContent {
     }
 
     public static void registerEvent() {
-        //UseBlockCallback.EVENT.register(AlchemyEventHandler::MapleBarkDrop);
     }
 
     public static void registerType() {
@@ -338,8 +337,8 @@ public class AlchemyContent {
             content.add(AlchemyBoatItems.MAPLE_CHEST_BOAT);
 
             // Other Materials
-            content.add(AlchemyItems.Silver_BEE_HIVE);
-            content.add(AlchemyItems.GOLDEN_BEE_HIVE);
+            content.add(AlchemyItems.Silver_Honeycomb);
+            content.add(AlchemyItems.GOLDEN_Honeycomb);
         });
 
         ItemGroupEvents.modifyEntriesEvent(Alchemy_Group_Food).register(content -> {

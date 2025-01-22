@@ -10,7 +10,8 @@
     "BoatDropsMixin",
     "BoatTypeMixin",
     "ChestBoatDropsMixin",
-    "api.AxeItemStrippableDropMixin"
+    "api.AxeItemStrippableDropMixin",
+    "BeehiveBlockMixin"
   ],
   "client": [
   ],

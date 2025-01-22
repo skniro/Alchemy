@@ -30,7 +30,7 @@ public class Alchemy implements ModInitializer, TerraBlenderApi {
         AlchemyContent.registerItemGroup();
         AlchemyContent.registerType();
         AlchemyContent.registerFluid();
-        //AlchemyContent.registerEvent();
+        AlchemyContent.registerEvent();
         AlchemyContent.registerCommand();
         AlchemyLootTableModifiers.modifyLootTables();
         AlchemyContent.registerEntityAttribute();

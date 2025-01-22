@@ -172,8 +172,8 @@ public class AlchemyItems {
     public static final Item RUSTED_SWORD = registerItem("rusted_sword", new Item(new Item.Settings()));
 
     // Other Materials
-    public static final Item Silver_BEE_HIVE = registerItem("silver_honeycomb", new Item(new Item.Settings()));
-    public static final Item GOLDEN_BEE_HIVE = registerItem("golden_honeycomb", new Item(new Item.Settings()));
+    public static final Item Silver_Honeycomb= registerItem("silver_honeycomb", new Item(new Item.Settings()));
+    public static final Item GOLDEN_Honeycomb = registerItem("golden_honeycomb", new Item(new Item.Settings()));
 
 
     //工具

@@ -1,4 +1,4 @@
-// 1.20.1	2025-01-22T19:56:47.2371177	Alchemy/Model Definitions
+// 1.20.1	2025-01-22T21:03:47.0929518	Alchemy/Model Definitions
 d64a7608c592cc9dd522e78dec6dfda28574eb50 assets\alchemy\models\item\puni_puni_ball_silver.json
 1e30be84d939834582289cb998b35957d6ac6ffd assets\alchemy\models\item\sea_urchin.json
 764a9afbcb1efea94ac3a9ca143854f60bc54c50 assets\alchemy\blockstates\maple_fence_gate.json
@@ -157,7 +157,6 @@ b11a320fc398b7897eb348d3d1071c8d3380fe56 assets\alchemy\models\block\maple_door_
 3f18a82ed0c4a4a194c156746e418153a6ba8821 assets\alchemy\blockstates\maple_door.json
 ea6c8e46871ef7bb20a634540c1ca953e014b32b assets\alchemy\models\item\maple_pressure_plate.json
 96686e16907b856ef98a3408ab891564e731d867 assets\alchemy\models\item\gordy_nightstone_ore.json
-38232884df47c98d4aef5f7096cb8ff689be582c assets\alchemy\models\item\berry_bush.json
 f6a54b3f9897ad1e14fa19f06036463c73334112 assets\alchemy\models\item\nameless_grass.json
 8660313a139d0647ee1b3d359ebc9de15f6898d8 assets\alchemy\models\item\palma_log.json
 2e4127ac1f37f561769d77d0a51a8abbe7e59ed6 assets\alchemy\models\item\maple_stairs.json
@@ -218,8 +217,8 @@ fe2636623763efcb81c843aa4776f6be67e8da3b assets\alchemy\models\block\berry_bush_
 1924a754773d4d6010657de802951a565161ecf8 assets\alchemy\models\item\maple_door.json
 c49ed49e97415295612e03e38c529a0cc17eadb5 assets\alchemy\models\item\paint_nightstone_ore.json
 6d1e0d4d7800499affa7e9ba8bf556ba079625c6 assets\alchemy\models\block\maple_door_top_left_open.json
-55e032053b9cba52a10dd8f65a2e8850c0b5c8f0 assets\alchemy\models\item\triangle_beetle.json
 8fe6fa1017dd97f9dbcfab3f03f479996e89e29d assets\alchemy\models\block\maple_button_inventory.json
+55e032053b9cba52a10dd8f65a2e8850c0b5c8f0 assets\alchemy\models\item\triangle_beetle.json
 e4db8d1335df1ff90a5136be653ba7aa47e1155c assets\alchemy\models\item\amber_fragment.json
 f6ece2e88d0b43ea6fdc3c469fba93e2fa398539 assets\alchemy\models\item\silent_moonflower.json
 715e3b3b88e6ef1ef719ef09deabeb038e1fa6ca assets\alchemy\models\item\seven_colored_grape.json
@@ -230,8 +229,8 @@ c8d82ddc5659bdf53381270efcd179369a7c52de assets\alchemy\models\item\old_magic_bo
 3c5ce039e710f78707511994704910694f1f90b8 assets\alchemy\models\block\palma_fence_gate_wall_open.json
 9da31d538de0a4d6e3790e6a67cda68e08b6082e assets\alchemy\models\item\crimson.json
 edfbb59744f735290449d415a2abc5a75a148590 assets\alchemy\blockstates\stripped_maple_log.json
-a66611a75e047bc78bf566c39983f6e727609738 assets\alchemy\models\item\cap_crab.json
 f14ad838317dc7ad64c453ee80a3c123259fde31 assets\alchemy\models\item\rotten_wood_poison_mist.json
+a66611a75e047bc78bf566c39983f6e727609738 assets\alchemy\models\item\cap_crab.json
 81efc56e683e9decc72a5b0eb9e40fc7bf11a60d assets\alchemy\models\item\bitter_root.json
 10d5be041aa8e3fae6dd93af6c4efde78d3ea34d assets\alchemy\models\block\palma_door_bottom_right_open.json
 e39015ca800a54c20f4d049ca7afab010848bd9b assets\alchemy\models\item\hematite.json

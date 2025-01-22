@@ -236,8 +236,8 @@ public class AlchemySimplifiedChineseLanguageProvider extends FabricLanguageProv
 
 
             // Other Materials
-            translationBuilder.add(AlchemyItems.Silver_BEE_HIVE,"银色蜂巢（采集物）");
-            translationBuilder.add(AlchemyItems.GOLDEN_BEE_HIVE,"金色蜂巢");
+            translationBuilder.add(AlchemyItems.Silver_Honeycomb,"银色蜜脾");
+            translationBuilder.add(AlchemyItems.GOLDEN_Honeycomb,"金色蜜脾");
 
 
 
