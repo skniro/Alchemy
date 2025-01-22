@@ -1,11 +1,11 @@
 package com.skniro.alchemy.block.init;
 
+import com.skniro.alchemy.item.AlchemyFoodComponents;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.server.world.ServerWorld;
@@ -28,22 +28,20 @@ import net.minecraft.world.WorldView;
 import net.minecraft.world.event.GameEvent;
 import net.minecraft.world.event.GameEvent.Emitter;
 
-public class AlchemySweetBerryBushBlock extends PlantBlock implements Fertilizable {
+public class AlchemyBerryBushBlock extends PlantBlock implements Fertilizable {
     private static final float field_31260 = 0.003F;
     public static final int MAX_AGE = 3;
-    private final Item fruitItem;
     public static final IntProperty AGE;
     private static final VoxelShape SMALL_SHAPE;
     private static final VoxelShape LARGE_SHAPE;
 
-    public AlchemySweetBerryBushBlock(AbstractBlock.Settings settings, Item fruitItem) {
+    public AlchemyBerryBushBlock(AbstractBlock.Settings settings) {
         super(settings);
         this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(AGE, 0));
-        this.fruitItem = fruitItem;
     }
 
     public ItemStack getPickStack(BlockView world, BlockPos pos, BlockState state) {
-        return new ItemStack(Items.SWEET_BERRIES);
+        return new ItemStack(AlchemyFoodComponents.BERRY);
     }
 
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
@@ -89,7 +87,7 @@ public class AlchemySweetBerryBushBlock extends PlantBlock implements Fertilizab
             return ActionResult.PASS;
         } else if (i > 1) {
             int j = 1 + world.random.nextInt(2);
-            dropStack(world, pos, new ItemStack(fruitItem, j + (bl ? 1 : 0)));
+            dropStack(world, pos, new ItemStack(AlchemyFoodComponents.BERRY, j + (bl ? 1 : 0)));
             world.playSound((PlayerEntity)null, pos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1.0F, 0.8F + world.random.nextFloat() * 0.4F);
             BlockState blockState = (BlockState)state.with(AGE, 1);
             world.setBlockState(pos, blockState, 2);

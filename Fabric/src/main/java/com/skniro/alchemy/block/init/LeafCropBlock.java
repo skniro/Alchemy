@@ -100,7 +100,7 @@ public class LeafCropBlock extends Block implements Waterloggable {
         boolean bl = i == 2;
         if (i > 1) {
             int j = 1;
-            dropStack(world, pos, new ItemStack(fruitItem, j ));
+            dropStack(world, pos, new ItemStack(this.fruitItem, j ));
             world.playSound((PlayerEntity)null, pos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1.0F, 0.8F + world.random.nextFloat() * 0.4F);
             BlockState blockState = (BlockState)state.with(AGE, 1);
             world.setBlockState(pos, blockState, 2);

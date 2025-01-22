@@ -1,7 +1,7 @@
 package com.skniro.alchemy.block;
 
 import com.skniro.alchemy.Alchemy;
-import com.skniro.alchemy.block.init.AlchemySweetBerryBushBlock;
+import com.skniro.alchemy.block.init.AlchemyBerryBushBlock;
 import com.skniro.alchemy.block.init.Alchemyblock;
 import com.skniro.alchemy.item.AlchemyFoodComponents;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -20,7 +20,7 @@ public class AlchemyBlocks {
     public static final Block Alchemy_Block =registerBlock("alchemy_block",new Alchemyblock(AbstractBlock.Settings.create().requiresTool().strength(3.0F, 3.0F)),Alchemy.Alchemy_Group);
 
     //berry
-    public static final Block BERRY_BUSH = registerBlock("berry_bush", new AlchemySweetBerryBushBlock(AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).ticksRandomly().noCollision().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).pistonBehavior(PistonBehavior.DESTROY), AlchemyFoodComponents.BERRY), Alchemy.Alchemy_Group);
+    public static final Block BERRY_BUSH = registerBlock("berry_bush", new AlchemyBerryBushBlock(AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).ticksRandomly().noCollision().nonOpaque().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).pistonBehavior(PistonBehavior.DESTROY)), Alchemy.Alchemy_Group);
 
     //SlimeBlock
     public static final Block BLUE_SLIME_BLOCK = registerBlock("blue_slime_block", new SlimeBlock(AbstractBlock.Settings.create().mapColor(MapColor.PALE_GREEN).slipperiness(0.8F).sounds(BlockSoundGroup.SLIME).nonOpaque()), Alchemy.Alchemy_Group);
