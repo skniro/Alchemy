@@ -106,14 +106,12 @@ public class AlchemyItems {
     public static final Item KUKEN_FRUIT = registerItem("kuken_fruit", new Item(new Item.Settings()));
     public static final Item UNKNOWN_EGG = registerItem("unknown_egg", new Item(new Item.Settings()));
     public static final Item SEVEN_COLORED_GRAPE = registerItem("seven_colored_grape", new Item(new Item.Settings()));
-    public static final Item BERRY = registerItem("berry", new Item(new Item.Settings()));
     public static final Item OIL_TREE_FRUIT = registerItem("oil_tree_fruit", new Item(new Item.Settings()));
     public static final Item DEW_FRUIT = registerItem("dew_fruit", new Item(new Item.Settings()));
     public static final Item OAK_MUSHROOM = registerItem("oak_mushroom", new Item(new Item.Settings()));
     public static final Item DREAM_MUSHROOM = registerItem("dream_mushroom", new Item(new Item.Settings()));
     public static final Item CLUSTER_MUSHROOM = registerItem("cluster_mushroom", new Item(new Item.Settings()));
     public static final Item JUPITER_TOOTH_MUSHROOM = registerItem("jupiter_tooth_mushroom", new Item(new Item.Settings()));
-
     public static final Item BEAUTIFUL_SHELL = registerItem("beautiful_shell", new Item(new Item.Settings()));
     public static final Item SARDINE = registerItem("sardine", new Item(new Item.Settings()));
     public static final Item JIANG_LONG_FISH = registerItem("jiang_long_fish", new Item(new Item.Settings()));

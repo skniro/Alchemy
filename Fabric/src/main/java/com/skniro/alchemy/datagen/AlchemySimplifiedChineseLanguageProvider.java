@@ -169,7 +169,7 @@ public class AlchemySimplifiedChineseLanguageProvider extends FabricLanguageProv
             translationBuilder.add(AlchemyItems.KUKEN_FRUIT,"库肯果");
             translationBuilder.add(AlchemyItems.UNKNOWN_EGG,"不知名的蛋");
             translationBuilder.add(AlchemyItems.SEVEN_COLORED_GRAPE,"七色葡萄");
-            translationBuilder.add(AlchemyItems.BERRY,"莓果");
+            translationBuilder.add(AlchemyFoodComponents.BERRY,"莓果");
             translationBuilder.add(AlchemyItems.OIL_TREE_FRUIT,"油木果实");
             translationBuilder.add(AlchemyItems.DEW_FRUIT,"甘露果实");
             translationBuilder.add(AlchemyItems.OAK_MUSHROOM,"橡树菇");

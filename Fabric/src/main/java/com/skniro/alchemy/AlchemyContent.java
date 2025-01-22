@@ -138,6 +138,10 @@ public class AlchemyContent {
             content.add(AlchemyOreItems.Septrin);
             content.add(AlchemyItems.Test_Tool_Type1_Level1);
 
+            //Food
+            content.add(AlchemyFoodComponents.PALMA_FRUIT);
+            content.add(AlchemyFoodComponents.BERRY);
+
             //Fluids
             content.add(AlchemyFluidItems.EmeraldBand_BUCKET);
 
@@ -233,8 +237,6 @@ public class AlchemyContent {
             content.add(AlchemyItems.KUKEN_FRUIT);
             content.add(AlchemyItems.UNKNOWN_EGG);
             content.add(AlchemyItems.SEVEN_COLORED_GRAPE);
-            content.add(AlchemyFoodComponents.PALMA_FRUIT);
-            content.add(AlchemyItems.BERRY);
             content.add(AlchemyItems.OIL_TREE_FRUIT);
             content.add(AlchemyItems.DEW_FRUIT);
             content.add(AlchemyItems.OAK_MUSHROOM);

@@ -13,7 +13,6 @@ public class AlchemyFoodComponents {
     public static final Item PALMA_FRUIT = registerItem("palma_fruit",
             new Item(new Item
                     .Settings()
-                    .rarity(Rarity.RARE)
                     .food
                             (new FoodComponent
                                     .Builder()
@@ -45,6 +44,18 @@ public class AlchemyFoodComponents {
                                                             0),
                                                     1.0F)
                                             .build()
+                            )
+            ));
+
+    public static final Item BERRY = registerItem("berry",
+            new Item(new Item.Settings()
+                    .food
+                            (new FoodComponent
+                                    .Builder()
+                                    .hunger(1)
+                                    .saturationModifier(0.3f)
+                                    .alwaysEdible()
+                                    .build()
                             )
             ));
 
