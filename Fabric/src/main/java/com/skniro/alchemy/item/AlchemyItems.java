@@ -30,6 +30,10 @@ public class AlchemyItems {
     public static final Item PUNI_PUNI_BALL_SILVER = registerItem("puni_puni_ball_silver", new Item(new Item.Settings()));
     public static final Item PUNI_PUNI_BALL_GOLD = registerItem("puni_puni_ball_gold", new Item(new Item.Settings()));
 
+    //Bark
+    public static final Item PALM_BARK = registerItem("palm_bark", new Item(new Item.Settings()));
+    public static final Item MAPLE_BARK = registerItem("maple_bark", new Item(new Item.Settings()));
+
     // Sea Urchins
     public static final Item SeaUrchin = registerItem("sea_urchin",new Item(new Item.Settings()));
     public static final Item SILVER_SEA_URCHIN = registerItem("silver_sea_urchin", new Item(new Item.Settings()));
@@ -97,7 +101,7 @@ public class AlchemyItems {
     public static final Item MAGMA_POWDER = registerItem("magma_powder", new Item(new Item.Settings()));
     public static final Item PAPER_SCRAP = registerItem("paper_scrap", new Item(new Item.Settings()));
     public static final Item FLAMMABLE_BARK = registerItem("flammable_bark", new Item(new Item.Settings()));
-    public static final Item PALM_BARK = registerItem("palm_bark", new Item(new Item.Settings()));
+
     public static final Item NATURAL_OIL = registerItem("natural_oil", new Item(new Item.Settings()));
     public static final Item WHITE_SMOKE_CHARCOAL = registerItem("white_smoke_charcoal", new Item(new Item.Settings()));
     public static final Item PALM_BLACK_CHARCOAL = registerItem("palm_black_charcoal", new Item(new Item.Settings()));
@@ -162,14 +166,12 @@ public class AlchemyItems {
     public static final Item OLD_MAGIC_BOOK = registerItem("old_magic_book", new Item(new Item.Settings()));
     public static final Item OTHERWORLD_CORE = registerItem("otherworld_core", new Item(new Item.Settings()));
     public static final Item HOLY_TREE_LEAF = registerItem("holy_tree_leaf", new Item(new Item.Settings()));
-    public static final Item MAPLE_BARK = registerItem("maple_bark", new Item(new Item.Settings()));
     public static final Item HONEY_WOOD_BRANCH = registerItem("honey_wood_branch", new Item(new Item.Settings()));
     public static final Item SPIRIT_FLOWER = registerItem("spirit_flower", new Item(new Item.Settings()));
     public static final Item SPIRIT_FEATHER = registerItem("spirit_feather", new Item(new Item.Settings()));
     public static final Item RUSTED_SWORD = registerItem("rusted_sword", new Item(new Item.Settings()));
 
     // Other Materials
-    public static final Item BEE_HIVE = registerItem("bee_hive", new Item(new Item.Settings()));
     public static final Item Silver_BEE_HIVE = registerItem("silver_bee_hive", new Item(new Item.Settings()));
     public static final Item GOLDEN_BEE_HIVE = registerItem("golden_bee_hive", new Item(new Item.Settings()));
 

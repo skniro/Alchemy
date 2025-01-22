@@ -337,7 +337,7 @@ public class AlchemyContent {
             content.add(AlchemyBoatItems.MAPLE_CHEST_BOAT);
 
             // Other Materials
-            content.add(AlchemyItems.BEE_HIVE);
+            content.add(AlchemyItems.Silver_BEE_HIVE);
             content.add(AlchemyItems.GOLDEN_BEE_HIVE);
         });
 

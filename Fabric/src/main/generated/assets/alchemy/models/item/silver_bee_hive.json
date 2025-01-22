@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "alchemy:item/bee_hive"
+    "layer0": "alchemy:item/silver_bee_hive"
   }
 }

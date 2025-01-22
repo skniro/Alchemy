@@ -29,6 +29,15 @@ import java.util.List;
 
 public class AlchemyOreConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>>  Arknite_ORE_KEY = registerKey("arknite_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>>  Hematite_ORE_KEY = registerKey("hematite_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>>  lightning_ORE_KEY = registerKey("lightning_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>>  Crimson_ORE_KEY = registerKey("crimson_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>>  End_Septrin_ORE_KEY = registerKey("end_septrin_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>>  AZURITE_ORE_KEY = registerKey("azurite_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>>  PAINT_NIGHTSTONE_ORE_KEY = registerKey("paint_nightstone_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>>  MOLDY_NIGHTSTONE_ORE_KEY = registerKey("moldy_nightstone_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>>  GORDY_NIGHTSTONE_ORE_KEY = registerKey("gordy_nightstone_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>>  CREATION_REVERSE_ORE_KEY = registerKey("creation_reverse_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>>  SALT_ORE_KEY = registerKey("salt_ore");
     public static final RegistryKey<ConfiguredFeature<?, ?>>  Deepslate_SALT_ORE_KEY = registerKey("deepslate_salt_ore");
 
@@ -51,6 +60,33 @@ public class AlchemyOreConfiguredFeatures {
         List<OreFeatureConfig.Target> deepslate_arknite_Ores =
                 List.of(OreFeatureConfig.createTarget(deepslateReplaceables, AlchemyOreBlocks.Deepslate_arknite_Ore.getDefaultState()));
 
+        List<OreFeatureConfig.Target> hematite_Ores =
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, AlchemyOreBlocks.Hematite_Ore.getDefaultState()));
+
+        List<OreFeatureConfig.Target> lightning_Ores =
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, AlchemyOreBlocks.lightning_Ore.getDefaultState()));
+
+        List<OreFeatureConfig.Target> Crimson_Ores =
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, AlchemyOreBlocks.Crimson_ore.getDefaultState()));
+
+        List<OreFeatureConfig.Target> end_septrin_Ores =
+                List.of(OreFeatureConfig.createTarget(endstoneReplaceables, AlchemyOreBlocks.End_Septrin_Ore.getDefaultState()));
+
+        List<OreFeatureConfig.Target> azurite_Ores =
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, AlchemyOreBlocks.AZURITE_ORE.getDefaultState()));
+
+        List<OreFeatureConfig.Target> paint_nightstone_Ores =
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, AlchemyOreBlocks.PAINT_NIGHTSTONE.getDefaultState()));
+
+        List<OreFeatureConfig.Target> moldy_nightstone_Ores =
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, AlchemyOreBlocks.MOLDY_NIGHTSTONE.getDefaultState()));
+
+        List<OreFeatureConfig.Target> gordy_nightstone_Ores =
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, AlchemyOreBlocks.GORDY_NIGHTSTONE.getDefaultState()));
+
+        List<OreFeatureConfig.Target> creation_reverse_Ores =
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, AlchemyOreBlocks.CREATION_REVERSE_Ore.getDefaultState()));
+
         List<OreFeatureConfig.Target> salt_Ores =
                 List.of(OreFeatureConfig.createTarget(stoneReplaceables, AlchemyOreBlocks.Salt_Ore.getDefaultState()));
 
@@ -58,6 +94,15 @@ public class AlchemyOreConfiguredFeatures {
                 List.of(OreFeatureConfig.createTarget(stoneReplaceables, AlchemyOreBlocks.DEEPSLATE_Salt_Ore.getDefaultState()));
 
         register(context, Arknite_ORE_KEY, Feature.ORE, new OreFeatureConfig(deepslate_arknite_Ores, 2));
+        register(context, Hematite_ORE_KEY, Feature.ORE, new OreFeatureConfig(hematite_Ores, 2));
+        register(context, lightning_ORE_KEY, Feature.ORE, new OreFeatureConfig(lightning_Ores, 2));
+        register(context, Crimson_ORE_KEY, Feature.ORE, new OreFeatureConfig(Crimson_Ores, 2));
+        register(context, End_Septrin_ORE_KEY, Feature.ORE, new OreFeatureConfig(end_septrin_Ores, 2));
+        register(context, AZURITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(azurite_Ores, 2));
+        register(context, PAINT_NIGHTSTONE_ORE_KEY, Feature.ORE, new OreFeatureConfig(paint_nightstone_Ores, 2));
+        register(context, MOLDY_NIGHTSTONE_ORE_KEY, Feature.ORE, new OreFeatureConfig(moldy_nightstone_Ores, 2));
+        register(context, GORDY_NIGHTSTONE_ORE_KEY, Feature.ORE, new OreFeatureConfig(gordy_nightstone_Ores, 2));
+        register(context, CREATION_REVERSE_ORE_KEY, Feature.ORE, new OreFeatureConfig(creation_reverse_Ores, 2));
         register(context, SALT_ORE_KEY, Feature.ORE, new OreFeatureConfig(salt_Ores, 1));
         register(context, Deepslate_SALT_ORE_KEY, Feature.ORE, new OreFeatureConfig(deepslate_salt_Ores, 2));
     }

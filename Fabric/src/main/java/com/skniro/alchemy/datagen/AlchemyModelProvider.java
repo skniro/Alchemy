@@ -233,7 +233,7 @@ public class AlchemyModelProvider extends FabricModelProvider {
 
 
         // Other Materials
-        itemModelGenerator.register(AlchemyItems.BEE_HIVE, Models.GENERATED);
+        itemModelGenerator.register(AlchemyItems.Silver_BEE_HIVE, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.GOLDEN_BEE_HIVE, Models.GENERATED);
 
 
