@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "alchemy:block/berry_bush_stage0"
+  }
+}

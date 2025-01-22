@@ -62,6 +62,7 @@ public class AlchemyContent {
         AlchemyDoorItems.registerAlchemyDoorItems();
         AlchemyBoatItems.registerAlchemyBoatItems();
         AlchemyCuriosItems.registerAlchemyCuriosItems();
+        AlchemyOreItems.registerAlchemyOreItems();
     }
 
     public static void registerBlock(){

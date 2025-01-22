@@ -20,7 +20,7 @@ public class AlchemyOreItems {
     }
 
 
-    public static void registerAlchemyCuriosItems() {
+    public static void registerAlchemyOreItems() {
         Alchemy.LOGGER.info("Registering Alchemy Curios Items for " + Alchemy.MOD_ID);
     }
 }

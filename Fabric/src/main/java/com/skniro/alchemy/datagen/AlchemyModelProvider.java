@@ -1,5 +1,6 @@
 package com.skniro.alchemy.datagen;
 
+import com.skniro.alchemy.api.registry.AlchemyModelDatagenHelper;
 import com.skniro.alchemy.block.AlchemyBlocks;
 import com.skniro.alchemy.block.AlchemyMapleBlocks;
 import com.skniro.alchemy.block.AlchemyOreBlocks;
@@ -9,10 +10,10 @@ import com.skniro.alchemy.fluid.AlchemyFluids;
 import com.skniro.alchemy.item.*;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
-import net.minecraft.data.client.BlockStateModelGenerator;
-import net.minecraft.data.client.ItemModelGenerator;
-import net.minecraft.data.client.Models;
+import net.minecraft.block.Blocks;
+import net.minecraft.data.client.*;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.state.property.Properties;
 
 public class AlchemyModelProvider extends FabricModelProvider {
@@ -52,6 +53,8 @@ public class AlchemyModelProvider extends FabricModelProvider {
         maple_pool.family(AlchemyPalmaBlocks.PALMA_FAMILY);
         //blockStateModelGenerator.registerWoolAndCarpet(AlchemyPalmaBlocks.PALMA_LEAVES,AlchemyPalmaBlocks.PALMA_CARPET);
 
+        AlchemyModelDatagenHelper alchemyModelDatagenHelper = new AlchemyModelDatagenHelper(blockStateModelGenerator);
+        alchemyModelDatagenHelper.registerModSweetBerryBush(AlchemyFoodComponents.BERRY, AlchemyBlocks.BERRY_BUSH);
     }
 
     @Override
@@ -154,7 +157,6 @@ public class AlchemyModelProvider extends FabricModelProvider {
         itemModelGenerator.register(AlchemyItems.UNKNOWN_EGG, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.SEVEN_COLORED_GRAPE, Models.GENERATED);
         itemModelGenerator.register(AlchemyFoodComponents.PALMA_FRUIT, Models.GENERATED);
-        itemModelGenerator.register(AlchemyFoodComponents.BERRY, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.OIL_TREE_FRUIT, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.DEW_FRUIT, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.OAK_MUSHROOM, Models.GENERATED);

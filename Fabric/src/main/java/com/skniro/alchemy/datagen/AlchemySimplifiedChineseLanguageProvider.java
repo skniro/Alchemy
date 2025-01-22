@@ -115,7 +115,6 @@ public class AlchemySimplifiedChineseLanguageProvider extends FabricLanguageProv
             translationBuilder.add(AlchemyItems.LANTERN_GRASS,"灯笼草");
             translationBuilder.add(AlchemyItems.SOAP_GRASS,"肥皂草");
             translationBuilder.add(AlchemyItems.Aether_Grass,"艾思草");
-
             translationBuilder.add(AlchemyItems.HERB,"药草");
             translationBuilder.add(AlchemyItems.LONG_NECK_GRASS,"长颈通草");
             translationBuilder.add(AlchemyItems.MUTANT_PLANT,"变异草");

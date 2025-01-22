@@ -1,6 +1,7 @@
 package com.skniro.alchemy.item;
 
 import com.skniro.alchemy.Alchemy;
+import com.skniro.alchemy.block.AlchemyBlocks;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
@@ -47,8 +48,8 @@ public class AlchemyFoodComponents {
                             )
             ));
 
-    public static final Item BERRY = registerItem("berry",
-            new Item(new Item.Settings()
+    public static final Item BERRY = registerItem("berries",
+            new AliasedBlockItem(AlchemyBlocks.BERRY_BUSH, new Item.Settings()
                     .food
                             (new FoodComponent
                                     .Builder()

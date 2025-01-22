@@ -1,4 +1,4 @@
-// 1.20.1	2025-01-22T18:28:42.2909404	Alchemy/alchemy
+// 1.20.1	2025-01-22T19:56:47.2407149	Alchemy/alchemy
 25b33fbc3e7c39714910b1ee52272b7b9cb3133d data\alchemy\worldgen\placed_feature\ore_gordy_nightstone_overworld.json
 c24fbbf724b252edc704005d778dcf133c516695 data\alchemy\worldgen\placed_feature\red_maple_tree_placed.json
 c7ed1e4eb14544d8ece18dc4cb5f0356d077f548 data\alchemy\worldgen\configured_feature\lightning_ore.json
@@ -15,9 +15,9 @@ ccf29c30098a13d09242ef26c34847fb60ffbe43 data\alchemy\worldgen\placed_feature\or
 acf9b2c92513b6746f0f1d142454b3f76ac30c07 data\alchemy\worldgen\placed_feature\ore_azurite_overworld.json
 e04ef4b6bdc3f26be599f20d6d4d4fc38ca357ad data\alchemy\worldgen\biome\maple_grove.json
 f8a9fa5e3c7a8ca77ad04cf3d1533af41fe8e853 data\alchemy\worldgen\configured_feature\deepslate_salt_ore.json
-f0cde0667bf7a3d4740eeb446c0196ced5fddce2 data\alchemy\worldgen\configured_feature\azurite_ore.json
 958cdb1b487f3854c4c49d756b0b858f6801ea88 data\alchemy\worldgen\configured_feature\moldy_nightstone_ore.json
 3a0bc3009e120d8fccec8a2b0efbf5fc2a068c26 data\alchemy\worldgen\configured_feature\creation_reverse_ore.json
+f0cde0667bf7a3d4740eeb446c0196ced5fddce2 data\alchemy\worldgen\configured_feature\azurite_ore.json
 054c399d4fbf500201187bf1b22f89f44a1292de data\alchemy\worldgen\configured_feature\salt_ore.json
 e56b020d8de49c9985dc453a5d83d9e833a52890 data\alchemy\worldgen\placed_feature\ore_hematite_overworld.json
 ef583839198393a4ce5bad6d3ecdb173ebf7ad56 data\alchemy\worldgen\placed_feature\ore_salt_overworld.json
