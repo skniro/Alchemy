@@ -401,6 +401,7 @@ public class AlchemyContent {
         BlockRenderLayerMap.INSTANCE.putBlock(AlchemyMapleBlocks.RED_MAPLE_LEAVES, renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(AlchemyMapleBlocks.RED_MAPLE_SAPLING , renderLayer3);
         BlockRenderLayerMap.INSTANCE.putBlock(AlchemyMapleBlocks.POTTED_RED_MAPLE_SAPLING, renderLayer3);
+        BlockRenderLayerMap.INSTANCE.putBlock(AlchemyBlocks.BERRY_BUSH, renderLayer3);
 
 
         RenderLayer renderLayer4 = RenderLayer.getTranslucent();
