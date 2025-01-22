@@ -29,7 +29,7 @@ public class AlchemyFoodComponents {
                             )
     ));
 
-    public static final Item KARMINE_FRUIT = registerItem("palma_fruit",
+    public static final Item KARMINE_FRUIT = registerItem("karmine_fruit",
             new Item(new Item
                     .Settings()
                     .rarity(Rarity.RARE)
