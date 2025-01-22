@@ -17,6 +17,8 @@ public class Alchemy implements ModInitializer, TerraBlenderApi {
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
     public static final RegistryKey<ItemGroup> Alchemy_Group = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(MOD_ID, "alchemy_group"));
+    public static final RegistryKey<ItemGroup> Alchemy_Group_Food = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(MOD_ID, "alchemy_group_food"));
+    public static final RegistryKey<ItemGroup> Alchemy_Group_Furniture = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(MOD_ID, "alchemy_group_furniture"));
 
     @Override
     public void onInitialize() {

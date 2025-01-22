@@ -49,7 +49,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import terrablender.api.Regions;
 
-import static com.skniro.alchemy.Alchemy.Alchemy_Group;
+import static com.skniro.alchemy.Alchemy.*;
 
 
 public class AlchemyContent {
@@ -121,7 +121,17 @@ public class AlchemyContent {
         Registry.register(Registries.ITEM_GROUP, Alchemy_Group, FabricItemGroup.builder()
                 .icon(() -> new ItemStack(Items.STONE))
                 .displayName(Text.translatable("itemGroup.alchemy.alchemy_group"))
-                .build()); // build() no longer registers by itself
+                .build());
+
+        Registry.register(Registries.ITEM_GROUP, Alchemy_Group_Food, FabricItemGroup.builder()
+                .icon(() -> new ItemStack(Items.STONE))
+                .displayName(Text.translatable("itemGroup.alchemy.alchemy_group_food"))
+                .build());
+
+        Registry.register(Registries.ITEM_GROUP, Alchemy_Group_Furniture, FabricItemGroup.builder()
+                .icon(() -> new ItemStack(Items.STONE))
+                .displayName(Text.translatable("itemGroup.alchemy.alchemy_group_furniture"))
+                .build());
 
         ItemGroupEvents.modifyEntriesEvent(Alchemy_Group).register(content -> {
             //Entity Block
@@ -137,10 +147,6 @@ public class AlchemyContent {
             content.add(AlchemyOreItems.Arknite);
             content.add(AlchemyOreItems.Septrin);
             content.add(AlchemyItems.Test_Tool_Type1_Level1);
-
-            //Food
-            content.add(AlchemyFoodComponents.PALMA_FRUIT);
-            content.add(AlchemyFoodComponents.BERRY);
 
             //Fluids
             content.add(AlchemyFluidItems.EmeraldBand_BUCKET);
@@ -333,6 +339,16 @@ public class AlchemyContent {
             // Other Materials
             content.add(AlchemyItems.BEE_HIVE);
             content.add(AlchemyItems.GOLDEN_BEE_HIVE);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(Alchemy_Group_Food).register(content -> {
+            //Food
+            content.add(AlchemyFoodComponents.PALMA_FRUIT);
+            content.add(AlchemyFoodComponents.BERRY);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(Alchemy_Group_Furniture).register(content -> {
+
         });
     }
     public static void registerEntityAttribute() {
