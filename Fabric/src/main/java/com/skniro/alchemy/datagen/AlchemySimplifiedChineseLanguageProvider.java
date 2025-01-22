@@ -43,6 +43,7 @@ public class AlchemySimplifiedChineseLanguageProvider extends FabricLanguageProv
 
             //PALMA
             translationBuilder.add(AlchemyPalmaBlocks.PALMA_WOOD,"帕尔马木");
+            translationBuilder.add(AlchemyItems.PALM_BARK,"帕尔马树皮");
 
             //史莱姆球
             translationBuilder.add(AlchemyItems.PUNI_PUNI_BALL_BLUE,"噗尼噗尼珠·蓝");
@@ -65,6 +66,10 @@ public class AlchemySimplifiedChineseLanguageProvider extends FabricLanguageProv
             translationBuilder.add(AlchemyOreItems.Crimson,"赤热矿");
             translationBuilder.add(AlchemyOreItems.Hematite,"赤铁矿");
             translationBuilder.add(AlchemyOreBlocks.AZURITE_ORE,"海蓝石矿");
+            translationBuilder.add(AlchemyOreItems.CREATION_REVERSE_STONE,"创生逆石");
+            translationBuilder.add(AlchemyOreBlocks.PAINT_NIGHTSTONE,"派恩特夜石");
+            translationBuilder.add(AlchemyOreBlocks.MOLDY_NIGHTSTONE,"毛尔迪夜石");
+            translationBuilder.add(AlchemyOreBlocks.GORDY_NIGHTSTONE,"戈尔迪夜石");
 
             //Crop
 
@@ -141,11 +146,7 @@ public class AlchemySimplifiedChineseLanguageProvider extends FabricLanguageProv
             translationBuilder.add(AlchemyItems.RIVER_STONE_BLAZE,"河石·苍炎");
             translationBuilder.add(AlchemyItems.STALACTITE_FRAGMENT,"钟乳石碎片");
             translationBuilder.add(AlchemyItems.SPIRIT_WHITE_ROCK,"白灵岩");
-            translationBuilder.add(AlchemyOreBlocks.PAINT_NIGHTSTONE,"派恩特夜石");
-            translationBuilder.add(AlchemyOreBlocks.MOLDY_NIGHTSTONE,"毛尔迪夜石");
-            translationBuilder.add(AlchemyOreBlocks.GORDY_NIGHTSTONE,"戈尔迪夜石");
             translationBuilder.add(AlchemyItems.COMET_ROCK,"彗星岩");
-            translationBuilder.add(AlchemyOreItems.CREATION_REVERSE_STONE,"创生逆石");
             translationBuilder.add(AlchemyItems.SMALL_CRYSTAL,"小晶石");
             translationBuilder.add(AlchemyItems.UNKNOWN_ORE,"未知的原石");
             translationBuilder.add(AlchemyItems.GREAT_WHITE_PEARL,"大贝白玉");
@@ -159,17 +160,15 @@ public class AlchemySimplifiedChineseLanguageProvider extends FabricLanguageProv
             translationBuilder.add(AlchemyItems.MAGMA_POWDER,"岩浆粉");
             translationBuilder.add(AlchemyItems.PAPER_SCRAP,"纸屑");
             translationBuilder.add(AlchemyItems.FLAMMABLE_BARK,"易燃树皮");
-            translationBuilder.add(AlchemyItems.PALM_BARK,"帕尔马树皮");
+
             translationBuilder.add(AlchemyItems.NATURAL_OIL,"天然油");
             translationBuilder.add(AlchemyItems.WHITE_SMOKE_CHARCOAL,"白烟炭");
             translationBuilder.add(AlchemyItems.PALM_BLACK_CHARCOAL,"帕尔马黑炭");
-            translationBuilder.add(AlchemyItems.WILD_POTATO,"野生土豆");
             translationBuilder.add(AlchemyItems.BEAST_MEAT,"兽肉");
             translationBuilder.add(AlchemyItems.FRESH_MEAT,"新鲜的肉");
             translationBuilder.add(AlchemyItems.KUKEN_FRUIT,"库肯果");
             translationBuilder.add(AlchemyItems.UNKNOWN_EGG,"不知名的蛋");
             translationBuilder.add(AlchemyItems.SEVEN_COLORED_GRAPE,"七色葡萄");
-
             translationBuilder.add(AlchemyItems.BERRY,"莓果");
             translationBuilder.add(AlchemyItems.OIL_TREE_FRUIT,"油木果实");
             translationBuilder.add(AlchemyItems.DEW_FRUIT,"甘露果实");

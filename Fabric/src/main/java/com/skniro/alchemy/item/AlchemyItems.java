@@ -101,7 +101,6 @@ public class AlchemyItems {
     public static final Item NATURAL_OIL = registerItem("natural_oil", new Item(new Item.Settings()));
     public static final Item WHITE_SMOKE_CHARCOAL = registerItem("white_smoke_charcoal", new Item(new Item.Settings()));
     public static final Item PALM_BLACK_CHARCOAL = registerItem("palm_black_charcoal", new Item(new Item.Settings()));
-    public static final Item WILD_POTATO = registerItem("wild_potato", new Item(new Item.Settings()));
     public static final Item BEAST_MEAT = registerItem("beast_meat", new Item(new Item.Settings()));
     public static final Item FRESH_MEAT = registerItem("fresh_meat", new Item(new Item.Settings()));
     public static final Item KUKEN_FRUIT = registerItem("kuken_fruit", new Item(new Item.Settings()));

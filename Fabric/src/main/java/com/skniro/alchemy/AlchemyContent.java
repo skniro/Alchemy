@@ -228,7 +228,6 @@ public class AlchemyContent {
             content.add(AlchemyItems.NATURAL_OIL);
             content.add(AlchemyItems.WHITE_SMOKE_CHARCOAL);
             content.add(AlchemyItems.PALM_BLACK_CHARCOAL);
-            content.add(AlchemyItems.WILD_POTATO);
             content.add(AlchemyItems.BEAST_MEAT);
             content.add(AlchemyItems.FRESH_MEAT);
             content.add(AlchemyItems.KUKEN_FRUIT);

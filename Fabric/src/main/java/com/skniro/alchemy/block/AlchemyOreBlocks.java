@@ -32,13 +32,13 @@ public class AlchemyOreBlocks {
     //海蓝石矿
     public static final Block AZURITE_ORE = registerBlock("azurite_ore", new ExperienceDroppingBlock(AbstractBlock.Settings.create().requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(3, 7)), Alchemy.Alchemy_Group);
     //派恩特夜石
-    public static final Block PAINT_NIGHTSTONE = registerBlock("paint_nightstone", new ExperienceDroppingBlock(AbstractBlock.Settings.create().requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(3, 7)), Alchemy.Alchemy_Group);
+    public static final Block PAINT_NIGHTSTONE = registerBlock("paint_nightstone_ore", new ExperienceDroppingBlock(AbstractBlock.Settings.create().requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(3, 7)), Alchemy.Alchemy_Group);
     //毛尔迪夜石
-    public static final Block MOLDY_NIGHTSTONE = registerBlock("moldy_nightstone", new ExperienceDroppingBlock(AbstractBlock.Settings.create().requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(3, 7)), Alchemy.Alchemy_Group);
+    public static final Block MOLDY_NIGHTSTONE = registerBlock("moldy_nightstone_ore", new ExperienceDroppingBlock(AbstractBlock.Settings.create().requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(3, 7)), Alchemy.Alchemy_Group);
     //戈尔迪夜石
-    public static final Block GORDY_NIGHTSTONE = registerBlock("gordy_nightstone", new ExperienceDroppingBlock(AbstractBlock.Settings.create().requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(3, 7)), Alchemy.Alchemy_Group);
+    public static final Block GORDY_NIGHTSTONE = registerBlock("gordy_nightstone_ore", new ExperienceDroppingBlock(AbstractBlock.Settings.create().requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(3, 7)), Alchemy.Alchemy_Group);
     //创生逆石
-    public static final Block CREATION_REVERSE_Ore = registerBlock("creation_reverse_stone", new ExperienceDroppingBlock(AbstractBlock.Settings.create().requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(3, 7)), Alchemy.Alchemy_Group);
+    public static final Block CREATION_REVERSE_Ore = registerBlock("creation_reverse_ore", new ExperienceDroppingBlock(AbstractBlock.Settings.create().requiresTool().strength(3.0F, 3.0F), UniformIntProvider.create(3, 7)), Alchemy.Alchemy_Group);
 
     private static Block registerBlockWithoutItem(String name, Block block) {
         return Registry.register(Registries.BLOCK, new Identifier(Alchemy.MOD_ID, name), block);

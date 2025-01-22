@@ -148,7 +148,6 @@ public class AlchemyModelProvider extends FabricModelProvider {
         itemModelGenerator.register(AlchemyItems.NATURAL_OIL, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.WHITE_SMOKE_CHARCOAL, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.PALM_BLACK_CHARCOAL, Models.GENERATED);
-        itemModelGenerator.register(AlchemyItems.WILD_POTATO, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.BEAST_MEAT, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.FRESH_MEAT, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.KUKEN_FRUIT, Models.GENERATED);
