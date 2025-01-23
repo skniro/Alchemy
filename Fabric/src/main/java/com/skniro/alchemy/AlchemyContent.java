@@ -311,7 +311,6 @@ public class AlchemyContent {
             content.add(AlchemyItems.HONEY_WOOD_BRANCH);
             content.add(AlchemyItems.SPIRIT_FLOWER);
             content.add(AlchemyItems.SPIRIT_FEATHER);
-            content.add(AlchemyItems.RUSTED_SWORD);
             content.add(AlchemyOreBlocks.AZURITE_ORE);
             content.add(AlchemyMapleBlocks.MAPLE_LOG);
             content.add(AlchemyMapleBlocks.STRIPPED_MAPLE_LOG);

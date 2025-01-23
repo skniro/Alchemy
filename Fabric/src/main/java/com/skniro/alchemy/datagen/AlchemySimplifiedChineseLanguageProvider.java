@@ -230,7 +230,6 @@ public class AlchemySimplifiedChineseLanguageProvider extends FabricLanguageProv
             translationBuilder.add(AlchemyItems.HONEY_WOOD_BRANCH,"蜜木枝");
             translationBuilder.add(AlchemyItems.SPIRIT_FLOWER,"精神之花");
             translationBuilder.add(AlchemyItems.SPIRIT_FEATHER,"精神之羽");
-            translationBuilder.add(AlchemyItems.RUSTED_SWORD,"Rusty Sword");
 
 
 

@@ -224,7 +224,6 @@ public class AlchemyModelProvider extends FabricModelProvider {
         itemModelGenerator.register(AlchemyItems.HONEY_WOOD_BRANCH, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.SPIRIT_FLOWER, Models.GENERATED);
         itemModelGenerator.register(AlchemyItems.SPIRIT_FEATHER, Models.GENERATED);
-        itemModelGenerator.register(AlchemyItems.RUSTED_SWORD, Models.GENERATED);
 
         //Sign
         itemModelGenerator.register(AlchemySignItems.Maple_HANGING_SIGN, Models.GENERATED);

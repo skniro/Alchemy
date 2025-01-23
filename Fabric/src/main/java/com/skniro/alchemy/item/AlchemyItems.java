@@ -169,7 +169,6 @@ public class AlchemyItems {
     public static final Item HONEY_WOOD_BRANCH = registerItem("honey_wood_branch", new Item(new Item.Settings()));
     public static final Item SPIRIT_FLOWER = registerItem("spirit_flower", new Item(new Item.Settings()));
     public static final Item SPIRIT_FEATHER = registerItem("spirit_feather", new Item(new Item.Settings()));
-    public static final Item RUSTED_SWORD = registerItem("rusted_sword", new Item(new Item.Settings()));
 
     // Other Materials
     public static final Item Silver_Honeycomb= registerItem("silver_honeycomb", new Item(new Item.Settings()));
