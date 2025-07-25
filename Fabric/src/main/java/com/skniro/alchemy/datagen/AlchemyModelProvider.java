@@ -43,6 +43,8 @@ public class AlchemyModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerLog(AlchemyPalmaBlocks.PALMA_LOG).log(AlchemyPalmaBlocks.PALMA_LOG).wood(AlchemyPalmaBlocks.PALMA_WOOD);
         blockStateModelGenerator.registerLog(AlchemyPalmaBlocks.STRIPPED_PALMA_LOG).log(AlchemyPalmaBlocks.STRIPPED_PALMA_LOG).wood(AlchemyPalmaBlocks.STRIPPED_PALMA_WOOD);
 
+        blockStateModelGenerator.registerNorthDefaultHorizontalRotation(AlchemyBlocks.Alchemy_Block);
+
         //Maple
         BlockStateModelGenerator.BlockTexturePool maple_pool = blockStateModelGenerator.registerCubeAllModelTexturePool(AlchemyMapleBlocks.MAPLE_PLANKS);
         maple_pool.family(AlchemyMapleBlocks.MAPLE_FAMILY);

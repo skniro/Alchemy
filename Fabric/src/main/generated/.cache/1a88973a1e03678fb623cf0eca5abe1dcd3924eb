@@ -1,4 +1,4 @@
-// 1.20.1	2025-01-22T21:03:47.0929518	Alchemy/Model Definitions
+// 1.20.1	2025-07-25T18:05:27.3329415	Alchemy/Model Definitions
 d64a7608c592cc9dd522e78dec6dfda28574eb50 assets\alchemy\models\item\puni_puni_ball_silver.json
 1e30be84d939834582289cb998b35957d6ac6ffd assets\alchemy\models\item\sea_urchin.json
 764a9afbcb1efea94ac3a9ca143854f60bc54c50 assets\alchemy\blockstates\maple_fence_gate.json
@@ -49,6 +49,7 @@ fd5c32a39d78b001f57a3605d4b05182c889671c assets\alchemy\models\item\dried_wood_c
 8499711c140672dd16b07aeafd40b459d093abbd assets\alchemy\models\item\amber_crystal.json
 6caf5184143c3a6ff572be55dee751242294ad5a assets\alchemy\models\item\stripped_palma_wood.json
 09a4713a819e98c6fb79a01f3042218baf9c5177 assets\alchemy\models\item\nightglow_flower.json
+80bf4df35d8485c81c177b4ef6995640257dcce3 assets\alchemy\blockstates\alchemy_block.json
 93b33f0182a7cce1653e2386352fa5caa966d33b assets\alchemy\models\block\maple_stairs.json
 4ff10e3647e567b0b39d26eda3f61d5e574e6d31 assets\alchemy\models\item\fantasy_beast_fur.json
 2052e42a82603a463a636b90874bd988ae28a6ae assets\alchemy\models\item\blessed_clear_flower.json
@@ -69,7 +70,6 @@ e8e1fcde7b1d184d55a2ab2b7661e81af4970c9d assets\alchemy\models\block\palma_fence
 b26e85575b108d26a1fde3759731c0897ff9c9b6 assets\alchemy\models\item\magic_stone_fragment.json
 348e74f43c7d12def94eb7297ff429d2fd199711 assets\alchemy\models\item\sky_bubble.json
 021ea70279b4c447c96d4c3d21203fef7d052aef assets\alchemy\blockstates\lightning_ore.json
-e4b260e9a92774dd033dbdc5a3d467341ffa11ed assets\alchemy\models\item\rusted_sword.json
 682267579dc1ec9ffe31a4a2b473098dee6facbc assets\alchemy\models\item\yellow_tail_fish.json
 027adaa7f417aa44c377116af12f9a4b9ecbf521 assets\alchemy\models\item\clear_water_white_princess.json
 08265b2c907697ba5fafc55481db3317a08d4829 assets\alchemy\models\item\maple_trapdoor.json
@@ -195,6 +195,7 @@ a4fae309cc1459cb25be739507f22623fcc3ef3a assets\alchemy\models\item\ancient_pill
 8c8a1593b1f65908d28e892de9314bc7b665a1b7 assets\alchemy\models\item\rich_soil.json
 772bf390bb76891accdf490def76a1782b5a817d assets\alchemy\models\item\dark_crystal_fragment.json
 b00c4db7b11fa435033f3d216e3dfa8bd8cbbc2f assets\alchemy\models\block\stripped_palma_log.json
+e008f33746f4797df17c623f36f5de3bf1589378 assets\alchemy\models\item\alchemy_block.json
 c7acb7f2f8000ba19e19ea70cfb575a89fe12f0b assets\alchemy\models\block\maple_slab.json
 5b08f3c761d376b0a46e4ab1f45e9fb3523f10bc assets\alchemy\models\item\spiky_fish.json
 eda372184122731a17b90551cc6a6afa267ece7c assets\alchemy\models\item\winged_leaf_grass.json
@@ -217,8 +218,8 @@ fe2636623763efcb81c843aa4776f6be67e8da3b assets\alchemy\models\block\berry_bush_
 1924a754773d4d6010657de802951a565161ecf8 assets\alchemy\models\item\maple_door.json
 c49ed49e97415295612e03e38c529a0cc17eadb5 assets\alchemy\models\item\paint_nightstone_ore.json
 6d1e0d4d7800499affa7e9ba8bf556ba079625c6 assets\alchemy\models\block\maple_door_top_left_open.json
-8fe6fa1017dd97f9dbcfab3f03f479996e89e29d assets\alchemy\models\block\maple_button_inventory.json
 55e032053b9cba52a10dd8f65a2e8850c0b5c8f0 assets\alchemy\models\item\triangle_beetle.json
+8fe6fa1017dd97f9dbcfab3f03f479996e89e29d assets\alchemy\models\block\maple_button_inventory.json
 e4db8d1335df1ff90a5136be653ba7aa47e1155c assets\alchemy\models\item\amber_fragment.json
 f6ece2e88d0b43ea6fdc3c469fba93e2fa398539 assets\alchemy\models\item\silent_moonflower.json
 715e3b3b88e6ef1ef719ef09deabeb038e1fa6ca assets\alchemy\models\item\seven_colored_grape.json
@@ -229,8 +230,8 @@ c8d82ddc5659bdf53381270efcd179369a7c52de assets\alchemy\models\item\old_magic_bo
 3c5ce039e710f78707511994704910694f1f90b8 assets\alchemy\models\block\palma_fence_gate_wall_open.json
 9da31d538de0a4d6e3790e6a67cda68e08b6082e assets\alchemy\models\item\crimson.json
 edfbb59744f735290449d415a2abc5a75a148590 assets\alchemy\blockstates\stripped_maple_log.json
-f14ad838317dc7ad64c453ee80a3c123259fde31 assets\alchemy\models\item\rotten_wood_poison_mist.json
 a66611a75e047bc78bf566c39983f6e727609738 assets\alchemy\models\item\cap_crab.json
+f14ad838317dc7ad64c453ee80a3c123259fde31 assets\alchemy\models\item\rotten_wood_poison_mist.json
 81efc56e683e9decc72a5b0eb9e40fc7bf11a60d assets\alchemy\models\item\bitter_root.json
 10d5be041aa8e3fae6dd93af6c4efde78d3ea34d assets\alchemy\models\block\palma_door_bottom_right_open.json
 e39015ca800a54c20f4d049ca7afab010848bd9b assets\alchemy\models\item\hematite.json

@@ -1,0 +1,7 @@
+{
+  "parent": "alchemy:block/alchemy_block/alchemy_block",
+  "textures": {
+    "side": "minecraft:block/cauldron_side",
+    "inner": "minecraft:block/cauldron_inner"
+  }
+}

@@ -17,7 +17,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 public class AlchemyBlocks {
-    public static final Block Alchemy_Block =registerBlock("alchemy_block",new Alchemyblock(AbstractBlock.Settings.create().requiresTool().strength(3.0F, 3.0F)),Alchemy.Alchemy_Group);
+    public static final Block Alchemy_Block =registerBlock("alchemy_block",new Alchemyblock(AbstractBlock.Settings.create().requiresTool().nonOpaque().strength(3.0F, 3.0F)),Alchemy.Alchemy_Group);
 
     //berry
     public static final Block BERRY_BUSH = registerBlock("berry_bush", new AlchemyBerryBushBlock(AbstractBlock.Settings.create().mapColor(MapColor.DARK_GREEN).ticksRandomly().noCollision().nonOpaque().sounds(BlockSoundGroup.SWEET_BERRY_BUSH).pistonBehavior(PistonBehavior.DESTROY)), Alchemy.Alchemy_Group);

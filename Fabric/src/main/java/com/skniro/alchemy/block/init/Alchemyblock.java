@@ -11,6 +11,8 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.state.StateManager;
+import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.*;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
@@ -22,6 +24,8 @@ import org.jetbrains.annotations.Nullable;
 import static net.minecraft.state.property.Properties.FACING;
 
 public class Alchemyblock extends BlockWithEntity implements BlockEntityProvider {
+    public static final DirectionProperty FACING;
+
     public Alchemyblock(Settings settings) {
         super(settings);
     }
@@ -97,4 +101,7 @@ public class Alchemyblock extends BlockWithEntity implements BlockEntityProvider
         return checkType(type, AlchemyBlockEntityType.ALCHEMY_BLOCK_ENTITY, Alchemyblockentity::tick);
     }
 
+    static {
+        FACING = Properties.HORIZONTAL_FACING;
+    }
 }
